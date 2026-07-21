@@ -178,8 +178,8 @@ export default function DigitalAssessmentCaseStudy() {
                   <h4 className="font-extrabold text-slate-900 text-xl border-b-2 border-slate-200 pb-3">
                     {stakeholder.title}
                   </h4>
-                  <div className="flex flex-col gap-4 flex-grow">
-                    <div className="bg-white/90 p-4 rounded-lg border border-slate-200">
+                  <div className="flex flex-col gap-5 flex-grow">
+                    <div>
                       <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Goal</span>
                       <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
                         {stakeholder.goals.map((g, i) => (
@@ -190,7 +190,7 @@ export default function DigitalAssessmentCaseStudy() {
                         ))}
                       </ul>
                     </div>
-                    <div className="bg-white/90 p-4 rounded-lg border border-slate-200">
+                    <div>
                       <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Pain Point</span>
                       <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
                         {stakeholder.pains.map((p, i) => (
@@ -201,7 +201,7 @@ export default function DigitalAssessmentCaseStudy() {
                         ))}
                       </ul>
                     </div>
-                    <div className="bg-white/90 p-4 rounded-lg border border-slate-200">
+                    <div>
                       <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Needs</span>
                       <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
                         {stakeholder.needs.map((n, i) => (
