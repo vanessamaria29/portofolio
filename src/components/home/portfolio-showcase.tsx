@@ -73,6 +73,11 @@ export function PortfolioShowcase() {
       description: "Platform digital yang membantu siswa SMA memetakan kemampuan digital serta memberikan rekomendasi jurusan yang sesuai.",
       imageSrc: "/images/Logo_UKRIDA_300x300.png",
       href: "/product-management/digital-skill-assessment"
+    },
+    {
+      title: "Glacier",
+      description: "Platform operasional berbasis web yang membantu Sahabat Mixue Group mengelola stok, menghitung HPP, dan memantau performa cabang secara terintegrasi.",
+      href: "/product-management/glacier"
     }
   ]
 
