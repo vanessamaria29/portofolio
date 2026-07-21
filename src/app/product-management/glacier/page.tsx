@@ -155,34 +155,34 @@ export default function GlacierCaseStudy() {
         {/* SECTION 2: Business Process Analysis */}
         <FadeIn delay={0.2}>
           <SlideFrame index="02" title="Business Process Analysis">
-            <div className="overflow-x-auto rounded-xl border border-slate-200 mb-5 bg-white">
+            <div className="overflow-x-auto rounded-xl border border-slate-200 mb-5 bg-white shadow-xs">
               <table className="w-full text-left border-collapse text-sm text-slate-700 min-w-[650px]">
                 <thead>
-                  <tr className="bg-slate-900 text-white border-b border-slate-900">
-                    <th className="p-4 font-bold uppercase text-xs tracking-wider w-1/2 border-r border-slate-800">Sebelum Glacier (As-Is)</th>
-                    <th className="p-4 font-bold uppercase text-xs tracking-wider w-1/2">Setelah Glacier (To-Be)</th>
+                  <tr className="bg-slate-900 text-white border-b-2 border-slate-900">
+                    <th className="px-6 py-5 md:py-6 font-bold uppercase text-xs tracking-wider w-1/2 border-r border-slate-800">Sebelum Glacier (As-Is)</th>
+                    <th className="px-6 py-5 md:py-6 font-bold uppercase text-xs tracking-wider w-1/2">Setelah Glacier (To-Be)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200">
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-medium border-r border-slate-200 text-slate-600">Pencatatan stok menggunakan Excel</td>
-                    <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Data stok tercatat dalam sistem secara terpusat</td>
+                    <td className="px-6 py-4 md:py-4.5 font-medium border-r border-slate-200 text-slate-600">Pencatatan stok menggunakan Excel</td>
+                    <td className="px-6 py-4 md:py-4.5 font-semibold text-slate-900 bg-slate-50/50">Data stok tercatat dalam sistem secara terpusat</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-medium border-r border-slate-200 text-slate-600">Perhitungan HPP dilakukan manual</td>
-                    <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">HPP dihitung otomatis oleh sistem</td>
+                    <td className="px-6 py-4 md:py-4.5 font-medium border-r border-slate-200 text-slate-600">Perhitungan HPP dilakukan manual</td>
+                    <td className="px-6 py-4 md:py-4.5 font-semibold text-slate-900 bg-slate-50/50">HPP dihitung otomatis oleh sistem</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-medium border-r border-slate-200 text-slate-600">Laporan dikirim melalui file Excel</td>
-                    <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Dashboard menampilkan data secara real-time</td>
+                    <td className="px-6 py-4 md:py-4.5 font-medium border-r border-slate-200 text-slate-600">Laporan dikirim melalui file Excel</td>
+                    <td className="px-6 py-4 md:py-4.5 font-semibold text-slate-900 bg-slate-50/50">Dashboard menampilkan data secara real-time</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-medium border-r border-slate-200 text-slate-600">Monitoring antar cabang memerlukan rekap manual</td>
-                    <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Owner dapat memantau seluruh cabang dari satu dashboard</td>
+                    <td className="px-6 py-4 md:py-4.5 font-medium border-r border-slate-200 text-slate-600">Monitoring antar cabang memerlukan rekap manual</td>
+                    <td className="px-6 py-4 md:py-4.5 font-semibold text-slate-900 bg-slate-50/50">Owner dapat memantau seluruh cabang dari satu dashboard</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-medium border-r border-slate-200 text-slate-600">Risiko human error tinggi</td>
-                    <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Data lebih konsisten dan mudah ditelusuri</td>
+                    <td className="px-6 py-4 md:py-4.5 font-medium border-r border-slate-200 text-slate-600">Risiko human error tinggi</td>
+                    <td className="px-6 py-4 md:py-4.5 font-semibold text-slate-900 bg-slate-50/50">Data lebih konsisten dan mudah ditelusuri</td>
                   </tr>
                 </tbody>
               </table>
@@ -528,55 +528,55 @@ export default function GlacierCaseStudy() {
         {/* SECTION 8: Prioritas Fitur (RICE) */}
         <FadeIn delay={0.8}>
           <SlideFrame index="08" title="Prioritas Fitur (RICE)">
-            <div className="overflow-x-auto rounded-xl border border-slate-200 mb-4 bg-white">
+            <div className="overflow-x-auto rounded-xl border border-slate-200 mb-4 bg-white shadow-xs">
               <table className="w-full text-left border-collapse text-xs md:text-sm text-slate-700 min-w-[700px]">
                 <thead>
-                  <tr className="bg-slate-900 text-white border-b border-slate-900">
-                    <th className="p-3.5 font-bold uppercase text-xs tracking-wider">Fitur</th>
-                    <th className="p-3.5 font-bold uppercase text-xs tracking-wider text-center">Reach</th>
-                    <th className="p-3.5 font-bold uppercase text-xs tracking-wider text-center">Impact</th>
-                    <th className="p-3.5 font-bold uppercase text-xs tracking-wider text-center">Confidence</th>
-                    <th className="p-3.5 font-bold uppercase text-xs tracking-wider text-center">Effort</th>
-                    <th className="p-3.5 font-bold uppercase text-xs tracking-wider text-center">Score</th>
-                    <th className="p-3.5 font-bold uppercase text-xs tracking-wider">Alasan Prioritas</th>
+                  <tr className="bg-slate-900 text-white border-b-2 border-slate-900">
+                    <th className="px-5 py-5 md:py-6 font-bold uppercase text-xs tracking-wider">Fitur</th>
+                    <th className="px-4 py-5 md:py-6 font-bold uppercase text-xs tracking-wider text-center">Reach</th>
+                    <th className="px-4 py-5 md:py-6 font-bold uppercase text-xs tracking-wider text-center">Impact</th>
+                    <th className="px-4 py-5 md:py-6 font-bold uppercase text-xs tracking-wider text-center">Confidence</th>
+                    <th className="px-4 py-5 md:py-6 font-bold uppercase text-xs tracking-wider text-center">Effort</th>
+                    <th className="px-4 py-5 md:py-6 font-bold uppercase text-xs tracking-wider text-center">Score</th>
+                    <th className="px-5 py-5 md:py-6 font-bold uppercase text-xs tracking-wider">Alasan Prioritas</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200">
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-3.5 font-bold text-slate-900">Inventory Management</td>
-                    <td className="p-3.5 font-medium text-center">100%</td>
-                    <td className="p-3.5 font-medium text-center">3 (High)</td>
-                    <td className="p-3.5 font-medium text-center">100%</td>
-                    <td className="p-3.5 font-medium text-center">2 (Med)</td>
-                    <td className="p-3.5 font-bold text-slate-900 text-center bg-slate-50">150.0</td>
-                    <td className="p-3.5 font-normal text-xs text-slate-600">Fondasi utama seluruh sistem operasional persediaan.</td>
+                    <td className="px-5 py-4 md:py-4.5 font-bold text-slate-900">Inventory Management</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">100%</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">3 (High)</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">100%</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">2 (Med)</td>
+                    <td className="px-4 py-4 md:py-4.5 font-bold text-slate-900 text-center bg-slate-50">150.0</td>
+                    <td className="px-5 py-4 md:py-4.5 font-normal text-xs text-slate-600">Fondasi utama seluruh sistem operasional persediaan.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-3.5 font-bold text-slate-900">Dashboard Monitoring</td>
-                    <td className="p-3.5 font-medium text-center">90%</td>
-                    <td className="p-3.5 font-medium text-center">3 (High)</td>
-                    <td className="p-3.5 font-medium text-center">90%</td>
-                    <td className="p-3.5 font-medium text-center">2 (Med)</td>
-                    <td className="p-3.5 font-bold text-slate-900 text-center bg-slate-50">121.5</td>
-                    <td className="p-3.5 font-normal text-xs text-slate-600">Memberikan visibilitas langsung bagi Owner dan Supervisor.</td>
+                    <td className="px-5 py-4 md:py-4.5 font-bold text-slate-900">Dashboard Monitoring</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">90%</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">3 (High)</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">90%</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">2 (Med)</td>
+                    <td className="px-4 py-4 md:py-4.5 font-bold text-slate-900 text-center bg-slate-50">121.5</td>
+                    <td className="px-5 py-4 md:py-4.5 font-normal text-xs text-slate-600">Memberikan visibilitas langsung bagi Owner dan Supervisor.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-3.5 font-bold text-slate-900">Automatic HPP Calculator</td>
-                    <td className="p-3.5 font-medium text-center">80%</td>
-                    <td className="p-3.5 font-medium text-center">3 (High)</td>
-                    <td className="p-3.5 font-medium text-center">90%</td>
-                    <td className="p-3.5 font-medium text-center">2 (Med)</td>
-                    <td className="p-3.5 font-bold text-slate-900 text-center bg-slate-50">108.0</td>
-                    <td className="p-3.5 font-normal text-xs text-slate-600">Mengeliminasi perhitungan manual HPP yang rawan error.</td>
+                    <td className="px-5 py-4 md:py-4.5 font-bold text-slate-900">Automatic HPP Calculator</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">80%</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">3 (High)</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">90%</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">2 (Med)</td>
+                    <td className="px-4 py-4 md:py-4.5 font-bold text-slate-900 text-center bg-slate-50">108.0</td>
+                    <td className="px-5 py-4 md:py-4.5 font-normal text-xs text-slate-600">Mengeliminasi perhitungan manual HPP yang rawan error.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-3.5 font-bold text-slate-900">Analytics Dashboard</td>
-                    <td className="p-3.5 font-medium text-center">60%</td>
-                    <td className="p-3.5 font-medium text-center">2 (Med)</td>
-                    <td className="p-3.5 font-medium text-center">80%</td>
-                    <td className="p-3.5 font-medium text-center">3 (High)</td>
-                    <td className="p-3.5 font-bold text-slate-900 text-center bg-slate-50">32.0</td>
-                    <td className="p-3.5 font-normal text-xs text-slate-600">Fitur evaluasi sekunder yang memerlukan effort pengembangan lebih besar.</td>
+                    <td className="px-5 py-4 md:py-4.5 font-bold text-slate-900">Analytics Dashboard</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">60%</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">2 (Med)</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">80%</td>
+                    <td className="px-4 py-4 md:py-4.5 font-medium text-center">3 (High)</td>
+                    <td className="px-4 py-4 md:py-4.5 font-bold text-slate-900 text-center bg-slate-50">32.0</td>
+                    <td className="px-5 py-4 md:py-4.5 font-normal text-xs text-slate-600">Fitur evaluasi sekunder yang memerlukan effort pengembangan lebih besar.</td>
                   </tr>
                 </tbody>
               </table>
@@ -590,32 +590,32 @@ export default function GlacierCaseStudy() {
             <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-xs bg-white">
               <table className="w-full text-left border-collapse text-xs md:text-sm text-slate-700 min-w-[650px]">
                 <thead>
-                  <tr className="bg-slate-900 text-white border-b border-slate-900">
-                    <th className="p-3.5 md:p-4 font-bold uppercase text-xs tracking-wider w-1/3">Masalah</th>
-                    <th className="p-3.5 md:p-4 font-bold uppercase text-xs tracking-wider w-1/3">Fitur Solusi</th>
-                    <th className="p-3.5 md:p-4 font-bold uppercase text-xs tracking-wider w-1/3">Manfaat Bisnis & User</th>
+                  <tr className="bg-slate-900 text-white border-b-2 border-slate-900">
+                    <th className="px-6 py-5 md:py-6 font-bold uppercase text-xs tracking-wider w-1/3">Masalah</th>
+                    <th className="px-6 py-5 md:py-6 font-bold uppercase text-xs tracking-wider w-1/3">Fitur Solusi</th>
+                    <th className="px-6 py-5 md:py-6 font-bold uppercase text-xs tracking-wider w-1/3">Manfaat Bisnis & User</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200">
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-3.5 md:p-4 font-normal text-slate-600">Stok tidak sinkron antar file Excel cabang.</td>
-                    <td className="p-3.5 md:p-4 font-bold text-slate-900">Inventory Management</td>
-                    <td className="p-3.5 md:p-4 text-slate-700 font-medium">Memastikan data stok selalu akurat dan terpusat.</td>
+                    <td className="px-6 py-4 md:py-4.5 font-normal text-slate-600">Stok tidak sinkron antar file Excel cabang.</td>
+                    <td className="px-6 py-4 md:py-4.5 font-bold text-slate-900">Inventory Management</td>
+                    <td className="px-6 py-4 md:py-4.5 text-slate-700 font-medium">Memastikan data stok selalu akurat dan terpusat.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-3.5 md:p-4 font-normal text-slate-600">Perhitungan HPP memakan waktu dan rentan salah hitung.</td>
-                    <td className="p-3.5 md:p-4 font-bold text-slate-900">Automatic HPP Calculator</td>
-                    <td className="p-3.5 md:p-4 text-slate-700 font-medium">Mengurangi proses perhitungan manual secara instan.</td>
+                    <td className="px-6 py-4 md:py-4.5 font-normal text-slate-600">Perhitungan HPP memakan waktu dan rentan salah hitung.</td>
+                    <td className="px-6 py-4 md:py-4.5 font-bold text-slate-900">Automatic HPP Calculator</td>
+                    <td className="px-6 py-4 md:py-4.5 text-slate-700 font-medium">Mengurangi proses perhitungan manual secara instan.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-3.5 md:p-4 font-normal text-slate-600">Owner sulit memantau seluruh cabang secara konsisten.</td>
-                    <td className="p-3.5 md:p-4 font-bold text-slate-900">Dashboard Monitoring</td>
-                    <td className="p-3.5 md:p-4 text-slate-700 font-medium">Memudahkan monitoring operasional secara real-time.</td>
+                    <td className="px-6 py-4 md:py-4.5 font-normal text-slate-600">Owner sulit memantau seluruh cabang secara konsisten.</td>
+                    <td className="px-6 py-4 md:py-4.5 font-bold text-slate-900">Dashboard Monitoring</td>
+                    <td className="px-6 py-4 md:py-4.5 text-slate-700 font-medium">Memudahkan monitoring operasional secara real-time.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-3.5 md:p-4 font-normal text-slate-600">Stok sering habis tanpa diketahui lebih awal.</td>
-                    <td className="p-3.5 md:p-4 font-bold text-slate-900">Smart Reminder</td>
-                    <td className="p-3.5 md:p-4 text-slate-700 font-medium">Membantu pengisian stok lebih cepat sebelum kehabisan.</td>
+                    <td className="px-6 py-4 md:py-4.5 font-normal text-slate-600">Stok sering habis tanpa diketahui lebih awal.</td>
+                    <td className="px-6 py-4 md:py-4.5 font-bold text-slate-900">Smart Reminder</td>
+                    <td className="px-6 py-4 md:py-4.5 text-slate-700 font-medium">Membantu pengisian stok lebih cepat sebelum kehabisan.</td>
                   </tr>
                 </tbody>
               </table>
