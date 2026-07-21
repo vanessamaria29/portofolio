@@ -4,6 +4,7 @@ import React from "react"
 import { FadeIn } from "@/components/animations/fade-in"
 import { ArrowLeft, ArrowRight, User, Building2, Users, GraduationCap, CheckCircle2, Target, AlertCircle, ListTodo, ClipboardCheck, Sparkles } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
   <div className={`bg-white/75 backdrop-blur-md border border-slate-200/90 rounded-2xl p-6 md:p-10 shadow-sm my-8 ${className}`}>
@@ -74,7 +75,7 @@ export default function DigitalAssessmentCaseStudy() {
               <div className="pt-6 border-t border-slate-200 mt-2">
                 <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-4">Frameworks & Methodologies</span>
                 <div className="flex flex-wrap gap-2.5">
-                  {["Requirement Gathering", "Stakeholder Analysis", "User Journey Mapping", "MoSCoW Prioritization", "Rule-Based Weighted Scoring", "Product Roadmap", "Success Metrics"].map((framework) => (
+                  {["Scrum", "Requirement Gathering", "Stakeholder Analysis", "User Journey Mapping", "MoSCoW Prioritization", "Rule-Based Weighted Scoring", "Product Roadmap", "Success Metrics"].map((framework) => (
                     <span key={framework} className="px-3.5 py-2 bg-slate-100/90 text-slate-900 text-xs font-bold rounded-lg border border-slate-200 shadow-sm">
                       {framework}
                     </span>
@@ -628,9 +629,27 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 11: Refleksi */}
+        {/* SECTION 11: Project Management */}
+        <FadeIn delay={0.95}>
+          <SlideFrame index="11" title="Project Management">
+            <p className="text-base text-slate-800 font-semibold mb-6 leading-relaxed">
+              Proyek dikelola menggunakan pendekatan <strong>Scrum</strong> dengan <strong>Trello</strong> sebagai alat manajemen tugas. Seluruh pekerjaan dibagi ke dalam <em>backlog, to do, in progress, review,</em> dan <em>done</em> agar perkembangan proyek dapat dipantau secara transparan oleh seluruh anggota tim.
+            </p>
+            <div className="overflow-hidden rounded-xl border-2 border-slate-200 shadow-md bg-white">
+              <Image 
+                src="/images/trello-scrum-board.png" 
+                alt="Trello Scrum Board Digital Assessment" 
+                width={1200} 
+                height={675} 
+                className="w-full h-auto object-cover hover:scale-[1.01] transition-transform duration-500"
+              />
+            </div>
+          </SlideFrame>
+        </FadeIn>
+
+        {/* SECTION 12: Refleksi */}
         <FadeIn delay={1.0}>
-          <SlideFrame index="11" title="Refleksi">
+          <SlideFrame index="12" title="Refleksi">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><AlertCircle className="w-6 h-6" /></div>
