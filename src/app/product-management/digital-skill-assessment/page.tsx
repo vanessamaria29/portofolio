@@ -633,7 +633,7 @@ export default function DigitalAssessmentCaseStudy() {
         <FadeIn delay={0.95}>
           <SlideFrame index="11" title="Project Management">
             <p className="text-base text-slate-800 font-semibold mb-6 leading-relaxed">
-              Proyek dikelola menggunakan pendekatan <strong>Scrum</strong> dengan <strong>Trello</strong> sebagai alat manajemen tugas. Seluruh pekerjaan dibagi ke dalam <em>backlog, to do, in progress, review,</em> dan <em>done</em> agar perkembangan proyek dapat dipantau secara transparan oleh seluruh anggota tim.
+              Proyek dikelola menggunakan <strong>Scrum Framework</strong> dengan <strong>Trello</strong> sebagai <em>project management tool</em>. Seluruh fitur disusun pada <strong>Product Backlog</strong>, diprioritaskan ke <strong>Sprint Backlog</strong>, kemudian dikembangkan secara bertahap melalui <strong>Sprint 1 hingga Sprint 3</strong> sesuai prioritas pengembangan.
             </p>
             <div className="overflow-hidden rounded-xl border-2 border-slate-200 shadow-md bg-white">
               <Image 
