@@ -78,7 +78,7 @@ export default function DigitalAssessmentCaseStudy() {
                 <div className="pt-6 border-t border-slate-200 mt-2">
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-4">Frameworks & Methodologies</span>
                   <div className="flex flex-wrap gap-2.5">
-                    {["Scrum", "Requirement Gathering", "Stakeholder Analysis", "User Journey Mapping", "MoSCoW Prioritization", "Rule-Based Weighted Scoring", "Product Roadmap", "Success Metrics"].map((framework) => (
+                    {["Scrum", "Requirement Gathering", "Stakeholder Analysis", "User Journey Mapping", "MoSCoW Prioritization", "Rule-Based Weighted Scoring", "Success Metrics"].map((framework) => (
                       <span key={framework} className="px-3.5 py-2 bg-slate-100/90 text-slate-900 text-xs font-bold rounded-lg border border-slate-200 shadow-sm">
                         {framework}
                       </span>
@@ -603,34 +603,9 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 10: Roadmap */}
+        {/* SECTION 10: Project Management */}
         <FadeIn delay={0.9}>
-          <SlideFrame index="10" title="Roadmap">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 relative">
-              {[
-                { phase: "Fase 1", title: "Digital Assessment Platform", desc: "Peluncuran engine utama, registrasi, dan hasil tes sederhana (MVP)." },
-                { phase: "Fase 2", title: "Recommendation Engine", desc: "Integrasi sistem Rule-Based Weighted Scoring untuk pemetaan jurusan." },
-                { phase: "Fase 3", title: "Dashboard & Analytics", desc: "Pengembangan portal admin untuk memantau data lead secara analitik." },
-                { phase: "Fase 4", title: "Analytics Enhancement & Personalization", desc: "Peningkatan kapabilitas analitik dan personalisasi rekomendasi tingkat lanjut." },
-              ].map((rd, idx) => (
-                <div key={idx} className="flex flex-col relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-slate-900 text-white font-black flex items-center justify-center mb-4 shadow-md">
-                    {idx + 1}
-                  </div>
-                  <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl h-full shadow-sm">
-                    <span className="text-xs font-extrabold text-slate-900 uppercase tracking-widest mb-2 block">{rd.phase}</span>
-                    <h4 className="font-extrabold text-slate-900 mb-2 text-base">{rd.title}</h4>
-                    <p className="text-xs font-semibold text-slate-700 leading-relaxed">{rd.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </SlideFrame>
-        </FadeIn>
-
-        {/* SECTION 11: Project Management */}
-        <FadeIn delay={0.95}>
-          <SlideFrame index="11" title="Project Management">
+          <SlideFrame index="10" title="Project Management">
             <p className="text-base text-slate-800 font-semibold mb-6 leading-relaxed">
               Scrum diterapkan menggunakan <strong>Trello</strong> dengan pembagian <strong>Product Backlog, Sprint Backlog, To Do, In Progress, Review, dan Done</strong> untuk memastikan setiap fitur dikembangkan secara iteratif.
             </p>
@@ -646,9 +621,9 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 12: Refleksi */}
-        <FadeIn delay={1.0}>
-          <SlideFrame index="12" title="Refleksi">
+        {/* SECTION 11: Refleksi */}
+        <FadeIn delay={0.95}>
+          <SlideFrame index="11" title="Refleksi">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><AlertCircle className="w-6 h-6" /></div>
