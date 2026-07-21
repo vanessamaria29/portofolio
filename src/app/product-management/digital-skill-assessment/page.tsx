@@ -281,11 +281,11 @@ export default function DigitalAssessmentCaseStudy() {
           <SlideFrame index="05" title="Key Features">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: BarChart3, title: "Digital Competency Assessment", desc: "Mengukur empat kompetensi digital melalui 50 pertanyaan berbobot." },
-                { icon: Target, title: "Rule-Based Recommendation", desc: "Memberikan rekomendasi program studi berdasarkan weighted scoring." },
-                { icon: ClipboardCheck, title: "PDF Report", desc: "Menghasilkan laporan hasil assessment yang dapat diunduh." },
-                { icon: Layers, title: "Admin Dashboard", desc: "Monitoring data peserta dan hasil assessment secara terpusat." },
-                { icon: Users, title: "Lead Management", desc: "Mengelola data prospek untuk tindak lanjut admission." }
+                { icon: BarChart3, title: "Digital Competency Assessment", desc: "Mengukur empat kompetensi digital melalui 50 pertanyaan berbobot untuk memetakan kemampuan peserta." },
+                { icon: Target, title: "Rule-Based Recommendation", desc: "Memberikan rekomendasi program studi berdasarkan hasil weighted scoring yang transparan dan konsisten." },
+                { icon: ClipboardCheck, title: "Assessment Report", desc: "Menyajikan ringkasan hasil assessment yang dapat diunduh sebagai laporan pribadi peserta." },
+                { icon: Layers, title: "Admin Dashboard", desc: "Memantau data peserta, hasil assessment, serta statistik penggunaan platform dalam satu dashboard." },
+                { icon: Users, title: "Lead Management", desc: "Mengelola data calon mahasiswa hasil assessment untuk mendukung proses tindak lanjut oleh tim admission." }
               ].map((feat, idx) => {
                 const IconComp = feat.icon
                 return (
