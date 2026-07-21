@@ -44,7 +44,7 @@ export default function KonekinCaseStudy() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
               
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <div className="mb-8 w-full max-w-md mx-auto flex justify-center relative">
+                <div className="mb-8 w-full max-w-[250px] mx-auto flex justify-center relative">
                   <Image 
                     src="/images/konekin-cover.png"
                     alt="KONEKIN Cover"
