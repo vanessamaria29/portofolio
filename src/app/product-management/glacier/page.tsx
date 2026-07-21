@@ -97,18 +97,18 @@ export default function GlacierCaseStudy() {
                 </div>
               </div>
 
-              {/* Kolom Kanan: Logo Glacier (BESAR & DIBAGUSIN) */}
-              <div className="lg:col-span-5 flex items-center justify-center p-6 md:p-8">
-                <div className="relative group flex items-center justify-center w-full max-w-[380px]">
-                  {/* Subtle ambient glow behind logo */}
-                  <div className="absolute inset-0 bg-sky-200/60 rounded-full blur-2xl group-hover:bg-sky-300/80 transition-all duration-500 transform group-hover:scale-110"></div>
+              {/* Kolom Kanan: Logo Glacier (BESAR BANGEET) */}
+              <div className="lg:col-span-5 flex items-center justify-center p-2 md:p-4">
+                <div className="relative group flex items-center justify-center w-full">
+                  {/* Soft ambient glow behind logo */}
+                  <div className="absolute inset-0 bg-sky-200/50 rounded-full blur-3xl group-hover:bg-sky-300/70 transition-all duration-500 transform group-hover:scale-110"></div>
                   
                   <Image 
                     src="/images/glacier-logo.png"
                     alt="Logo Glacier"
-                    width={500}
-                    height={500}
-                    className="w-64 sm:w-72 md:w-80 lg:w-full max-w-[360px] h-auto object-contain relative z-10 transition-all duration-500 group-hover:scale-105 filter drop-shadow-md"
+                    width={800}
+                    height={800}
+                    className="w-full max-w-[480px] md:max-w-[550px] lg:max-w-[580px] h-auto object-contain relative z-10 transition-all duration-500 group-hover:scale-105 filter drop-shadow-lg"
                     priority
                   />
                 </div>
