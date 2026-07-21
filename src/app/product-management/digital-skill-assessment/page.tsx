@@ -319,17 +319,20 @@ export default function DigitalAssessmentCaseStudy() {
                 <div className="flex flex-col gap-0 relative ml-2">
                   <div className="absolute left-[13px] top-4 bottom-8 w-[2px] bg-slate-300 rounded-full"></div>
                   {[
-                    "Registrasi akun dengan data diri dasar",
-                    "Mengerjakan soal Assessment",
-                    "Melihat hasil analisis kemampuan digital",
-                    "Download laporan lengkap (PDF)",
-                    "Menerima rekomendasi jurusan UKRIDA"
+                    { title: "Registrasi Akun", desc: "Mengisi data diri untuk membuat akun." },
+                    { title: "Mengerjakan Digital Assessment", desc: "Menjawab 50 pertanyaan untuk mengukur kompetensi digital dan minat." },
+                    { title: "Melihat Hasil Assessment", desc: "Melihat skor kompetensi digital beserta penjelasannya." },
+                    { title: "Menerima Rekomendasi Program Studi", desc: "Sistem memberikan rekomendasi program studi berdasarkan Rule-Based Weighted Scoring." },
+                    { title: "Mengunduh Laporan Assessment", desc: "Mengunduh hasil assessment sebagai laporan pribadi." }
                   ].map((step, idx) => (
                     <div key={idx} className="flex items-start gap-4 pb-8 relative">
-                      <div className="w-7 h-7 rounded-full bg-slate-900 text-white font-black text-xs flex items-center justify-center relative z-10 shrink-0 shadow-md">
+                      <div className="w-7 h-7 rounded-full bg-slate-900 text-white font-black text-xs flex items-center justify-center relative z-10 shrink-0 shadow-md mt-0.5">
                         {idx + 1}
                       </div>
-                      <p className="text-sm font-bold text-slate-800 pt-1 leading-snug">{step}</p>
+                      <div>
+                        <h5 className="text-sm font-extrabold text-slate-900">{step.title}</h5>
+                        <p className="text-xs font-semibold text-slate-700 leading-relaxed mt-0.5">{step.desc}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -340,22 +343,25 @@ export default function DigitalAssessmentCaseStudy() {
                   <div className="p-2 rounded-lg bg-slate-900 text-white">
                     <Users className="w-5 h-5" />
                   </div>
-                  Journey Admission
+                  Journey Tim Admission
                 </h4>
                 <div className="flex flex-col gap-0 relative ml-2">
                   <div className="absolute left-[13px] top-4 bottom-8 w-[2px] bg-slate-300 rounded-full"></div>
                   {[
-                    "Melihat dashboard ringkasan",
-                    "Melihat data detail siswa & skor",
-                    "Mengelompokkan data prospect/lead",
-                    "Melakukan follow up via komunikasi langsung",
-                    "Monitoring konversi pendaftaran"
+                    { title: "Memantau Data Peserta", desc: "Melihat daftar peserta yang telah menyelesaikan assessment." },
+                    { title: "Melihat Hasil Assessment", desc: "Menganalisis skor kompetensi dan rekomendasi program studi setiap peserta." },
+                    { title: "Mengelompokkan Prospek", desc: "Mengelompokkan calon mahasiswa berdasarkan hasil assessment dan minat." },
+                    { title: "Melakukan Tindak Lanjut", desc: "Menghubungi calon mahasiswa yang potensial melalui proses admission." },
+                    { title: "Memantau Statistik & Konversi", desc: "Melihat jumlah peserta, tren assessment, dan konversi menjadi pendaftar." }
                   ].map((step, idx) => (
                     <div key={idx} className="flex items-start gap-4 pb-8 relative">
-                      <div className="w-7 h-7 rounded-full bg-slate-900 text-white font-black text-xs flex items-center justify-center relative z-10 shrink-0 shadow-md">
+                      <div className="w-7 h-7 rounded-full bg-slate-900 text-white font-black text-xs flex items-center justify-center relative z-10 shrink-0 shadow-md mt-0.5">
                         {idx + 1}
                       </div>
-                      <p className="text-sm font-bold text-slate-800 pt-1 leading-snug">{step}</p>
+                      <div>
+                        <h5 className="text-sm font-extrabold text-slate-900">{step.title}</h5>
+                        <p className="text-xs font-semibold text-slate-700 leading-relaxed mt-0.5">{step.desc}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
