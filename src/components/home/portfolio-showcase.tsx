@@ -76,8 +76,7 @@ export function PortfolioShowcase() {
           {/* Product Management */}
           <div className="flex flex-col gap-6">
             <FadeIn direction="up">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">Product Management</h2>
-              <p className="text-lg text-slate-600 mt-2">Strategi, riset, dan eksekusi produk digital.</p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">Case Studies</h2>
             </FadeIn>
             <motion.div 
               variants={containerVariants}
