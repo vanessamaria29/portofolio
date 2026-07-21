@@ -77,6 +77,7 @@ export function PortfolioShowcase() {
     {
       title: "Glacier",
       description: "Platform operasional berbasis web yang membantu Sahabat Mixue Group mengelola stok, menghitung HPP, dan memantau performa cabang secara terintegrasi.",
+      imageSrc: "/images/glacier-logo.png",
       href: "/product-management/glacier"
     }
   ]

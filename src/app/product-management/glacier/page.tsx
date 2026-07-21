@@ -47,51 +47,68 @@ export default function GlacierCaseStudy() {
         {/* HERO SECTION */}
         <FadeIn direction="up">
           <div className="bg-white/80 backdrop-blur-md border border-slate-200/90 rounded-2xl p-8 md:p-12 shadow-sm mb-12 relative overflow-hidden">
-            <div className="flex flex-col gap-6 max-w-4xl">
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-slate-800 uppercase tracking-widest bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full w-fit">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-900" />
-                Case Study
-              </span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none">
-                Glacier
-              </h1>
-              
-              <p className="text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-3xl">
-                Platform operasional berbasis web yang membantu <strong className="text-slate-900 font-extrabold underline decoration-slate-300">Sahabat Mixue Group</strong> mengelola stok, menghitung HPP, dan memantau performa cabang secara lebih efisien melalui sistem yang terintegrasi.
-              </p>
+              {/* Kolom Kiri: Informasi Case Study */}
+              <div className="lg:col-span-8 flex flex-col gap-6">
+                <span className="inline-flex items-center gap-2 text-xs font-extrabold text-slate-800 uppercase tracking-widest bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full w-fit">
+                  <span className="w-2.5 h-2.5 rounded-full bg-slate-900" />
+                  Case Study
+                </span>
+                
+                <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none">
+                  Glacier
+                </h1>
+                
+                <p className="text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-3xl">
+                  Platform operasional berbasis web yang membantu <strong className="text-slate-900 font-extrabold underline decoration-slate-300">Sahabat Mixue Group</strong> mengelola stok, menghitung HPP, dan memantau performa cabang secara lebih efisien melalui sistem yang terintegrasi.
+                </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-200 mt-2">
-                <div className="flex flex-col gap-1.5">
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Peran</span>
-                  <span className="font-bold text-slate-900 text-sm md:text-base">Product Manager • Project Manager</span>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-200 mt-2">
+                  <div className="flex flex-col gap-1.5">
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Peran</span>
+                    <span className="font-bold text-slate-900 text-sm md:text-base">Product Manager • Project Manager</span>
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Durasi</span>
+                    <span className="font-bold text-slate-900 text-sm md:text-base">3 Bulan</span>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-1.5">
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Durasi</span>
-                  <span className="font-bold text-slate-900 text-sm md:text-base">3 Bulan</span>
+
+                <div className="pt-6 border-t border-slate-200 mt-2">
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-4">Frameworks & Methodologies</span>
+                  <div className="flex flex-wrap gap-2.5">
+                    {[
+                      "Requirement Gathering",
+                      "Business Process Analysis (As-Is & To-Be)",
+                      "Stakeholder Analysis",
+                      "User Journey Mapping",
+                      "MoSCoW Prioritization",
+                      "RICE Prioritization",
+                      "Scrum",
+                      "Product Roadmap",
+                      "Success Metrics"
+                    ].map((framework) => (
+                      <span key={framework} className="px-3.5 py-2 bg-slate-100/90 text-slate-900 text-xs font-bold rounded-lg border border-slate-200 shadow-sm">
+                        {framework}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-slate-200 mt-2">
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-4">Frameworks & Methodologies</span>
-                <div className="flex flex-wrap gap-2.5">
-                  {[
-                    "Requirement Gathering",
-                    "Business Process Analysis (As-Is & To-Be)",
-                    "Stakeholder Analysis",
-                    "User Journey Mapping",
-                    "MoSCoW Prioritization",
-                    "RICE Prioritization",
-                    "Scrum",
-                    "Product Roadmap",
-                    "Success Metrics"
-                  ].map((framework) => (
-                    <span key={framework} className="px-3.5 py-2 bg-slate-100/90 text-slate-900 text-xs font-bold rounded-lg border border-slate-200 shadow-sm">
-                      {framework}
-                    </span>
-                  ))}
-                </div>
+              {/* Kolom Kanan: Logo Glacier */}
+              <div className="lg:col-span-4 flex items-center justify-center p-4">
+                <Image 
+                  src="/images/glacier-logo.png"
+                  alt="Logo Glacier"
+                  width={300}
+                  height={300}
+                  className="w-48 md:w-60 h-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+                  priority
+                />
               </div>
+
             </div>
           </div>
         </FadeIn>
