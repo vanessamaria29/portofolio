@@ -71,6 +71,7 @@ export function PortfolioShowcase() {
     {
       title: "Digital Skill Assessment Platform",
       description: "Platform digital yang membantu siswa SMA memetakan kemampuan digital serta memberikan rekomendasi jurusan yang sesuai.",
+      imageSrc: "/images/Logo_UKRIDA_300x300.png",
       href: "/product-management/digital-skill-assessment"
     }
   ]
