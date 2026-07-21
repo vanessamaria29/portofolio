@@ -70,7 +70,7 @@ export function PortfolioShowcase() {
     },
     {
       title: "Digital Skill Assessment Platform",
-      description: "Platform berbasis AI yang membantu siswa SMA memetakan kemampuan digital serta memberikan rekomendasi jurusan yang sesuai.",
+      description: "Platform digital yang membantu siswa SMA memetakan kemampuan digital serta memberikan rekomendasi jurusan yang sesuai.",
       href: "/product-management/digital-skill-assessment"
     }
   ]

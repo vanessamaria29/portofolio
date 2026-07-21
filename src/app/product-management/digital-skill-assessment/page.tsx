@@ -52,7 +52,7 @@ export default function DigitalAssessmentCaseStudy() {
               </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed">
-                Platform berbasis AI yang membantu siswa SMA memetakan kemampuan digital serta memberikan rekomendasi jurusan yang sesuai, sekaligus mendukung proses branding dan admission UKRIDA.
+                Platform digital yang membantu siswa SMA memetakan kompetensi digital dan memberikan rekomendasi program studi menggunakan metode Rule-Based Weighted Scoring.
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-slate-200 mt-2">
@@ -69,7 +69,7 @@ export default function DigitalAssessmentCaseStudy() {
               <div className="pt-6 border-t border-slate-200 mt-2">
                 <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-4">Frameworks</span>
                 <div className="flex flex-wrap gap-2">
-                  {["Requirement Gathering", "Stakeholder Analysis", "User Persona", "User Journey Mapping", "MoSCoW Prioritization", "Product Roadmap", "Success Metrics"].map((framework) => (
+                  {["Requirement Gathering", "Stakeholder Analysis", "User Journey Mapping", "MoSCoW Prioritization", "Rule-Based Weighted Scoring", "Product Roadmap", "Success Metrics"].map((framework) => (
                     <span key={framework} className="px-3 py-1.5 bg-slate-50 text-slate-700 text-xs font-medium rounded-full border border-slate-200">
                       {framework}
                     </span>
@@ -205,8 +205,7 @@ export default function DigitalAssessmentCaseStudy() {
                 </h4>
                 <ul className="text-sm text-slate-500 space-y-3 line-through">
                   <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-200 shrink-0 mt-0.5" /> Mobile App</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-200 shrink-0 mt-0.5" /> Machine Learning Recs</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-200 shrink-0 mt-0.5" /> Integrasi PMB</li>
+                                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-200 shrink-0 mt-0.5" /> Integrasi PMB</li>
                 </ul>
               </div>
             </div>
@@ -306,9 +305,101 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 7: Solusi yang Ditawarkan */}
+
+        {/* SECTION 7: Cara Kerja Recommendation Engine */}
+        <FadeIn delay={0.65}>
+          <SlideFrame index="07" title="Recommendation Engine">
+            <p className="text-sm text-slate-600 mb-8 leading-relaxed">
+              Sistem rekomendasi pada Digital Skill Assessment tidak menggunakan Artificial Intelligence, tetapi menggunakan metode <strong>Rule-Based Weighted Scoring</strong>. Nilai rekomendasi dihitung berdasarkan hasil assessment kompetensi digital dan minat siswa sehingga proses penilaian bersifat transparan dan mudah dipahami.
+            </p>
+
+            {/* Tahap 1 */}
+            <div className="mb-10">
+              <h4 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Tahap 1: Perhitungan Kompetensi Digital</h4>
+              <p className="text-xs text-slate-500 mb-6">
+                Setiap jawaban memiliki bobot terhadap empat kompetensi digital. Setelah seluruh assessment selesai, sistem menghitung skor setiap kompetensi dan menormalisasinya ke skala 0–100. Kompetensi yang dinilai meliputi <strong>Literasi Digital, Logika Komputasi, Computational Thinking, dan Digital Problem Solving</strong>.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-between bg-slate-50 border border-slate-200 p-4 rounded-xl">
+                <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm text-xs font-bold text-slate-700 text-center w-full sm:w-auto">Jawaban Assessment</div>
+                <div className="text-slate-300 font-bold rotate-90 sm:rotate-0">→</div>
+                <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm text-xs font-bold text-slate-700 text-center w-full sm:w-auto">Akumulasi Bobot</div>
+                <div className="text-slate-300 font-bold rotate-90 sm:rotate-0">→</div>
+                <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm text-xs font-bold text-slate-700 text-center w-full sm:w-auto">Normalisasi Nilai</div>
+                <div className="text-slate-300 font-bold rotate-90 sm:rotate-0">→</div>
+                <div className="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg shadow-sm text-xs font-bold text-white text-center w-full sm:w-auto">Skor Kompetensi (0–100)</div>
+              </div>
+            </div>
+
+            {/* Tahap 2 */}
+            <div className="mb-10">
+              <h4 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Tahap 2: Perhitungan Rekomendasi Program Studi</h4>
+              <p className="text-xs text-slate-500 mb-6">
+                Setiap program studi memiliki komposisi bobot kompetensi yang berbeda sehingga menghasilkan rekomendasi yang sesuai dengan karakteristik masing-masing program studi.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <div className="p-5 border border-slate-200 bg-white shadow-sm rounded-xl">
+                  <h5 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-slate-800" /> Sistem Informasi
+                  </h5>
+                  <ul className="space-y-3">
+                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Literasi Digital</span><span className="font-bold text-slate-900">35%</span></li>
+                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Logika Komputasi</span><span className="font-bold text-slate-900">20%</span></li>
+                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Computational Thinking</span><span className="font-bold text-slate-900">20%</span></li>
+                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Digital Problem Solving</span><span className="font-bold text-slate-900">25%</span></li>
+                  </ul>
+                </div>
+
+                <div className="p-5 border border-slate-200 bg-white shadow-sm rounded-xl">
+                  <h5 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-slate-400" /> Informatika
+                  </h5>
+                  <ul className="space-y-3">
+                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Literasi Digital</span><span className="font-bold text-slate-900">15%</span></li>
+                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Logika Komputasi</span><span className="font-bold text-slate-900">30%</span></li>
+                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Computational Thinking</span><span className="font-bold text-slate-900">35%</span></li>
+                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Digital Problem Solving</span><span className="font-bold text-slate-900">20%</span></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Tahap 3 */}
+            <div>
+              <h4 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Tahap 3: Penyesuaian Berdasarkan Minat</h4>
+              <p className="text-xs text-slate-500 mb-6">
+                Hasil akhir diperoleh dari kombinasi antara skor kompetensi digital (70%) dan hasil asesmen minat siswa (30%).
+              </p>
+              
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4 bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-md">
+                <div className="flex flex-col items-center bg-slate-800/50 p-4 rounded-lg border border-slate-700 w-full md:w-auto">
+                  <span className="text-3xl font-black text-white">70%</span>
+                  <span className="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Skor Kompetensi</span>
+                </div>
+                
+                <span className="text-2xl font-bold text-slate-500">+</span>
+                
+                <div className="flex flex-col items-center bg-slate-800/50 p-4 rounded-lg border border-slate-700 w-full md:w-auto">
+                  <span className="text-3xl font-black text-white">30%</span>
+                  <span className="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Skor Minat</span>
+                </div>
+                
+                <span className="text-2xl font-bold text-slate-500">→</span>
+                
+                <div className="flex flex-col items-center bg-white p-4 rounded-lg w-full md:w-auto">
+                  <span className="text-xl font-black text-slate-900 uppercase">Final Recommendation Score</span>
+                </div>
+              </div>
+            </div>
+            
+          </SlideFrame>
+        </FadeIn>
+
+        {/* SECTION 08: Solusi yang Ditawarkan */}
         <FadeIn delay={0.7}>
-          <SlideFrame index="07" title="Solusi yang Ditawarkan">
+          <SlideFrame index="08" title="Solusi yang Ditawarkan">
             <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
               <table className="w-full text-left border-collapse text-sm text-slate-700 min-w-[800px]">
                 <thead>
@@ -326,7 +417,7 @@ export default function DigitalAssessmentCaseStudy() {
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
                     <td className="p-4">Sulit memilih program studi yang paling tepat di universitas.</td>
-                    <td className="p-4 font-semibold text-slate-900">AI-driven Recommendation Logic</td>
+                    <td className="p-4 font-semibold text-slate-900">Rule-Based Recommendation</td>
                     <td className="p-4 text-slate-600">Mengarahkan siswa ke prodi yang relevan, menekan angka putus kuliah.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
@@ -352,7 +443,7 @@ export default function DigitalAssessmentCaseStudy() {
 
         {/* SECTION 8: Success Metrics */}
         <FadeIn delay={0.8}>
-          <SlideFrame index="08" title="Success Metrics">
+          <SlideFrame index="09" title="Success Metrics">
             <div className="flex flex-col gap-6">
               
               <div className="p-6 md:p-8 bg-slate-900 rounded-xl text-white flex flex-col md:flex-row md:items-center gap-6 justify-between shadow-md">
@@ -387,16 +478,16 @@ export default function DigitalAssessmentCaseStudy() {
 
         {/* SECTION 9: Roadmap */}
         <FadeIn delay={0.9}>
-          <SlideFrame index="09" title="Roadmap">
+          <SlideFrame index="10" title="Roadmap">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6 relative">
               {/* Connector Line for Desktop */}
               <div className="hidden lg:block absolute top-6 left-10 right-10 h-[2px] bg-slate-200 z-0"></div>
               
               {[
-                { phase: "Fase 1", title: "Assessment Platform", desc: "Peluncuran engine utama, registrasi, dan hasil tes sederhana (MVP)." },
-                { phase: "Fase 2", title: "Dashboard Admission", desc: "Pengembangan portal admin untuk memantau data lead." },
-                { phase: "Fase 3", title: "AI Recommendation", desc: "Integrasi algoritma yang lebih cerdas untuk pemetaan jurusan." },
-                { phase: "Fase 4", title: "Gamification & Mobile", desc: "Penambahan sistem badge dan adaptasi khusus aplikasi mobile." },
+                { phase: "Fase 1", title: "Digital Assessment Platform", desc: "Peluncuran engine utama, registrasi, dan hasil tes sederhana (MVP)." },
+                { phase: "Fase 2", title: "Recommendation Engine", desc: "Integrasi sistem Rule-Based Weighted Scoring untuk pemetaan jurusan." },
+                { phase: "Fase 3", title: "Dashboard & Analytics", desc: "Pengembangan portal admin untuk memantau data lead secara analitik." },
+                { phase: "Fase 4", title: "Mobile App & Integrasi PMB", desc: "Adaptasi ke aplikasi seluler dan sinkronisasi dengan sistem admisi kampus." },
               ].map((rd, idx) => (
                 <div key={idx} className="flex flex-col relative z-10 pt-1 lg:pt-0">
                   <div className="w-12 h-12 rounded-full bg-slate-100 border-4 border-white shadow-sm flex items-center justify-center mb-4 lg:mx-auto">
@@ -415,7 +506,7 @@ export default function DigitalAssessmentCaseStudy() {
 
         {/* SECTION 10: Refleksi */}
         <FadeIn delay={1.0}>
-          <SlideFrame index="10" title="Refleksi">
+          <SlideFrame index="11" title="Refleksi">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
                 <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-4"><AlertCircle className="w-5 h-5 text-slate-700" /></div>
@@ -428,14 +519,14 @@ export default function DigitalAssessmentCaseStudy() {
                 <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-4"><ListTodo className="w-5 h-5 text-slate-700" /></div>
                 <h4 className="font-bold text-slate-900 mb-3">Trade-Off</h4>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Memprioritaskan stabilitas fitur assessment dan pencatatan data dasar (core feature) dibandingkan langsung mengintegrasikan model AI Recommendation yang kompleks di tahap awal. Fokus dijaga pada penyelesaian kebutuhan fundamental terlebih dahulu.
+                  Pada tahap perancangan, saya memilih menggunakan metode Rule-Based Weighted Scoring karena lebih transparan, mudah diimplementasikan, dan sesuai dengan kebutuhan awal platform. Pendekatan ini memungkinkan sistem memberikan rekomendasi secara konsisten tanpa kompleksitas model machine learning.
                 </p>
               </div>
               <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
                 <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-4"><ClipboardCheck className="w-5 h-5 text-slate-700" /></div>
                 <h4 className="font-bold text-slate-900 mb-3">Rencana Pengembangan</h4>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Apabila platform dikembangkan lebih lanjut, langkah prioritas berikutnya adalah integrasi AI Recommendation engine, pengemasan ke dalam aplikasi mobile mandiri, serta integrasi data langsung dengan sistem Penerimaan Mahasiswa Baru kampus.
+                  Apabila platform dikembangkan lebih lanjut, langkah prioritas berikutnya adalah pengemasan ke dalam aplikasi mobile mandiri, gamifikasi, serta integrasi data langsung dengan sistem Penerimaan Mahasiswa Baru (PMB) kampus.
                 </p>
               </div>
             </div>
