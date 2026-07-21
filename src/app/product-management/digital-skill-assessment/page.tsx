@@ -153,30 +153,64 @@ export default function DigitalAssessmentCaseStudy() {
         {/* SECTION 3: Stakeholder Analysis */}
         <FadeIn delay={0.3}>
           <SlideFrame index="03" title="Stakeholder Analysis">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { title: "Siswa SMA", goal: "Mendapatkan arahan karir dan jurusan yang tepat.", pain: "Kebingungan memilih prodi, tidak tahu bakat digital diri.", needs: "Tes yang cepat, hasil instan, dan penjelasan yang mudah dimengerti." },
-                { title: "Tim Admission", goal: "Mendapatkan prospek pendaftaran berkualitas.", pain: "Pemasaran door-to-door yang memakan waktu dan kurang tepat sasaran.", needs: "Dashboard analitik untuk mengelompokkan calon mahasiswa berdasarkan minat." },
-                { title: "Institusi (UKRIDA)", goal: "Peningkatan citra institusi dan jumlah mahasiswa.", pain: "Kalah saing dengan metode rekrutmen kampus lain yang lebih modern.", needs: "Platform yang dapat diluncurkan dengan cepat dan mencerminkan kemajuan teknologi." },
-                { title: "Mahasiswa Developer", goal: "Menyelesaikan proyek nyata dengan impact tinggi.", pain: "Terbatasnya sumber daya dan waktu pengembangan yang ketat.", needs: "Kebutuhan sistem (requirements) yang jelas, prioritas terstruktur, dan ruang eksplorasi teknologi." },
+                { 
+                  title: "Siswa SMA", 
+                  goals: ["Mengetahui kompetensi digital yang dimiliki.", "Mendapatkan rekomendasi program studi yang sesuai."], 
+                  pains: ["Bingung menentukan program studi setelah lulus.", "Belum mengetahui kemampuan digital yang dimiliki."], 
+                  needs: ["Assessment yang mudah diikuti.", "Hasil yang cepat dan mudah dipahami.", "Rekomendasi program studi yang sesuai dengan kemampuan."] 
+                },
+                { 
+                  title: "Tim Admission UKRIDA", 
+                  goals: ["Memperoleh data calon mahasiswa yang potensial.", "Mempermudah proses tindak lanjut setelah assessment."], 
+                  pains: ["Sulit mengelola data calon mahasiswa secara terpusat.", "Proses promosi dan follow-up masih dilakukan secara manual."], 
+                  needs: ["Dashboard untuk melihat hasil assessment siswa.", "Data peserta yang terstruktur dan mudah dianalisis.", "Informasi minat siswa untuk mendukung proses follow-up."] 
+                },
+                { 
+                  title: "UKRIDA", 
+                  goals: ["Meningkatkan branding digital institusi.", "Menarik lebih banyak calon mahasiswa."], 
+                  pains: ["Belum memiliki media assessment digital sebagai sarana promosi.", "Persaingan antar perguruan tinggi semakin tinggi."], 
+                  needs: ["Platform yang mampu meningkatkan citra institusi.", "Media promosi yang modern, interaktif, dan mudah diakses calon mahasiswa."] 
+                },
               ].map((stakeholder, idx) => (
-                <div key={idx} className="p-6 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm flex flex-col gap-4">
-                  <h4 className="font-extrabold text-slate-900 text-lg border-b border-slate-200 pb-3 flex items-center justify-between">
-                    <span>{stakeholder.title}</span>
-                    <span className="text-xs font-bold bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">Stakeholder</span>
+                <div key={idx} className="p-6 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm flex flex-col justify-between h-full gap-5">
+                  <h4 className="font-extrabold text-slate-900 text-xl border-b-2 border-slate-200 pb-3">
+                    {stakeholder.title}
                   </h4>
-                  <div className="flex flex-col gap-4 pt-1">
-                    <div className="bg-white/90 p-3.5 rounded-lg border border-slate-200">
-                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Goal</span>
-                      <p className="text-sm font-semibold text-slate-800">{stakeholder.goal}</p>
+                  <div className="flex flex-col gap-4 flex-grow">
+                    <div className="bg-white/90 p-4 rounded-lg border border-slate-200">
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Goal</span>
+                      <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
+                        {stakeholder.goals.map((g, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="text-slate-900 font-black">•</span>
+                            <span>{g}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="bg-white/90 p-3.5 rounded-lg border border-slate-200">
-                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Pain Point</span>
-                      <p className="text-sm font-semibold text-slate-800">{stakeholder.pain}</p>
+                    <div className="bg-white/90 p-4 rounded-lg border border-slate-200">
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Pain Point</span>
+                      <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
+                        {stakeholder.pains.map((p, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="text-slate-900 font-black">•</span>
+                            <span>{p}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="bg-white/90 p-3.5 rounded-lg border border-slate-200">
-                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Needs</span>
-                      <p className="text-sm font-semibold text-slate-800">{stakeholder.needs}</p>
+                    <div className="bg-white/90 p-4 rounded-lg border border-slate-200">
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Needs</span>
+                      <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
+                        {stakeholder.needs.map((n, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="text-slate-900 font-black">•</span>
+                            <span>{n}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
