@@ -5,6 +5,7 @@ import { Container } from "@/components/layout/container"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerChildren, StaggerItem } from "@/components/animations/stagger-children"
 import { motion } from "framer-motion"
+import { Award, Briefcase, Users } from "lucide-react"
 
 export function ExperiencePreview() {
   const achievements = [
@@ -40,8 +41,8 @@ export function ExperiencePreview() {
     "Anggota Aktif | UKM Samaritan"
   ]
 
-  const CardGlassmorphism = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
-    <div className={`h-full bg-white/40 backdrop-blur-md border border-slate-100/50 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow ${className}`}>
+  const CardGlassmorphism = ({ children, className = "", id }: { children: React.ReactNode, className?: string, id?: string }) => (
+    <div id={id} className={`h-full bg-white/40 backdrop-blur-md border border-slate-100/50 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow ${className}`}>
       {children}
     </div>
   )
@@ -64,9 +65,11 @@ export function ExperiencePreview() {
           
           {/* Kolom 1: Prestasi Utama */}
           <StaggerItem>
-            <CardGlassmorphism>
-              <div className="flex items-center gap-3 pb-4 border-b border-slate-200/50 mb-6">
-                <span className="text-2xl">🏆</span>
+            <CardGlassmorphism id="achievements" className="scroll-mt-24">
+              <div className="flex items-center gap-4 pb-5 border-b border-slate-200/50 mb-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 shadow-sm">
+                  <Award className="w-6 h-6" />
+                </div>
                 <h3 className="text-lg font-bold text-text-primary uppercase tracking-wide">Prestasi Utama</h3>
               </div>
               <ul className="flex flex-col gap-4">
@@ -85,8 +88,10 @@ export function ExperiencePreview() {
           {/* Kolom 2: Pengalaman Kerja & Magang */}
           <StaggerItem>
             <CardGlassmorphism>
-              <div className="flex items-center gap-3 pb-4 border-b border-slate-200/50 mb-6">
-                <span className="text-2xl">💼</span>
+              <div className="flex items-center gap-4 pb-5 border-b border-slate-200/50 mb-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
+                  <Briefcase className="w-6 h-6" />
+                </div>
                 <h3 className="text-lg font-bold text-text-primary uppercase tracking-wide leading-tight">Pengalaman Kerja & Magang</h3>
               </div>
               <div className="flex flex-col gap-8">
@@ -114,9 +119,11 @@ export function ExperiencePreview() {
 
           {/* Kolom 3: Organisasi & Kepanitiaan */}
           <StaggerItem>
-            <CardGlassmorphism>
-              <div className="flex items-center gap-3 pb-4 border-b border-slate-200/50 mb-6">
-                <span className="text-2xl">👥</span>
+            <CardGlassmorphism id="organisasi" className="scroll-mt-24">
+              <div className="flex items-center gap-4 pb-5 border-b border-slate-200/50 mb-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 shadow-sm">
+                  <Users className="w-6 h-6" />
+                </div>
                 <h3 className="text-lg font-bold text-text-primary uppercase tracking-wide leading-tight">Organisasi & Kepanitiaan</h3>
               </div>
               <ul className="flex flex-col gap-4">

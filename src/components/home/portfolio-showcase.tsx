@@ -55,8 +55,14 @@ const containerVariants = {
 export function PortfolioShowcase() {
   const pmProjects = [
     {
+      title: "KONEKIN",
+      description: "Platform yang menghubungkan UMKM dengan talenta mahasiswa untuk menyediakan layanan digital secara aman, terverifikasi, dan transparan.",
+      imageSrc: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
+      href: "/product-management/konekin"
+    },
+    {
       title: "Onium",
-      description: "Aplikasi pelacak keuangan minimalis dengan entri 1-klik, menyederhanakan manajemen pengeluaran harian pengguna tanpa kerumitan akuntansi.",
+      description: "Platform yang membantu pedagang UMKM mengelola transaksi, piutang, dan arus kas melalui pencatatan digital yang sederhana dan mudah digunakan.",
       imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
       href: "/product-management/onium"
     },
@@ -123,7 +129,7 @@ export function PortfolioShowcase() {
   ]
 
   return (
-    <Section className="py-24 bg-transparent">
+    <Section id="portfolio" className="py-24 bg-transparent scroll-mt-24">
       <Container>
         <div className="flex flex-col gap-16">
           

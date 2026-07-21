@@ -39,56 +39,57 @@ export default function KonekinCaseStudy() {
             01. PROJECT OVERVIEW
             ========================================= */}
         <FadeIn direction="up">
-          <div className="bg-white border border-slate-200 rounded-xl p-10 md:p-14 shadow-sm mb-12 relative overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-              <div className="lg:col-span-8 flex flex-col justify-center">
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4 block">Kajian Produk</span>
-                
-                <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
-                  KONEKIN
-                </h1>
-                <h2 className="text-lg md:text-xl font-medium text-slate-700 mb-10 leading-relaxed">
-                  Platform yang menghubungkan UMKM dengan mahasiswa untuk menyediakan layanan digital seperti desain promosi, pengelolaan media sosial, dan website sederhana melalui proses yang aman, terverifikasi, dan transparan.
-                </h2>
-                
-                <div className="space-y-6 text-sm text-slate-700 leading-relaxed">
-                  <div>
-                    <strong className="text-slate-900 block mb-1">Peluang Pasar:</strong>
-                    Saat ini banyak UMKM yang mulai beralih ke digital, namun terhalang oleh tingginya biaya layanan digital dari agensi profesional.
-                  </div>
-                  <div>
-                    <strong className="text-slate-900 block mb-1">Permasalahan Pengguna:</strong>
-                    UMKM membutuhkan layanan digital yang terjangkau dan aman. Di sisi lain, talenta mahasiswa membutuhkan proyek nyata untuk membangun portofolio profesional sebelum lulus, tetapi kesulitan menemukan klien yang terpercaya.
-                  </div>
-                  <div>
-                    <strong className="text-slate-900 block mb-1">Peluang Bisnis:</strong>
-                    Terdapat celah antara kebutuhan UMKM yang tidak memiliki anggaran besar dan kebutuhan mahasiswa akan pengalaman praktis. Platform lokal yang transparan dan terverifikasi sangat dibutuhkan sebagai alternatif dari platform freelance global.
-                  </div>
-                  <div>
-                    <strong className="text-slate-900 block mb-1">Dampak yang Diharapkan:</strong>
-                    Membantu UMKM mendapatkan layanan digital dengan harga terjangkau melalui proses yang aman, sekaligus memfasilitasi mahasiswa membangun portofolio profesional mereka.
-                  </div>
+          <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12 relative overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+              
+              <div className="lg:col-span-7 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 mb-4">
+                  <span className="w-2 h-2 rounded-full bg-blue-500" />
+                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Case Study</span>
                 </div>
                 
-                <div className="flex flex-wrap items-center gap-6 text-sm font-medium text-slate-600 mt-10 pt-6 border-t border-slate-100">
-                  <span><strong className="text-slate-900">Peran:</strong> Product Management Intern (Simulasi)</span>
-                  <span className="text-slate-300">|</span>
-                  <span><strong className="text-slate-900">Durasi:</strong> 3 Bulan</span>
+                <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tight mb-4">
+                  KONEKIN
+                </h1>
+                <p className="font-sans text-base text-slate-600 leading-relaxed mb-6">
+                  Platform yang menghubungkan UMKM dengan mahasiswa untuk menyediakan layanan digital seperti desain promosi, pengelolaan media sosial, dan website sederhana melalui proses yang aman, terverifikasi, dan transparan.
+                </p>
+                
+                <div className="grid grid-cols-[100px_1fr] gap-y-3 text-xs md:text-sm font-medium text-slate-600 bg-white/50 backdrop-blur-sm px-4 py-4 rounded-lg border border-slate-100">
+                  <strong className="text-slate-900">Peran:</strong>
+                  <span>Product Manager, Ketua Tim</span>
+                  
+                  <strong className="text-slate-900">Durasi:</strong>
+                  <span>1 Bulan</span>
+                  
+                  <strong className="text-slate-900">Frameworks:</strong>
+                  <span className="leading-relaxed">Lean Canvas {" • "} User Persona {" • "} Market Validation {" • "} User Journey Mapping {" • "} RICE Prioritization {" • "} SWOT Analysis {" • "} Product Roadmap {" • "} North Star Metric</span>
                 </div>
               </div>
 
-              <div className="lg:col-span-4 bg-slate-50 border border-slate-200 p-8 rounded-lg">
-                <h3 className="text-xs font-semibold text-slate-900 uppercase tracking-wider mb-6 pb-4 border-b border-slate-200">Tahapan Analisis</h3>
-                <ul className="space-y-4 text-sm text-slate-600">
-                  <li>Identifikasi Masalah</li>
-                  <li>Tujuan & Ruang Lingkup Produk</li>
-                  <li>Target Pengguna (Persona)</li>
-                  <li>Validasi Pasar</li>
-                  <li>Lean Canvas & Market Sizing</li>
-                  <li>Pemetaan Perjalanan Pengguna</li>
-                  <li>Prioritas Fitur (RICE)</li>
-                </ul>
+              <div className="lg:col-span-5 bg-white/50 backdrop-blur-sm border border-slate-100 rounded-lg p-6 flex flex-col gap-4">
+                <h3 className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 border-b border-slate-200 pb-2">Kajian Produk</h3>
+                
+                <div className="space-y-4 text-xs md:text-sm text-slate-700 leading-relaxed">
+                  <div>
+                    <span className="text-slate-500 block mb-1 font-medium">Peluang Pasar</span>
+                    <span className="font-medium">Saat ini banyak UMKM yang mulai beralih ke digital, namun terhalang oleh tingginya biaya layanan digital dari agensi profesional.</span>
+                  </div>
+                  <div className="border-t border-slate-100 pt-3">
+                    <span className="text-slate-500 block mb-1 font-medium">Permasalahan Pengguna</span>
+                    <span className="font-medium">UMKM membutuhkan layanan digital yang terjangkau dan aman. Di sisi lain, talenta mahasiswa membutuhkan proyek nyata untuk membangun portofolio profesional sebelum lulus, tetapi kesulitan menemukan klien yang terpercaya.</span>
+                  </div>
+                  <div className="border-t border-slate-100 pt-3">
+                    <span className="text-slate-500 block mb-1 font-medium">Peluang Bisnis</span>
+                    <span className="font-medium">Terdapat celah antara kebutuhan UMKM yang tidak memiliki anggaran besar dan kebutuhan mahasiswa akan pengalaman praktis. Platform lokal yang transparan dan terverifikasi sangat dibutuhkan sebagai alternatif dari platform freelance global.</span>
+                  </div>
+                  <div className="border-t border-slate-100 pt-3">
+                    <span className="text-slate-500 block mb-1 font-medium">Dampak yang Diharapkan</span>
+                    <span className="font-medium">Membantu UMKM mendapatkan layanan digital dengan harga terjangkau melalui proses yang aman, sekaligus memfasilitasi mahasiswa membangun portofolio profesional mereka.</span>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
         </FadeIn>
@@ -97,7 +98,7 @@ export default function KonekinCaseStudy() {
             02. PROBLEM STATEMENT
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="02" title="Pernyataan Masalah">
+          <SlideFrame index="1" title="Pernyataan Masalah">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
               <div className="border border-slate-200 bg-white p-8 rounded-lg">
@@ -136,7 +137,7 @@ export default function KonekinCaseStudy() {
             03. PRODUCT GOALS
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="03" title="Tujuan Produk">
+          <SlideFrame index="2" title="Tujuan Produk">
             <div className="mb-6">
               <p className="text-sm text-slate-700 leading-relaxed">
                 Platform KONEKIN dirancang untuk memberikan keuntungan bagi tiga pihak secara bersamaan.
@@ -164,7 +165,7 @@ export default function KonekinCaseStudy() {
             04. USER PERSONA
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="04" title="User Persona">
+          <SlideFrame index="3" title="User Persona">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
               
               {/* Persona 1 */}
@@ -263,7 +264,7 @@ export default function KonekinCaseStudy() {
             05. PRODUCT SCOPE
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="05" title="Cakupan MVP (Minimum Viable Product)">
+          <SlideFrame index="4" title="Cakupan MVP (Minimum Viable Product)">
             <div className="mb-6">
               <p className="text-sm text-slate-700 leading-relaxed">
                 Pada tahap awal pengembangan, KONEKIN berfokus pada fitur-fitur yang paling penting untuk menyelesaikan permasalahan utama pengguna, yaitu membangun kepercayaan dalam proses transaksi serta mempermudah UMKM menemukan mahasiswa yang sesuai. Fitur lain yang belum menjadi prioritas akan dipertimbangkan pada tahap pengembangan berikutnya.
@@ -316,7 +317,7 @@ export default function KonekinCaseStudy() {
             06. MARKET VALIDATION
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="06" title="Validasi Pasar & Riset">
+          <SlideFrame index="5" title="Validasi Pasar & Riset">
             <div className="mb-10">
               <p className="text-sm text-slate-700 leading-relaxed">
                 Halaman ini bertujuan menunjukkan proses validasi yang dilakukan sebelum merancang solusi KONEKIN.
@@ -422,7 +423,7 @@ export default function KonekinCaseStudy() {
             07. LEAN CANVAS
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="07" title="Lean Canvas">
+          <SlideFrame index="6" title="Lean Canvas">
             <div className="w-full bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
               <img 
                 src="/images/konekin-lean-canvas.png" 
@@ -438,7 +439,7 @@ export default function KonekinCaseStudy() {
             08. SWOT ANALYSIS
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="08" title="Analisis SWOT">
+          <SlideFrame index="7" title="Analisis SWOT">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white border border-slate-200 p-8 rounded-lg">
                 <span className="text-slate-900 font-semibold uppercase text-xs tracking-wider block mb-4 border-b border-slate-100 pb-2">Kekuatan (Strengths)</span>
@@ -479,7 +480,7 @@ export default function KonekinCaseStudy() {
             09. USER JOURNEY
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="09" title="Pemetaan Perjalanan Pengguna">
+          <SlideFrame index="8" title="Pemetaan Perjalanan Pengguna">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
               
               <div className="bg-white border border-slate-200 rounded-lg p-8">
@@ -487,34 +488,34 @@ export default function KonekinCaseStudy() {
                 <div className="space-y-8">
                   {[
                     {
-                      phase: "Cari Talenta", 
-                      goal: "Mencari talenta mahasiswa yang sesuai dengan kebutuhan layanan digital.", 
-                      pain: "Khawatir tertipu atau mendapatkan hasil yang buruk.", 
-                      opp: "Tampilkan rekomendasi talenta yang paling relevan secara otomatis."
+                      phase: "Membuat Proyek", 
+                      goal: "Membuat kebutuhan proyek layanan digital dengan cepat.", 
+                      pain: "UMKM sering kesulitan menjelaskan kebutuhan proyek secara rinci.", 
+                      opp: "Sediakan template brief yang memandu UMKM mengisi tujuan, kebutuhan, anggaran awal, dan tenggat waktu."
                     },
                     {
-                      phase: "Lihat Profil Terverifikasi", 
-                      goal: "Memastikan kredibilitas dan kemampuan mahasiswa.", 
-                      pain: "Sulit menilai kualitas portofolio jika terlalu kompleks.", 
-                      opp: "Tampilkan portofolio, pengalaman proyek, dan status verifikasi dalam satu halaman profil."
+                      phase: "Meninjau Lamaran Mahasiswa", 
+                      goal: "Menemukan talenta mahasiswa yang paling sesuai.", 
+                      pain: "Sulit membandingkan kemampuan setiap pelamar hanya dari deskripsi singkat.", 
+                      opp: "Tampilkan portofolio, harga penawaran, pengalaman proyek, dan status verifikasi dalam satu halaman sehingga UMKM dapat membandingkan kandidat dengan mudah."
                     },
                     {
-                      phase: "Diskusi Proyek", 
-                      goal: "Menyampaikan kebutuhan spesifik proyek.", 
-                      pain: "Tidak terbiasa menyusun dokumen brief atau spesifikasi detail.", 
-                      opp: "Sediakan formulir singkat berbasis pilihan ganda (guided brief)."
+                      phase: "Memilih Talenta & Memulai Kolaborasi", 
+                      goal: "Memulai proyek dengan mahasiswa yang telah dipilih.", 
+                      pain: "Komunikasi baru dapat dimulai setelah mahasiswa dipilih.", 
+                      opp: "Aktifkan fitur chat secara otomatis setelah UMKM menerima salah satu pelamar."
                     },
                     {
-                      phase: "Pembayaran Escrow", 
-                      goal: "Melakukan pembayaran secara aman.", 
-                      pain: "Takut uang hilang dibawa kabur jika mahasiswa menghilang.", 
-                      opp: "Sistem menahan uang UMKM sampai proyek disetujui selesai."
+                      phase: "Pembayaran Escrow & Monitoring Progress", 
+                      goal: "Melakukan pembayaran dengan aman tanpa khawatir kehilangan dana.", 
+                      pain: "UMKM khawatir proyek berhenti di tengah jalan setelah pembayaran dilakukan.", 
+                      opp: "Dana disimpan di escrow dan dicairkan secara bertahap berdasarkan milestone yang telah diselesaikan."
                     },
                     {
-                      phase: "Proyek Selesai & Review", 
-                      goal: "Menerima hasil layanan dan memberikan ulasan.", 
-                      pain: "Proses revisi yang tidak terstruktur atau berlarut-larut.", 
-                      opp: "Fasilitasi alur persetujuan dan batasan revisi secara sistem."
+                      phase: "Review & Penyelesaian", 
+                      goal: "Menyelesaikan proyek dan memberikan penilaian kepada mahasiswa.", 
+                      pain: "Sulit mengetahui kualitas mahasiswa jika tidak ada riwayat pekerjaan sebelumnya.", 
+                      opp: "Setelah proyek selesai, UMKM memberikan rating dan ulasan yang akan tampil pada profil mahasiswa sebagai referensi bagi UMKM lainnya."
                     }
                   ].map((step, idx) => (
                     <div key={idx} className="border-l-2 border-slate-200 pl-6 relative">
@@ -536,33 +537,33 @@ export default function KonekinCaseStudy() {
                   {[
                     {
                       phase: "Registrasi", 
-                      goal: "Membuat akun profesional.", 
-                      pain: "Belum memiliki pengalaman kerja yang dapat ditunjukkan.", 
-                      opp: "Pandu mahasiswa untuk menampilkan tugas kuliah terbaik mereka."
+                      goal: "Membuat akun sebagai talenta mahasiswa.", 
+                      pain: "Harus membuktikan bahwa benar merupakan mahasiswa aktif.", 
+                      opp: "Sediakan proses registrasi sederhana dengan verifikasi identitas mahasiswa."
                     },
                     {
-                      phase: "Verifikasi Identitas", 
-                      goal: "Mendapatkan status terverifikasi di platform.", 
-                      pain: "Proses verifikasi dokumen sering memakan waktu lama.", 
-                      opp: "Gunakan proses verifikasi identitas yang sederhana namun tetap terpercaya agar mahasiswa dapat segera mulai menerima proyek."
+                      phase: "Verifikasi Akun", 
+                      goal: "Memperoleh akses untuk melamar proyek.", 
+                      pain: "Mahasiswa perlu melalui proses verifikasi sebelum dapat menggunakan platform.", 
+                      opp: "Seluruh mahasiswa yang lolos verifikasi dapat langsung melamar proyek, sedangkan Badge Talenta Terverifikasi diberikan kepada mahasiswa yang melampirkan surat rekomendasi dosen sebagai bentuk validasi tambahan."
                     },
                     {
-                      phase: "Menerima Proyek", 
-                      goal: "Mendapatkan klien nyata pertama.", 
-                      pain: "Kesulitan bersaing dengan freelancer yang sudah berpengalaman.", 
-                      opp: "Fokuskan algoritma pencarian pada tarif kompetitif dan kesesuaian kategori."
+                      phase: "Melamar Proyek", 
+                      goal: "Mengajukan penawaran pada proyek yang sesuai.", 
+                      pain: "Harus menentukan harga penawaran yang kompetitif.", 
+                      opp: "Mahasiswa dapat mengirim proposal singkat beserta harga penawaran sesuai ruang lingkup pekerjaan."
                     },
                     {
-                      phase: "Menyelesaikan Proyek", 
-                      goal: "Bekerja secara profesional dan sesuai kesepakatan waktu.", 
-                      pain: "Permintaan revisi klien yang terus berubah-ubah tanpa batas.", 
-                      opp: "Sediakan ruang kerja digital dengan kesepakatan tertulis yang mengikat."
+                      phase: "Kolaborasi & Update Progress", 
+                      goal: "Menyelesaikan proyek sesuai kesepakatan.", 
+                      pain: "Klien dapat meminta revisi di luar ruang lingkup proyek.", 
+                      opp: "Komunikasi dilakukan melalui fitur chat dan setiap progres dikirim berdasarkan milestone yang telah disepakati."
                     },
                     {
-                      phase: "Portofolio Bertambah", 
-                      goal: "Mendapatkan bayaran dan pengalaman tercatat.", 
-                      pain: "Lupa atau malas menyusun portofolio secara manual di platform lain.", 
-                      opp: "Otomatisasi publikasi hasil proyek ke halaman profil publik mahasiswa."
+                      phase: "Pembayaran & Reputasi", 
+                      goal: "Menerima pembayaran dan membangun reputasi profesional.", 
+                      pain: "Mahasiswa membutuhkan bukti pengalaman agar lebih mudah memperoleh proyek berikutnya.", 
+                      opp: "Setelah setiap milestone disetujui, dana escrow dicairkan. Setelah proyek selesai, mahasiswa menerima rating dan ulasan dari UMKM, sementara hasil proyek otomatis ditambahkan ke portofolio."
                     }
                   ].map((step, idx) => (
                     <div key={idx} className="border-l-2 border-slate-200 pl-6 relative">
@@ -586,7 +587,7 @@ export default function KonekinCaseStudy() {
             10. RICE PRIORITIZATION
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="10" title="Prioritas Fitur (RICE)">
+          <SlideFrame index="9" title="Prioritas Fitur (RICE)">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse text-sm text-slate-700 min-w-[800px]">
                 <thead>
@@ -643,46 +644,75 @@ export default function KonekinCaseStudy() {
             11. VALUE-DRIVEN SOLUTIONS
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="11" title="Solusi yang Ditawarkan">
+          <SlideFrame index="10" title="Solusi yang Ditawarkan">
             <div className="mb-8">
               <p className="text-sm text-slate-700 leading-relaxed max-w-3xl">
                 Setiap fitur dirancang untuk menjawab keluhan utama pengguna agar produk benar-benar bermanfaat.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 p-6 rounded-lg">
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Masalah</span>
-                <p className="text-sm text-slate-700 mb-6 pb-6 border-b border-slate-100">Takut tertipu saat menggunakan layanan digital dari penyedia yang belum terpercaya.</p>
-                
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Fitur Solusi</span>
-                <p className="text-sm font-semibold text-slate-900 mb-6 pb-6 border-b border-slate-100">Sistem Escrow</p>
-                
-                <span className="text-xs font-semibold text-slate-900 uppercase tracking-wider block mb-2">Manfaat</span>
-                <p className="text-sm text-slate-700">Uang aman ditahan platform, UMKM tenang, mahasiswa pasti dibayar.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              
+              <div className="bg-white border border-slate-200 p-5 rounded-lg flex flex-col gap-3">
+                <div>
+                  <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">Masalah</span>
+                  <p className="text-sm text-slate-700">Takut tertipu saat menggunakan layanan digital dari penyedia yang belum terpercaya.</p>
+                </div>
+                <div className="border-t border-slate-100 pt-3">
+                  <span className="text-[10px] font-semibold text-blue-600 uppercase tracking-wider block mb-1">Fitur Solusi</span>
+                  <p className="text-sm font-semibold text-slate-900">Sistem Escrow</p>
+                </div>
+                <div className="border-t border-slate-100 pt-3">
+                  <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Manfaat</span>
+                  <p className="text-sm text-slate-700">Uang aman ditahan platform, UMKM tenang, mahasiswa pasti dibayar.</p>
+                </div>
               </div>
 
-              <div className="bg-white border border-slate-200 p-6 rounded-lg">
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Masalah</span>
-                <p className="text-sm text-slate-700 mb-6 pb-6 border-b border-slate-100">Sering terjadi miskomunikasi karena kebutuhan proyek tidak dijelaskan secara rinci.</p>
-                
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Fitur Solusi</span>
-                <p className="text-sm font-semibold text-slate-900 mb-6 pb-6 border-b border-slate-100">Brief Proyek Terstruktur</p>
-                
-                <span className="text-xs font-semibold text-slate-900 uppercase tracking-wider block mb-2">Manfaat</span>
-                <p className="text-sm text-slate-700">Membantu UMKM menjelaskan kebutuhan proyek secara lebih jelas sehingga mengurangi miskomunikasi dan revisi.</p>
+              <div className="bg-white border border-slate-200 p-5 rounded-lg flex flex-col gap-3">
+                <div>
+                  <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">Masalah</span>
+                  <p className="text-sm text-slate-700">Sering terjadi miskomunikasi karena kebutuhan proyek tidak dijelaskan secara rinci.</p>
+                </div>
+                <div className="border-t border-slate-100 pt-3">
+                  <span className="text-[10px] font-semibold text-blue-600 uppercase tracking-wider block mb-1">Fitur Solusi</span>
+                  <p className="text-sm font-semibold text-slate-900">Brief Proyek Terstruktur</p>
+                </div>
+                <div className="border-t border-slate-100 pt-3">
+                  <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Manfaat</span>
+                  <p className="text-sm text-slate-700">Membantu UMKM menjelaskan kebutuhan proyek secara lebih jelas sehingga mengurangi miskomunikasi dan revisi.</p>
+                </div>
               </div>
 
-              <div className="bg-white border border-slate-200 p-6 rounded-lg">
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Masalah</span>
-                <p className="text-sm text-slate-700 mb-6 pb-6 border-b border-slate-100">Mahasiswa butuh bukti pengalaman nyata.</p>
-                
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Fitur Solusi</span>
-                <p className="text-sm font-semibold text-slate-900 mb-6 pb-6 border-b border-slate-100">Riwayat Portofolio Publik</p>
-                
-                <span className="text-xs font-semibold text-slate-900 uppercase tracking-wider block mb-2">Manfaat</span>
-                <p className="text-sm text-slate-700">Mahasiswa bisa memakai tautan profil mereka sebagai lampiran saat mencari pekerjaan resmi.</p>
+              <div className="bg-white border border-slate-200 p-5 rounded-lg flex flex-col gap-3">
+                <div>
+                  <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">Masalah</span>
+                  <p className="text-sm text-slate-700">Mahasiswa butuh bukti pengalaman nyata.</p>
+                </div>
+                <div className="border-t border-slate-100 pt-3">
+                  <span className="text-[10px] font-semibold text-blue-600 uppercase tracking-wider block mb-1">Fitur Solusi</span>
+                  <p className="text-sm font-semibold text-slate-900">Riwayat Portofolio Publik</p>
+                </div>
+                <div className="border-t border-slate-100 pt-3">
+                  <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Manfaat</span>
+                  <p className="text-sm text-slate-700">Mahasiswa bisa memakai tautan profil mereka sebagai lampiran saat mencari pekerjaan resmi.</p>
+                </div>
               </div>
+
+              <div className="bg-white border border-slate-200 p-5 rounded-lg flex flex-col gap-3">
+                <div>
+                  <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">Masalah</span>
+                  <p className="text-sm text-slate-700">UMKM sulit memilih talenta yang sesuai dengan anggaran.</p>
+                </div>
+                <div className="border-t border-slate-100 pt-3">
+                  <span className="text-[10px] font-semibold text-blue-600 uppercase tracking-wider block mb-1">Fitur Solusi</span>
+                  <p className="text-sm font-semibold text-slate-900">Sistem Penawaran (Bidding)</p>
+                </div>
+                <div className="border-t border-slate-100 pt-3">
+                  <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Manfaat</span>
+                  <p className="text-sm text-slate-700">Mahasiswa dapat mengajukan harga sesuai ruang lingkup proyek, sehingga UMKM memiliki beberapa alternatif sebelum menentukan pilihan.</p>
+                </div>
+              </div>
+
             </div>
           </SlideFrame>
         </FadeIn>
@@ -691,7 +721,7 @@ export default function KonekinCaseStudy() {
             12. SUCCESS METRICS
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="12" title="Indikator Keberhasilan">
+          <SlideFrame index="11" title="Indikator Keberhasilan">
             <div className="bg-slate-900 rounded-lg p-8 mb-8 text-center">
               <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-3">North Star Metric</span>
               <h4 className="text-2xl font-semibold text-white mb-4">Jumlah Proyek yang Berhasil Diselesaikan</h4>
@@ -725,7 +755,7 @@ export default function KonekinCaseStudy() {
             13. PRODUCT ROADMAP
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="13" title="Rencana Pengembangan (Roadmap)">
+          <SlideFrame index="12" title="Rencana Pengembangan (Roadmap)">
             <div className="space-y-4">
               {[
                 { 
@@ -762,7 +792,7 @@ export default function KonekinCaseStudy() {
             14. REFLECTION
             ========================================= */}
         <FadeIn direction="up">
-          <SlideFrame index="14" title="Refleksi dan Pembelajaran">
+          <SlideFrame index="13" title="Refleksi dan Pembelajaran">
             <div className="bg-white border border-slate-200 p-8 rounded-lg space-y-6 text-sm text-slate-700 leading-relaxed">
               <div>
                 <strong className="text-slate-900 block mb-2">Tantangan</strong>
@@ -774,7 +804,7 @@ export default function KonekinCaseStudy() {
               </div>
               <div>
                 <strong className="text-slate-900 block mb-2">Rencana Perbaikan</strong>
-                Pada iterasi berikutnya, saya ingin mengembangkan mekanisme penyelesaian sengketa, sistem refund, serta dashboard analitik agar pengalaman pengguna menjadi lebih transparan.
+                Apabila KONEKIN dikembangkan lebih lanjut, saya akan mengeksplorasi fitur seperti penyelesaian sengketa, sistem refund, dan dashboard analitik untuk meningkatkan pengalaman pengguna.
               </div>
             </div>
           </SlideFrame>

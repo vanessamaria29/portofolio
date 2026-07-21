@@ -6,28 +6,28 @@ import { ExperiencePreview } from "@/components/home/experience-preview"
 import { ContactCTA } from "@/components/home/contact-cta"
 
 export const metadata: Metadata = {
-  title: "Alex | Senior Product Manager & UX Strategist",
-  description: "Portfolio of Alex, a Senior Product Manager specializing in user experience and frontend execution. Available for new opportunities.",
+  title: "Vanessa | Product Management Portfolio",
+  description: "Portofolio Product Management dari Vanessa, mahasiswi Sistem Informasi semester 5 yang mencari kesempatan magang di bidang Product Management & IT Project Management.",
   openGraph: {
-    title: "Alex | Product Manager Portfolio",
-    description: "Portfolio of Alex, a Senior Product Manager specializing in user experience and frontend execution.",
+    title: "Vanessa | Product Management Portfolio",
+    description: "Portofolio Product Management dari Vanessa, mahasiswi Sistem Informasi semester 5.",
     url: "https://portfolio.com",
-    siteName: "Alex Portfolio",
+    siteName: "Vanessa Portfolio",
     images: [
       {
         url: "https://portfolio.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Alex - Product Manager Portfolio",
+        alt: "Vanessa - Product Management Portfolio",
       },
     ],
-    locale: "en_US",
+    locale: "id_ID",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alex | Product Manager Portfolio",
-    description: "Building products that balance business goals with user needs.",
+    title: "Vanessa | Product Management Portfolio",
+    description: "Portofolio Product Management dari Vanessa.",
     images: ["https://portfolio.com/twitter-image.jpg"],
   },
 }
@@ -38,12 +38,12 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Alex",
-    jobTitle: "Senior Product Manager",
+    name: "Vanessa",
+    jobTitle: "Product Management Intern",
     url: "https://portfolio.com",
     sameAs: [
-      "https://linkedin.com/in/alex",
-      "https://github.com/alex",
+      "https://linkedin.com/in/vanessa",
+      "https://github.com/vanessa",
     ],
   }
 

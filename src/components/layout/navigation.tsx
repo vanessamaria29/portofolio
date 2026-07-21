@@ -13,14 +13,36 @@ const Navigation = React.forwardRef<HTMLElement, NavigationProps>(
   ({ className, ...props }, ref) => {
     const pathname = usePathname()
     const [scrolled, setScrolled] = useState(false)
+    const [activeSection, setActiveSection] = useState("")
 
     useEffect(() => {
       const handleScroll = () => {
         setScrolled(window.scrollY > 20)
       }
       window.addEventListener("scroll", handleScroll, { passive: true })
-      return () => window.removeEventListener("scroll", handleScroll)
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      }, { rootMargin: "-20% 0px -50% 0px" })
+
+      const sections = document.querySelectorAll("section[id]")
+      sections.forEach((section) => observer.observe(section))
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll)
+        sections.forEach((section) => observer.unobserve(section))
+      }
     }, [])
+
+    const navLinks = [
+      { name: "About", href: "/#about", id: "about" },
+      { name: "Portofolio", href: "/#portfolio", id: "portfolio" },
+      { name: "Experience", href: "/#experience", id: "experience" },
+    ]
 
     return (
       <header
@@ -42,7 +64,22 @@ const Navigation = React.forwardRef<HTMLElement, NavigationProps>(
             >
               Vanessa.
             </Link>
-
+            <nav className="hidden md:flex items-center gap-2">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.id}
+                  href={link.href} 
+                  className={cn(
+                    "px-4 py-2 text-sm font-medium rounded-full transition-all duration-300",
+                    activeSection === link.id 
+                      ? "bg-purple-100 text-purple-700 font-bold" 
+                      : "text-slate-600 hover:text-purple-600 hover:bg-slate-50"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
           </div>
           <div className="flex items-center gap-4">
             <Link 

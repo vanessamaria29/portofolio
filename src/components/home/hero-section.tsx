@@ -76,7 +76,7 @@ function InteractivePhoto() {
 
 export function HeroSection() {
   return (
-    <Section className="py-20 md:py-32 overflow-hidden relative bg-transparent">
+    <Section id="about" className="py-20 md:py-32 overflow-hidden relative bg-transparent scroll-mt-20">
       <Container>
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10">
           

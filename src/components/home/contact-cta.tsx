@@ -17,14 +17,14 @@ export function ContactCTA() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent" />
             
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-6">
-              Let's build something impactful together.
+              Mari bangun produk digital yang berdampak bersama.
             </h2>
             <p className="text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed">
-              I'm currently open to new product management opportunities. If you're looking for someone who can bridge the gap between engineering and business, let's talk.
+              Saya sedang mencari peluang magang di bidang Product Management. Jika tim Anda mencari seseorang yang mampu menjembatani sisi teknis, bisnis, dan kebutuhan pengguna, mari berdiskusi.
             </p>
             <HoverLift>
               <Button size="lg" className="rounded-full px-8 py-6 text-base group bg-slate-900 hover:bg-slate-800 transition-colors shadow-md hover:shadow-lg">
-                Let's Talk / Let's Connect
+                Mari Berdiskusi
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </HoverLift>
