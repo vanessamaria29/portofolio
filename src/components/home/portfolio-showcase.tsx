@@ -63,7 +63,7 @@ export function PortfolioShowcase() {
     {
       title: "Onium",
       description: "Platform yang membantu pedagang UMKM mengelola transaksi, piutang, dan arus kas melalui pencatatan digital yang sederhana dan mudah digunakan.",
-      imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+      imageSrc: "/images/onium-ui.png",
       href: "/product-management/onium"
     },
     {
