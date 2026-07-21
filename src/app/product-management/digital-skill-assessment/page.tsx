@@ -2,7 +2,7 @@
 
 import React from "react"
 import { FadeIn } from "@/components/animations/fade-in"
-import { ArrowLeft, ArrowRight, User, Building2, Users, GraduationCap, CheckCircle2, Target, AlertCircle, ListTodo, ClipboardCheck, Sparkles } from "lucide-react"
+import { ArrowLeft, ArrowRight, User, Building2, Users, CheckCircle2, Target, AlertCircle, ListTodo, ClipboardCheck, Sparkles, BarChart3, Layers } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -89,35 +89,25 @@ export default function DigitalAssessmentCaseStudy() {
         {/* SECTION 1: Latar Belakang */}
         <FadeIn delay={0.1}>
           <SlideFrame index="01" title="Latar Belakang">
-            <div className="prose prose-slate max-w-none text-slate-700 space-y-4">
-              <p className="text-base md:text-lg leading-relaxed text-slate-800 font-medium">
-                Platform ini dikembangkan berdasarkan observasi mendalam terhadap tantangan yang dihadapi oleh berbagai pihak dalam ekosistem pendidikan, khususnya pada tahap transisi dari sekolah menengah ke perguruan tinggi. Terdapat kesenjangan nyata antara pemahaman siswa mengenai potensi diri dengan informasi akademik yang tersedia.
-              </p>
-              
-              <div className="bg-white/70 backdrop-blur-sm border border-slate-200 rounded-xl p-6 my-6 space-y-3">
-                <h4 className="font-bold text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">Poin Masalah Utama:</h4>
-                <ul className="space-y-3">
-                  {[
-                    "Siswa SMA seringkali belum mengetahui secara pasti kemampuan digital yang mereka miliki secara terukur.",
-                    "Siswa mengalami kesulitan dalam menentukan pilihan jurusan perkuliahan yang paling sesuai dengan potensi tersebut.",
-                    "Di sisi institusi, UKRIDA belum memiliki media assessment digital yang interaktif dan mudah diakses secara luas.",
-                    "Tim Admission kesulitan memperoleh data analitik yang mendalam mengenai profil, bakat, dan minat calon mahasiswa.",
-                    "Strategi promosi kampus yang ada saat ini masih menggunakan pendekatan konvensional dan belum berbasis data analitik."
-                  ].map((poin, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-slate-800 font-semibold text-sm md:text-base">
-                      <div className="w-2 h-2 rounded-full bg-slate-900 shrink-0 mt-2"></div>
-                      <span>{poin}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm">
+                <h4 className="font-extrabold text-slate-900 text-base mb-2 border-b border-slate-200 pb-2">Masalah Siswa</h4>
+                <p className="text-sm text-slate-700 font-semibold leading-relaxed">
+                  Siswa SMA belum mengetahui secara pasti kemampuan digital yang dimiliki serta mengalami kesulitan menentukan jurusan kuliah yang sesuai.
+                </p>
               </div>
-
-              <div className="p-5 bg-white/80 backdrop-blur-md border-2 border-slate-900/80 text-slate-900 rounded-xl shadow-sm flex items-center gap-4">
-                <div className="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center shrink-0">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <p className="text-sm md:text-base font-bold leading-relaxed">
-                  Digitalisasi proses admission melalui assessment ini merupakan peluang strategis untuk menjaring prospek potensial secara data-driven, sekaligus memberikan nilai tambah yang nyata bagi calon mahasiswa sebelum mereka memutuskan mendaftar.
+              <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm">
+                <h4 className="font-extrabold text-slate-900 text-base mb-2 border-b border-slate-200 pb-2">Masalah UKRIDA</h4>
+                <p className="text-sm text-slate-700 font-semibold leading-relaxed">
+                  UKRIDA belum memiliki media assessment digital dan tim admission kesulitan memperoleh data analitik calon mahasiswa secara terpusat.
+                </p>
+              </div>
+              <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-900 rounded-xl shadow-sm">
+                <h4 className="font-extrabold text-slate-900 text-base mb-2 border-b border-slate-200 pb-2 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-slate-900" /> Peluang Digitalisasi
+                </h4>
+                <p className="text-sm text-slate-800 font-bold leading-relaxed">
+                  Menjaring prospek potensial secara data-driven sekaligus memberikan nilai tambah nyata bagi calon mahasiswa sebelum mendaftar.
                 </p>
               </div>
             </div>
@@ -127,12 +117,11 @@ export default function DigitalAssessmentCaseStudy() {
         {/* SECTION 2: Tujuan Produk */}
         <FadeIn delay={0.2}>
           <SlideFrame index="02" title="Tujuan Produk">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { icon: User, title: "Untuk Siswa", desc: "Memberikan visibilitas terhadap potensi digital individu dan memberikan rekomendasi program studi yang presisi dan relevan dengan kemampuan mereka." },
-                { icon: Building2, title: "Untuk UKRIDA", desc: "Meningkatkan brand awareness sebagai kampus teknologi yang inovatif serta memodernisasi saluran interaksi dengan calon mahasiswa baru." },
-                { icon: Users, title: "Untuk Tim Admission", desc: "Membangun database prospek (leads) yang terstruktur dan berkualitas untuk strategi pemasaran dan akuisisi mahasiswa baru yang lebih terukur." },
-                { icon: GraduationCap, title: "Untuk Mahasiswa SI", desc: "Menyediakan studi kasus pengembangan perangkat lunak secara nyata dan end-to-end yang dapat diimplementasikan di tingkat perguruan tinggi." }
+                { icon: User, title: "Untuk Siswa", desc: "Memberikan visibilitas terhadap potensi digital individu dan memberikan rekomendasi program studi yang presisi dan relevan." },
+                { icon: Users, title: "Untuk Tim Admission", desc: "Membangun database prospek (leads) yang terstruktur dan berkualitas untuk strategi akuisisi mahasiswa baru yang terukur." },
+                { icon: Building2, title: "Untuk Institusi (UKRIDA)", desc: "Meningkatkan brand awareness sebagai kampus teknologi yang inovatif serta memodernisasi saluran interaksi promosi." }
               ].map((item, idx) => {
                 const IconComp = item.icon
                 return (
@@ -158,21 +147,21 @@ export default function DigitalAssessmentCaseStudy() {
               {[
                 { 
                   title: "Siswa SMA", 
-                  goals: ["Mengetahui kompetensi digital yang dimiliki.", "Mendapatkan rekomendasi program studi yang sesuai."], 
-                  pains: ["Bingung menentukan program studi setelah lulus.", "Belum mengetahui kemampuan digital yang dimiliki."], 
-                  needs: ["Assessment yang mudah diikuti.", "Hasil yang cepat dan mudah dipahami.", "Rekomendasi program studi yang sesuai dengan kemampuan."] 
+                  goal: "Mengetahui kompetensi digital yang dimiliki dan memperoleh rekomendasi jurusan.", 
+                  pain: "Kesulitan menentukan program studi yang sesuai setelah lulus.", 
+                  need: "Assessment yang cepat dan hasil rekomendasi yang mudah dipahami." 
                 },
                 { 
                   title: "Tim Admission UKRIDA", 
-                  goals: ["Memperoleh data calon mahasiswa yang potensial.", "Mempermudah proses tindak lanjut setelah assessment."], 
-                  pains: ["Sulit mengelola data calon mahasiswa secara terpusat.", "Proses promosi dan follow-up masih dilakukan secara manual."], 
-                  needs: ["Dashboard untuk melihat hasil assessment siswa.", "Data peserta yang terstruktur dan mudah dianalisis.", "Informasi minat siswa untuk mendukung proses follow-up."] 
+                  goal: "Memperoleh data calon mahasiswa potensial dan mempermudah tindak lanjut.", 
+                  pain: "Proses promosi dan follow-up calon mahasiswa masih dilakukan secara manual.", 
+                  need: "Dashboard analitik untuk melihat data peserta secara terstruktur." 
                 },
                 { 
                   title: "UKRIDA", 
-                  goals: ["Meningkatkan branding digital institusi.", "Menarik lebih banyak calon mahasiswa."], 
-                  pains: ["Belum memiliki media assessment digital sebagai sarana promosi.", "Persaingan antar perguruan tinggi semakin tinggi."], 
-                  needs: ["Platform yang mampu meningkatkan citra institusi.", "Media promosi yang modern, interaktif, dan mudah diakses calon mahasiswa."] 
+                  goal: "Meningkatkan branding digital institusi dan menarik calon mahasiswa.", 
+                  pain: "Belum memiliki media assessment digital interaktif sebagai sarana promosi.", 
+                  need: "Platform promosi modern yang mampu meningkatkan citra institusi." 
                 },
               ].map((stakeholder, idx) => (
                 <div key={idx} className="p-6 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm flex flex-col justify-between h-full gap-5">
@@ -181,37 +170,16 @@ export default function DigitalAssessmentCaseStudy() {
                   </h4>
                   <div className="flex flex-col gap-5 flex-grow">
                     <div>
-                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Goal</span>
-                      <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
-                        {stakeholder.goals.map((g, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="text-slate-900 font-black">•</span>
-                            <span>{g}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Goal</span>
+                      <p className="text-sm font-semibold text-slate-800 leading-relaxed">{stakeholder.goal}</p>
                     </div>
                     <div>
-                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Pain Point</span>
-                      <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
-                        {stakeholder.pains.map((p, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="text-slate-900 font-black">•</span>
-                            <span>{p}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Pain Point</span>
+                      <p className="text-sm font-semibold text-slate-800 leading-relaxed">{stakeholder.pain}</p>
                     </div>
                     <div>
-                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-2">Needs</span>
-                      <ul className="space-y-1.5 text-sm font-semibold text-slate-800">
-                        {stakeholder.needs.map((n, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="text-slate-900 font-black">•</span>
-                            <span>{n}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Needs</span>
+                      <p className="text-sm font-semibold text-slate-800 leading-relaxed">{stakeholder.need}</p>
                     </div>
                   </div>
                 </div>
@@ -220,7 +188,7 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 4: MoSCoW Prioritization */}
+        {/* SECTION 4: Requirement Prioritization (MoSCoW) */}
         <FadeIn delay={0.4}>
           <SlideFrame index="04" title="Requirement Prioritization (MoSCoW)">
             <p className="text-base text-slate-800 font-semibold mb-6">
@@ -291,40 +259,30 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 5: Modul Sistem */}
+        {/* SECTION 5: Key Features (Menggantikan Modul Sistem) */}
         <FadeIn delay={0.5}>
-          <SlideFrame index="05" title="Modul Sistem">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <SlideFrame index="05" title="Key Features">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: "Authentication", aim: "Mengelola akses kredensial pengguna secara aman.", val: "Mencegah duplikasi akun dan menjaga privasi data." },
-                { name: "User Management", aim: "Mengelola profil siswa dan staf admin.", val: "Mempermudah klasifikasi prospek." },
-                { name: "Assessment Engine", aim: "Menjalankan logika pertanyaan dan perhitungan.", val: "Core product yang mengukur keterampilan digital." },
-                { name: "Scoring System", aim: "Menganalisis hasil tes untuk setiap kategori.", val: "Memberikan bobot ukur yang presisi dan objektif." },
-                { name: "Recommendation Logic", aim: "Memetakan skor ke prodi yang relevan.", val: "Membantu siswa memilih jurusan yang tepat." },
-                { name: "Result Generation", aim: "Menyajikan hasil akhir dalam format ringkas.", val: "Memberikan wawasan langsung kepada pengguna." },
-                { name: "PDF Export", aim: "Menghasilkan laporan yang dapat diunduh.", val: "Nilai tambah bagi siswa sebagai portofolio pribadi." },
-                { name: "Lead Capture", aim: "Menyimpan data pendaftar sebelum tes.", val: "Sumber utama akuisisi bagi tim admission." },
-                { name: "Admin Dashboard", aim: "Visualisasi data keseluruhan sistem.", val: "Pusat komando pemantauan operasional." },
-                { name: "Analytics & Reporting", aim: "Mengolah agregat data demografi & minat.", val: "Insight untuk penentuan strategi promosi kampus." },
-                { name: "Email Notification", aim: "Mengirimkan hasil & info otomatis.", val: "Meningkatkan interaksi dan follow-up prospek." },
-                { name: "Data Export", aim: "Mengunduh rekap data prospek ke format spreadsheet.", val: "Kemudahan integrasi dengan aktivitas telesales." }
-              ].map((modul, idx) => (
-                <div key={idx} className="p-5 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                  <div>
-                    <h4 className="font-extrabold text-slate-900 text-base mb-3 border-b border-slate-100 pb-2">{modul.name}</h4>
-                    <div className="flex flex-col gap-3">
-                      <div>
-                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">Tujuan</span>
-                        <p className="text-xs font-semibold text-slate-700 leading-relaxed">{modul.aim}</p>
+                { icon: BarChart3, title: "Digital Competency Assessment", desc: "Mengukur empat kompetensi digital melalui 50 pertanyaan berbobot." },
+                { icon: Target, title: "Rule-Based Recommendation", desc: "Memberikan rekomendasi program studi berdasarkan weighted scoring." },
+                { icon: ClipboardCheck, title: "PDF Report", desc: "Menghasilkan laporan hasil assessment yang dapat diunduh." },
+                { icon: Layers, title: "Admin Dashboard", desc: "Monitoring data peserta dan hasil assessment secara terpusat." },
+                { icon: Users, title: "Lead Management", desc: "Mengelola data prospek untuk tindak lanjut admission." }
+              ].map((feat, idx) => {
+                const IconComp = feat.icon
+                return (
+                  <div key={idx} className="p-6 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4 shadow-sm">
+                        <IconComp className="w-6 h-6" />
                       </div>
-                      <div>
-                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">Nilai Bisnis</span>
-                        <p className="text-xs font-bold text-slate-900 leading-relaxed">{modul.val}</p>
-                      </div>
+                      <h4 className="font-extrabold text-slate-900 text-lg mb-2">{feat.title}</h4>
+                      <p className="text-sm font-semibold text-slate-700 leading-relaxed">{feat.desc}</p>
                     </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </SlideFrame>
         </FadeIn>
@@ -491,7 +449,7 @@ export default function DigitalAssessmentCaseStudy() {
               </div>
             </div>
 
-            {/* Tahap 3 - Frosted Glass Card instead of Heavy Black Block */}
+            {/* Tahap 3 */}
             <div className="bg-white/85 backdrop-blur-md border-2 border-slate-900 p-6 rounded-xl shadow-md">
               <h4 className="font-extrabold text-slate-900 text-lg mb-3 flex items-center gap-2 border-b border-slate-200 pb-3">
                 <span className="w-3 h-3 rounded-full bg-slate-900" />
@@ -586,13 +544,12 @@ export default function DigitalAssessmentCaseStudy() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
                   { label: "Assessment Completion Rate", desc: "Persentase siswa yang menyelesaikan tes hingga akhir." },
                   { label: "Recommendation View Rate", desc: "Tingkat perhatian pada jurusan yang disarankan oleh sistem." },
                   { label: "Report Download Rate", desc: "Metrik seberapa banyak siswa yang menyimpan laporan hasil tes." },
-                  { label: "Lead Conversion Rate", desc: "Tingkat konversi pendaftar tes menjadi calon mahasiswa resmi." },
-                  { label: "Monthly Active Users", desc: "Jumlah partisipasi dari kunjungan harian maupun bulanan di event promosi." }
+                  { label: "Lead Conversion Rate", desc: "Tingkat konversi pendaftar tes menjadi calon mahasiswa resmi." }
                 ].map((metric, idx) => (
                   <div key={idx} className="p-5 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all">
                     <h5 className="font-extrabold text-slate-900 text-base mb-2">{metric.label}</h5>
@@ -612,7 +569,7 @@ export default function DigitalAssessmentCaseStudy() {
                 { phase: "Fase 1", title: "Digital Assessment Platform", desc: "Peluncuran engine utama, registrasi, dan hasil tes sederhana (MVP)." },
                 { phase: "Fase 2", title: "Recommendation Engine", desc: "Integrasi sistem Rule-Based Weighted Scoring untuk pemetaan jurusan." },
                 { phase: "Fase 3", title: "Dashboard & Analytics", desc: "Pengembangan portal admin untuk memantau data lead secara analitik." },
-                { phase: "Fase 4", title: "Mobile App & Integrasi PMB", desc: "Adaptasi ke aplikasi seluler dan sinkronisasi dengan sistem admisi kampus." },
+                { phase: "Fase 4", title: "Analytics Enhancement & Personalization", desc: "Peningkatan kapabilitas analitik dan personalisasi rekomendasi tingkat lanjut." },
               ].map((rd, idx) => (
                 <div key={idx} className="flex flex-col relative z-10">
                   <div className="w-12 h-12 rounded-full bg-slate-900 text-white font-black flex items-center justify-center mb-4 shadow-md">
@@ -633,7 +590,7 @@ export default function DigitalAssessmentCaseStudy() {
         <FadeIn delay={0.95}>
           <SlideFrame index="11" title="Project Management">
             <p className="text-base text-slate-800 font-semibold mb-6 leading-relaxed">
-              Proyek dikelola menggunakan <strong>Scrum Framework</strong> dengan <strong>Trello</strong> sebagai <em>project management tool</em>. Seluruh fitur disusun pada <strong>Product Backlog</strong>, diprioritaskan ke <strong>Sprint Backlog</strong>, kemudian dikembangkan secara bertahap melalui <strong>Sprint 1 hingga Sprint 3</strong> sesuai prioritas pengembangan.
+              Scrum diterapkan menggunakan <strong>Trello</strong> dengan pembagian <strong>Product Backlog, Sprint Backlog, To Do, In Progress, Review, dan Done</strong> untuk memastikan setiap fitur dikembangkan secara iteratif.
             </p>
             <div className="overflow-hidden rounded-xl border-2 border-slate-200 shadow-md bg-white">
               <Image 
