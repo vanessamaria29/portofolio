@@ -328,7 +328,7 @@ export default function GlacierCaseStudy() {
         <FadeIn delay={0.5}>
           <SlideFrame index="05" title="Requirement Prioritization (MoSCoW)">
             <p className="text-base text-slate-800 font-semibold mb-6">
-              Metode MoSCoW diterapkan untuk memfokuskan alokasi sumber daya pada pengerjaan modul operasional inti terlebih dahulu, sehingga nilai bisnis utama dapat langsung dirasakan oleh tim operasional tanpa tertunda oleh fitur pelengkap.
+              Metode MoSCoW digunakan untuk memprioritaskan pengembangan modul operasional inti agar kebutuhan utama pengguna dapat diselesaikan lebih dahulu. Fitur lanjutan diposisikan sebagai pengembangan berikutnya setelah fondasi sistem berjalan dengan baik.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -338,7 +338,7 @@ export default function GlacierCaseStudy() {
                   <span className="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded">P0</span>
                 </h4>
                 <ul className="text-sm font-bold text-slate-800 space-y-2.5">
-                  {["Login", "Dashboard", "Inventory Management", "HPP Calculator", "Stock Movement", "Reporting"].map((item, i) => (
+                  {["Login & Authentication", "Dashboard Monitoring", "Inventory Management", "Stock Movement", "Automatic HPP Calculator", "Reporting"].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 bg-white p-2 rounded-lg border border-slate-200 shadow-xs">
                       <CheckCircle2 className="w-4 h-4 text-slate-900 shrink-0" />
                       <span>{item}</span>
@@ -368,7 +368,7 @@ export default function GlacierCaseStudy() {
                   <span className="text-[10px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">P2</span>
                 </h4>
                 <ul className="text-sm font-semibold text-slate-700 space-y-2.5">
-                  {["Export PDF", "Notifikasi Email"].map((item, i) => (
+                  {["Export PDF", "Email Notification"].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 bg-white p-2 rounded-lg border border-slate-200 shadow-xs">
                       <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" />
                       <span>{item}</span>
@@ -383,7 +383,7 @@ export default function GlacierCaseStudy() {
                   <span className="text-[10px] font-bold bg-slate-200 text-slate-700 px-2 py-0.5 rounded">Out of Scope</span>
                 </h4>
                 <ul className="text-sm font-semibold text-slate-700 space-y-2.5">
-                  {["Mobile Application", "AI Forecasting", "Integrasi ERP"].map((item, i) => (
+                  {["Mobile Application", "AI Forecasting", "ERP Integration"].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 bg-white p-2 rounded-lg border border-slate-200 text-slate-700 shadow-xs">
                       <span className="w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>
                       <span>{item}</span>
@@ -394,7 +394,7 @@ export default function GlacierCaseStudy() {
             </div>
 
             <p className="text-xs md:text-sm font-semibold text-slate-700 bg-white/90 p-5 rounded-2xl border-2 border-slate-200 shadow-sm">
-              <strong>Rasionalisasi Prioritas:</strong> Fitur pada kategori <em>Must Have</em> berfokus penuh pada penyelesaian masalah utama (pengelolaan stok dan HPP), sedangkan fitur kecerdasan tingkat lanjut seperti AI Forecasting dan Integrasi ERP ditunda karena membutuhkan kesiapan infrastruktur data yang lebih matang.
+              <strong>Rasionalisasi:</strong> Fitur pada kategori Must Have berfokus pada digitalisasi proses operasional utama, yaitu pengelolaan stok, perhitungan HPP, dan pelaporan. Sementara fitur seperti AI Forecasting dan ERP Integration tidak menjadi prioritas awal karena membutuhkan kesiapan data dan kompleksitas implementasi yang lebih tinggi.
             </p>
           </SlideFrame>
         </FadeIn>
@@ -405,40 +405,40 @@ export default function GlacierCaseStudy() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { 
+                  icon: BarChart3, 
+                  title: "Dashboard Monitoring", 
+                  desc: "Menampilkan ringkasan KPI operasional, kondisi stok, dan performa setiap cabang dalam satu dashboard.",
+                  val: "Memudahkan owner memantau seluruh cabang secara real-time."
+                },
+                { 
                   icon: Layers, 
                   title: "Inventory Management", 
-                  desc: "Mengelola dan mencatat posisi stok persediaan bahan baku secara terpusat. Mengurangi risiko ketidaksesuaian data akibat pencatatan manual.",
-                  val: "Memastikan data persediaan selalu akurat dan konsisten."
+                  desc: "Mengelola data stok bahan baku secara terpusat mulai dari pencatatan hingga pembaruan stok.",
+                  val: "Meningkatkan akurasi data persediaan dan mengurangi human error."
+                },
+                { 
+                  icon: Store, 
+                  title: "Stock Movement", 
+                  desc: "Mencatat perpindahan stok antar cabang beserta riwayat transaksi sehingga distribusi stok lebih mudah dipantau.",
+                  val: "Membantu pengelolaan distribusi stok antar cabang secara lebih efisien."
                 },
                 { 
                   icon: Calculator, 
                   title: "Automatic HPP Calculator", 
-                  desc: "Kalkulator berbasis rumus otomatis untuk menghitung Harga Pokok Penjualan secara akurat. Memangkas waktu kalkulasi manual yang sebelumnya memakan waktu.",
-                  val: "Meningkatkan presisi margin keuntungan cabang."
-                },
-                { 
-                  icon: BarChart3, 
-                  title: "Dashboard Monitoring", 
-                  desc: "Visualisasi metrik KPI operasional dan ringkasan aktivitas seluruh cabang. Memudahkan pemantauan berkala dalam satu tampilan terpadu.",
-                  val: "Memberikan transparansi performa operasional real-time."
-                },
-                { 
-                  icon: Store, 
-                  title: "Cross Store Inventory", 
-                  desc: "Fitur konsolidasi data stok persediaan antar berbagai cabang secara terintegrasi. Memungkinkan perpindahan dan pemantauan stok antar toko.",
-                  val: "Meningkatkan efisiensi distribusi stok antar lokasi."
+                  desc: "Menghitung Harga Pokok Penjualan secara otomatis berdasarkan data bahan baku dan transaksi.",
+                  val: "Mempercepat proses perhitungan serta meningkatkan akurasi biaya operasional."
                 },
                 { 
                   icon: TrendingUp, 
                   title: "Analytics Dashboard", 
-                  desc: "Grafik analitik tren penggunaan bahan baku dan performa penjualan bulanan. Menyediakan pola data historis untuk evaluasi berkala.",
-                  val: "Mendukung perencanaan pengadaan berbasis data."
+                  desc: "Menyajikan tren penggunaan bahan baku, performa penjualan, dan indikator operasional dalam bentuk visual.",
+                  val: "Mendukung pengambilan keputusan berbasis data."
                 },
                 { 
                   icon: Bell, 
                   title: "Smart Reminder", 
-                  desc: "Sistem peringatan otomatis saat jumlah stok berada di bawah batas minimum (safety stock). Mencegah terjadinya kehabisan stok bahan baku.",
-                  val: "Menjaga kontinuitas penjualan tanpa keterlambatan stok."
+                  desc: "Memberikan notifikasi ketika stok berada di bawah batas minimum yang telah ditentukan.",
+                  val: "Mengurangi risiko kehabisan stok dan menjaga kelancaran operasional."
                 }
               ].map((feat, idx) => {
                 const IconComp = feat.icon
@@ -477,7 +477,7 @@ export default function GlacierCaseStudy() {
                 <div className="flex flex-col gap-0 relative ml-2">
                   <div className="absolute left-[13px] top-4 bottom-8 w-[2px] bg-slate-300 rounded-full"></div>
                   {[
-                    { title: "Dashboard", desc: "Membuka platform dan masuk ke halaman utama dashboard." },
+                    { title: "Dashboard Monitoring", desc: "Membuka platform dan masuk ke halaman utama dashboard." },
                     { title: "Melihat KPI", desc: "Memeriksa ringkasan performa finansial dan total stok." },
                     { title: "Memantau Cabang", desc: "Memilih dan melihat detail laporan operasional cabang tertentu." },
                     { title: "Melihat Analisis", desc: "Menganalisis grafik tren penggunaan stok dan margin HPP." },
@@ -509,7 +509,7 @@ export default function GlacierCaseStudy() {
                     { title: "Login", desc: "Masuk ke dalam sistem menggunakan kredensial akun supervisor." },
                     { title: "Input Perubahan Stok", desc: "Mencatat penerimaan barang masuk atau penggunaan stok harian." },
                     { title: "Validasi Data", desc: "Memeriksa kesesuaian fisik stok dengan angka input sistem." },
-                    { title: "Perhitungan HPP", desc: "Sistem secara otomatis menghitung nilai HPP berdasarkan stok." },
+                    { title: "Automatic HPP Calculator", desc: "Sistem secara otomatis menghitung nilai HPP berdasarkan stok." },
                     { title: "Generate Laporan", desc: "Menghasilkan laporan harian otomatis untuk dikirim ke manajemen." }
                   ].map((step, idx) => (
                     <div key={idx} className="flex items-start gap-4 pb-8 relative">
@@ -565,7 +565,7 @@ export default function GlacierCaseStudy() {
                     <td className="p-4 font-semibold text-xs text-slate-700">Memberikan visibilitas langsung bagi Owner dan Supervisor.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-extrabold text-slate-900">HPP Calculator</td>
+                    <td className="p-4 font-extrabold text-slate-900">Automatic HPP Calculator</td>
                     <td className="p-4 font-bold text-center">80%</td>
                     <td className="p-4 font-bold text-center">3 (High)</td>
                     <td className="p-4 font-bold text-center">90%</td>
@@ -740,7 +740,7 @@ export default function GlacierCaseStudy() {
                       <span>Sprint Backlog</span>
                       <span className="w-2 h-2 rounded-full bg-slate-600"></span>
                     </span>
-                    <div className="p-2.5 bg-slate-50 rounded border border-slate-200 text-xs font-bold text-slate-800">Cross Store Inventory Transfer</div>
+                    <div className="p-2.5 bg-slate-50 rounded border border-slate-200 text-xs font-bold text-slate-800">Stock Movement Inter-Branch</div>
                     <div className="p-2.5 bg-slate-50 rounded border border-slate-200 text-xs font-bold text-slate-800">Analytics Trend Chart</div>
                   </div>
 
