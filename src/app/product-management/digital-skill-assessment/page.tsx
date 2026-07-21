@@ -562,21 +562,40 @@ export default function DigitalAssessmentCaseStudy() {
                   </span>
                   <h4 className="text-2xl md:text-3xl font-extrabold tracking-tight">Jumlah Assessment yang Berhasil Diselesaikan</h4>
                   <p className="text-sm font-semibold text-slate-700 mt-3 max-w-2xl leading-relaxed">
-                    Mengindikasikan value nyata yang dinikmati pengguna dan validitas data yang diperoleh institusi secara utuh.
+                    Menunjukkan seberapa banyak pengguna berhasil menyelesaikan seluruh proses assessment hingga memperoleh hasil rekomendasi.
                   </p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
-                  { label: "Assessment Completion Rate", desc: "Persentase siswa yang menyelesaikan tes hingga akhir." },
-                  { label: "Recommendation View Rate", desc: "Tingkat perhatian pada jurusan yang disarankan oleh sistem." },
-                  { label: "Report Download Rate", desc: "Metrik seberapa banyak siswa yang menyimpan laporan hasil tes." },
-                  { label: "Lead Conversion Rate", desc: "Tingkat konversi pendaftar tes menjadi calon mahasiswa resmi." }
+                  { 
+                    label: "Assessment Completion Rate", 
+                    subtitle: "Persentase peserta yang menyelesaikan seluruh assessment.", 
+                    desc: "Mengukur apakah alur assessment cukup mudah diselesaikan pengguna." 
+                  },
+                  { 
+                    label: "Report Download Rate", 
+                    subtitle: "Persentase peserta yang mengunduh hasil assessment.", 
+                    desc: "Mengindikasikan bahwa hasil assessment dianggap bernilai dan layak disimpan." 
+                  },
+                  { 
+                    label: "Lead Conversion Rate", 
+                    subtitle: "Persentase peserta assessment yang melanjutkan ke proses pendaftaran atau dihubungi oleh tim admission.", 
+                    desc: "Mengukur efektivitas assessment sebagai media akuisisi calon mahasiswa." 
+                  },
+                  { 
+                    label: "Average Assessment Completion Time", 
+                    subtitle: "Rata-rata waktu yang dibutuhkan peserta untuk menyelesaikan assessment.", 
+                    desc: "Membantu mengevaluasi apakah jumlah soal dan alur assessment sudah efisien." 
+                  }
                 ].map((metric, idx) => (
-                  <div key={idx} className="p-5 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all">
-                    <h5 className="font-extrabold text-slate-900 text-base mb-2">{metric.label}</h5>
-                    <p className="text-xs font-semibold text-slate-700 leading-relaxed">{metric.desc}</p>
+                  <div key={idx} className="p-5 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                      <h5 className="font-extrabold text-slate-900 text-base mb-2">{metric.label}</h5>
+                      <p className="text-xs font-bold text-slate-800 mb-2 leading-relaxed">{metric.subtitle}</p>
+                      <p className="text-xs font-medium text-slate-600 leading-relaxed">{metric.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
