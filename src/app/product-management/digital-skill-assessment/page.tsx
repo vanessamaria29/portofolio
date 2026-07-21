@@ -2,14 +2,19 @@
 
 import React from "react"
 import { FadeIn } from "@/components/animations/fade-in"
-import { ArrowLeft, ArrowRight, User, Building2, Users, GraduationCap, CheckCircle2, Target, AlertCircle, ListTodo, ClipboardCheck } from "lucide-react"
+import { ArrowLeft, ArrowRight, User, Building2, Users, GraduationCap, CheckCircle2, Target, AlertCircle, ListTodo, ClipboardCheck, Sparkles } from "lucide-react"
 import Link from "next/link"
 
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
-  <div className={`bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm my-6 ${className}`}>
-    <div className="border-b border-slate-200 pb-4 mb-6">
-      <span className="text-xs font-bold text-slate-500 tracking-wider uppercase">{index} / {title.split(' ')[0]}</span>
-      <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">{title}</h3>
+  <div className={`bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-6 md:p-10 shadow-lg shadow-slate-200/40 my-8 ${className}`}>
+    <div className="border-b border-slate-200 pb-5 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-2">
+      <div>
+        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-bold tracking-wider uppercase border border-slate-200/80 mb-2">
+          {index} / {title.split(' ')[0]}
+        </span>
+        <h3 className="font-serif text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">{title}</h3>
+      </div>
+      <div className="w-12 h-1 bg-slate-900 rounded-full hidden md:block"></div>
     </div>
     {children}
   </div>
@@ -17,21 +22,21 @@ const SlideFrame = ({ children, title, index, className = "" }: { children: Reac
 
 export default function DigitalAssessmentCaseStudy() {
   return (
-    <div className="min-h-screen bg-surface-primary selection:bg-slate-200 selection:text-slate-900 relative">
+    <div className="min-h-screen bg-surface-primary selection:bg-slate-200 selection:text-slate-900 relative text-slate-900">
       
       {/* Background gradients */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob" />
-        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob animation-delay-2000" />
-        <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-pink-200/40 rounded-full blur-[120px] mix-blend-multiply opacity-60 animate-blob animation-delay-4000" />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-[120px] mix-blend-multiply opacity-60 animate-blob" />
+        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-200/30 rounded-full blur-[120px] mix-blend-multiply opacity-60 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-pink-200/30 rounded-full blur-[140px] mix-blend-multiply opacity-50 animate-blob animation-delay-4000" />
       </div>
 
-      <main className="pt-24 pb-20 max-w-7xl mx-auto px-6 relative z-0">
+      <main className="pt-24 pb-20 max-w-7xl mx-auto px-6 relative z-10">
         
         <FadeIn>
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors mb-6"
+            className="inline-flex items-center gap-2 font-sans text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors mb-8 bg-white/80 border border-slate-200 px-4 py-2 rounded-full shadow-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             Kembali ke Beranda
@@ -40,37 +45,37 @@ export default function DigitalAssessmentCaseStudy() {
 
         {/* HERO SECTION */}
         <FadeIn direction="up">
-          <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 md:p-12 shadow-sm mb-12 relative overflow-hidden">
-            <div className="flex flex-col gap-6 max-w-3xl">
-              <span className="inline-flex items-center gap-2 text-[11px] font-bold text-slate-500 uppercase tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-slate-400" />
+          <div className="bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-8 md:p-12 shadow-xl shadow-slate-200/50 mb-12 relative overflow-hidden">
+            <div className="flex flex-col gap-6 max-w-4xl">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-slate-800 uppercase tracking-widest bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full w-fit">
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-900" />
                 Case Study
               </span>
               
-              <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none">
                 Digital Skill Assessment Platform
               </h1>
               
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Platform digital yang membantu siswa SMA memetakan kompetensi digital dan memberikan rekomendasi program studi menggunakan metode Rule-Based Weighted Scoring.
+              <p className="text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-3xl">
+                Platform digital yang membantu siswa SMA memetakan kompetensi digital dan memberikan rekomendasi program studi menggunakan metode <strong className="text-slate-900 font-extrabold underline decoration-slate-300">Rule-Based Weighted Scoring</strong>.
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-slate-200 mt-2">
-                <div className="flex flex-col gap-1">
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Peran</span>
-                  <span className="font-medium text-slate-900">Product Manager, Full Stack Dev</span>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-200 mt-2">
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Peran</span>
+                  <span className="font-bold text-slate-900 text-sm md:text-base">Product Manager, Full Stack Dev</span>
                 </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Durasi</span>
-                  <span className="font-medium text-slate-900">3 Bulan</span>
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Durasi</span>
+                  <span className="font-bold text-slate-900 text-sm md:text-base">3 Bulan</span>
                 </div>
               </div>
 
               <div className="pt-6 border-t border-slate-200 mt-2">
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-4">Frameworks</span>
-                <div className="flex flex-wrap gap-2">
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-4">Frameworks & Methodologies</span>
+                <div className="flex flex-wrap gap-2.5">
                   {["Requirement Gathering", "Stakeholder Analysis", "User Journey Mapping", "MoSCoW Prioritization", "Rule-Based Weighted Scoring", "Product Roadmap", "Success Metrics"].map((framework) => (
-                    <span key={framework} className="px-3 py-1.5 bg-slate-50 text-slate-700 text-xs font-medium rounded-full border border-slate-200">
+                    <span key={framework} className="px-3.5 py-2 bg-slate-900 text-white text-xs font-bold rounded-lg shadow-sm">
                       {framework}
                     </span>
                   ))}
@@ -83,20 +88,37 @@ export default function DigitalAssessmentCaseStudy() {
         {/* SECTION 1: Latar Belakang */}
         <FadeIn delay={0.1}>
           <SlideFrame index="01" title="Latar Belakang">
-            <div className="prose prose-slate max-w-none text-slate-600">
-              <p>
-                Platform ini dikembangkan berdasarkan observasi terhadap tantangan yang dihadapi oleh berbagai pihak dalam ekosistem pendidikan, khususnya pada tahap transisi dari sekolah menengah ke perguruan tinggi. Terdapat kesenjangan antara pemahaman siswa mengenai potensi diri dengan informasi akademik yang tersedia.
+            <div className="prose prose-slate max-w-none text-slate-700 space-y-4">
+              <p className="text-base md:text-lg leading-relaxed text-slate-800 font-medium">
+                Platform ini dikembangkan berdasarkan observasi mendalam terhadap tantangan yang dihadapi oleh berbagai pihak dalam ekosistem pendidikan, khususnya pada tahap transisi dari sekolah menengah ke perguruan tinggi. Terdapat kesenjangan nyata antara pemahaman siswa mengenai potensi diri dengan informasi akademik yang tersedia.
               </p>
-              <ul className="mt-4 space-y-2 list-none pl-0">
-                <li className="flex items-start gap-3"><span className="text-slate-400 mt-0.5">•</span>Siswa SMA seringkali belum mengetahui secara pasti kemampuan digital yang mereka miliki.</li>
-                <li className="flex items-start gap-3"><span className="text-slate-400 mt-0.5">•</span>Mereka mengalami kesulitan dalam menentukan pilihan jurusan perkuliahan yang sesuai dengan potensi tersebut.</li>
-                <li className="flex items-start gap-3"><span className="text-slate-400 mt-0.5">•</span>Di sisi institusi, UKRIDA belum memiliki media assessment digital yang interaktif dan mudah diakses.</li>
-                <li className="flex items-start gap-3"><span className="text-slate-400 mt-0.5">•</span>Tim Admission kesulitan memperoleh data analitik yang mendalam mengenai profil dan minat calon mahasiswa.</li>
-                <li className="flex items-start gap-3"><span className="text-slate-400 mt-0.5">•</span>Strategi promosi kampus yang ada saat ini masih menggunakan pendekatan konvensional dan belum sepenuhnya memanfaatkan data.</li>
-              </ul>
-              <p className="mt-6 font-medium text-slate-900">
-                Digitalisasi proses admission melalui assessment ini merupakan peluang strategis untuk menjaring prospek potensial secara data-driven, sekaligus memberikan nilai tambah yang nyata bagi calon mahasiswa sebelum mereka memutuskan mendaftar.
-              </p>
+              
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6 space-y-3">
+                <h4 className="font-bold text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">Poin Masalah Utama:</h4>
+                <ul className="space-y-3">
+                  {[
+                    "Siswa SMA seringkali belum mengetahui secara pasti kemampuan digital yang mereka miliki secara terukur.",
+                    "Siswa mengalami kesulitan dalam menentukan pilihan jurusan perkuliahan yang paling sesuai dengan potensi tersebut.",
+                    "Di sisi institusi, UKRIDA belum memiliki media assessment digital yang interaktif dan mudah diakses secara luas.",
+                    "Tim Admission kesulitan memperoleh data analitik yang mendalam mengenai profil, bakat, dan minat calon mahasiswa.",
+                    "Strategi promosi kampus yang ada saat ini masih menggunakan pendekatan konvensional dan belum berbasis data analitik."
+                  ].map((poin, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-slate-800 font-semibold text-sm md:text-base">
+                      <div className="w-2 h-2 rounded-full bg-slate-900 shrink-0 mt-2"></div>
+                      <span>{poin}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="p-5 bg-slate-900 text-white rounded-xl shadow-md flex items-center gap-4">
+                <div className="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0">
+                  <Sparkles className="w-5 h-5 text-white" />
+                </div>
+                <p className="text-sm md:text-base font-semibold leading-relaxed">
+                  Digitalisasi proses admission melalui assessment ini merupakan peluang strategis untuk menjaring prospek potensial secara data-driven, sekaligus memberikan nilai tambah yang nyata bagi calon mahasiswa sebelum mereka memutuskan mendaftar.
+                </p>
+              </div>
             </div>
           </SlideFrame>
         </FadeIn>
@@ -104,27 +126,26 @@ export default function DigitalAssessmentCaseStudy() {
         {/* SECTION 2: Tujuan Produk */}
         <FadeIn delay={0.2}>
           <SlideFrame index="02" title="Tujuan Produk">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center mb-4"><User className="w-5 h-5 text-slate-700" /></div>
-                <h4 className="font-bold text-slate-900 mb-2">Untuk Siswa</h4>
-                <p className="text-sm text-slate-600">Memberikan visibilitas terhadap potensi digital individu dan memberikan rekomendasi program studi yang presisi dan relevan dengan kemampuan mereka.</p>
-              </div>
-              <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center mb-4"><Building2 className="w-5 h-5 text-slate-700" /></div>
-                <h4 className="font-bold text-slate-900 mb-2">Untuk UKRIDA</h4>
-                <p className="text-sm text-slate-600">Meningkatkan brand awareness sebagai kampus teknologi yang inovatif serta memodernisasi saluran interaksi dengan calon mahasiswa baru.</p>
-              </div>
-              <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center mb-4"><Users className="w-5 h-5 text-slate-700" /></div>
-                <h4 className="font-bold text-slate-900 mb-2">Untuk Tim Admission</h4>
-                <p className="text-sm text-slate-600">Membangun database prospek (leads) yang terstruktur dan berkualitas untuk strategi pemasaran dan akuisisi mahasiswa baru yang lebih terukur.</p>
-              </div>
-              <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center mb-4"><GraduationCap className="w-5 h-5 text-slate-700" /></div>
-                <h4 className="font-bold text-slate-900 mb-2">Untuk Mahasiswa SI</h4>
-                <p className="text-sm text-slate-600">Menyediakan studi kasus pengembangan perangkat lunak secara nyata dan end-to-end yang dapat diimplementasikan di tingkat perguruan tinggi.</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { icon: User, title: "Untuk Siswa", desc: "Memberikan visibilitas terhadap potensi digital individu dan memberikan rekomendasi program studi yang presisi dan relevan dengan kemampuan mereka." },
+                { icon: Building2, title: "Untuk UKRIDA", desc: "Meningkatkan brand awareness sebagai kampus teknologi yang inovatif serta memodernisasi saluran interaksi dengan calon mahasiswa baru." },
+                { icon: Users, title: "Untuk Tim Admission", desc: "Membangun database prospek (leads) yang terstruktur dan berkualitas untuk strategi pemasaran dan akuisisi mahasiswa baru yang lebih terukur." },
+                { icon: GraduationCap, title: "Untuk Mahasiswa SI", desc: "Menyediakan studi kasus pengembangan perangkat lunak secara nyata dan end-to-end yang dapat diimplementasikan di tingkat perguruan tinggi." }
+              ].map((item, idx) => {
+                const IconComp = item.icon
+                return (
+                  <div key={idx} className="p-6 bg-white border-2 border-slate-200/90 rounded-xl hover:border-slate-400 transition-all shadow-sm flex flex-col justify-between">
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-5 shadow-sm">
+                        <IconComp className="w-6 h-6" />
+                      </div>
+                      <h4 className="font-extrabold text-slate-900 text-lg mb-2">{item.title}</h4>
+                      <p className="text-sm text-slate-700 font-semibold leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </SlideFrame>
         </FadeIn>
@@ -139,20 +160,23 @@ export default function DigitalAssessmentCaseStudy() {
                 { title: "Institusi (UKRIDA)", goal: "Peningkatan citra institusi dan jumlah mahasiswa.", pain: "Kalah saing dengan metode rekrutmen kampus lain yang lebih modern.", needs: "Platform yang dapat diluncurkan dengan cepat dan mencerminkan kemajuan teknologi." },
                 { title: "Mahasiswa Developer", goal: "Menyelesaikan proyek nyata dengan impact tinggi.", pain: "Terbatasnya sumber daya dan waktu pengembangan yang ketat.", needs: "Kebutuhan sistem (requirements) yang jelas, prioritas terstruktur, dan ruang eksplorasi teknologi." },
               ].map((stakeholder, idx) => (
-                <div key={idx} className="p-6 border border-slate-200 rounded-xl bg-white shadow-sm flex flex-col gap-4">
-                  <h4 className="font-bold text-slate-900 text-lg border-b border-slate-100 pb-3">{stakeholder.title}</h4>
+                <div key={idx} className="p-6 border-2 border-slate-200 bg-white rounded-xl shadow-sm flex flex-col gap-4">
+                  <h4 className="font-extrabold text-slate-900 text-lg border-b border-slate-200 pb-3 flex items-center justify-between">
+                    <span>{stakeholder.title}</span>
+                    <span className="text-xs font-bold bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">Stakeholder</span>
+                  </h4>
                   <div className="flex flex-col gap-4 pt-1">
-                    <div>
-                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Goal</span>
-                      <p className="text-sm text-slate-700">{stakeholder.goal}</p>
+                    <div className="bg-slate-50 p-3.5 rounded-lg border border-slate-200/80">
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Goal</span>
+                      <p className="text-sm font-semibold text-slate-800">{stakeholder.goal}</p>
                     </div>
-                    <div>
-                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Pain Point</span>
-                      <p className="text-sm text-slate-700">{stakeholder.pain}</p>
+                    <div className="bg-slate-50 p-3.5 rounded-lg border border-slate-200/80">
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Pain Point</span>
+                      <p className="text-sm font-semibold text-slate-800">{stakeholder.pain}</p>
                     </div>
-                    <div>
-                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Needs</span>
-                      <p className="text-sm text-slate-700">{stakeholder.needs}</p>
+                    <div className="bg-slate-50 p-3.5 rounded-lg border border-slate-200/80">
+                      <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block mb-1">Needs</span>
+                      <p className="text-sm font-semibold text-slate-800">{stakeholder.needs}</p>
                     </div>
                   </div>
                 </div>
@@ -164,48 +188,68 @@ export default function DigitalAssessmentCaseStudy() {
         {/* SECTION 4: MoSCoW Prioritization */}
         <FadeIn delay={0.4}>
           <SlideFrame index="04" title="Requirement Prioritization (MoSCoW)">
-            <p className="text-sm text-slate-600 mb-6">Mengingat produk ini merupakan pengembangan platform institusi, framework MoSCoW digunakan untuk menentukan ruang lingkup prioritas rilis agar nilai utama dapat diserahkan lebih awal.</p>
+            <p className="text-base text-slate-800 font-semibold mb-6">
+              Mengingat produk ini merupakan pengembangan platform institusi, framework MoSCoW digunakan untuk menentukan ruang lingkup prioritas rilis agar nilai utama dapat diserahkan lebih awal.
+            </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="p-5 border border-slate-200 rounded-xl bg-white shadow-sm">
-                <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-slate-900" /> Must Have
+              <div className="p-6 border-2 border-slate-900 rounded-xl bg-white shadow-md">
+                <h4 className="font-extrabold text-slate-900 mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                  <span className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-slate-900" /> Must Have</span>
+                  <span className="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded">P0</span>
                 </h4>
-                <ul className="text-sm text-slate-700 space-y-3">
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" /> Registrasi</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" /> Assessment</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" /> Scoring</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" /> Dashboard</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" /> Recommendation</li>
+                <ul className="text-sm font-bold text-slate-800 space-y-3">
+                  {["Registrasi", "Assessment", "Scoring", "Dashboard", "Recommendation"].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 bg-slate-50 p-2 rounded border border-slate-200">
+                      <CheckCircle2 className="w-4 h-4 text-slate-900 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <div className="p-5 border border-slate-200 rounded-xl bg-white shadow-sm">
-                <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-slate-600" /> Should Have
+
+              <div className="p-6 border-2 border-slate-300 rounded-xl bg-white shadow-sm">
+                <h4 className="font-extrabold text-slate-900 mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                  <span className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-slate-600" /> Should Have</span>
+                  <span className="text-[10px] font-bold bg-slate-200 text-slate-800 px-2 py-0.5 rounded">P1</span>
                 </h4>
-                <ul className="text-sm text-slate-700 space-y-3">
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" /> Export PDF</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" /> Dashboard Analytics</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" /> Email Notification</li>
+                <ul className="text-sm font-semibold text-slate-800 space-y-3">
+                  {["Export PDF", "Dashboard Analytics", "Email Notification"].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 bg-slate-50 p-2 rounded border border-slate-200">
+                      <CheckCircle2 className="w-4 h-4 text-slate-700 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <div className="p-5 border border-slate-200 rounded-xl bg-white shadow-sm">
-                <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-slate-400" /> Could Have
+
+              <div className="p-6 border-2 border-slate-200 rounded-xl bg-white shadow-sm">
+                <h4 className="font-extrabold text-slate-900 mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                  <span className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-slate-400" /> Could Have</span>
+                  <span className="text-[10px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">P2</span>
                 </h4>
-                <ul className="text-sm text-slate-700 space-y-3">
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-300 shrink-0 mt-0.5" /> Badge</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-300 shrink-0 mt-0.5" /> Gamification</li>
+                <ul className="text-sm font-semibold text-slate-700 space-y-3">
+                  {["Badge System", "Gamification Elements"].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 bg-slate-50 p-2 rounded border border-slate-200">
+                      <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <div className="p-5 border border-slate-200 rounded-xl bg-slate-50 shadow-sm opacity-80">
-                <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-slate-200 border border-slate-300" /> Won't Have 
-                  <span className="font-normal text-[10px] text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">(versi 1)</span>
+
+              <div className="p-6 border-2 border-slate-200 rounded-xl bg-slate-50 shadow-sm">
+                <h4 className="font-extrabold text-slate-900 mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                  <span className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-slate-300" /> Won't Have</span>
+                  <span className="text-[10px] font-bold bg-slate-200 text-slate-700 px-2 py-0.5 rounded">V1 Out</span>
                 </h4>
-                <ul className="text-sm text-slate-500 space-y-3 line-through">
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-200 shrink-0 mt-0.5" /> Mobile App</li>
-                                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-slate-200 shrink-0 mt-0.5" /> Integrasi PMB</li>
+                <ul className="text-sm font-semibold text-slate-700 space-y-3">
+                  {["Mobile App Native", "Integrasi PMB Kampus"].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 bg-white p-2 rounded border border-slate-200 text-slate-700">
+                      <span className="w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -230,16 +274,18 @@ export default function DigitalAssessmentCaseStudy() {
                 { name: "Email Notification", aim: "Mengirimkan hasil & info otomatis.", val: "Meningkatkan interaksi dan follow-up prospek." },
                 { name: "Data Export", aim: "Mengunduh rekap data prospek ke format spreadsheet.", val: "Kemudahan integrasi dengan aktivitas telesales." }
               ].map((modul, idx) => (
-                <div key={idx} className="p-5 border border-slate-200 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <h4 className="font-bold text-slate-900 mb-3">{modul.name}</h4>
-                  <div className="flex flex-col gap-3">
-                    <div>
-                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Tujuan</span>
-                      <p className="text-xs text-slate-600 leading-relaxed">{modul.aim}</p>
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Nilai Bisnis</span>
-                      <p className="text-xs text-slate-600 leading-relaxed">{modul.val}</p>
+                <div key={idx} className="p-5 border-2 border-slate-200 bg-white rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-extrabold text-slate-900 text-base mb-3 border-b border-slate-100 pb-2">{modul.name}</h4>
+                    <div className="flex flex-col gap-3">
+                      <div>
+                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">Tujuan</span>
+                        <p className="text-xs font-semibold text-slate-700 leading-relaxed">{modul.aim}</p>
+                      </div>
+                      <div>
+                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">Nilai Bisnis</span>
+                        <p className="text-xs font-bold text-slate-900 leading-relaxed">{modul.val}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -253,37 +299,41 @@ export default function DigitalAssessmentCaseStudy() {
           <SlideFrame index="06" title="User Journey">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               
-              <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
-                <h4 className="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-200 pb-4">
-                  <User className="w-5 h-5 text-slate-700" />
+              <div className="bg-white border-2 border-slate-200 p-6 rounded-xl shadow-sm">
+                <h4 className="font-extrabold text-slate-900 text-lg mb-6 flex items-center gap-3 border-b border-slate-200 pb-4">
+                  <div className="p-2 rounded-lg bg-slate-900 text-white">
+                    <User className="w-5 h-5" />
+                  </div>
                   Journey Siswa
                 </h4>
                 <div className="flex flex-col gap-0 relative ml-2">
-                  <div className="absolute left-[11px] top-4 bottom-8 w-[2px] bg-slate-200 rounded-full"></div>
+                  <div className="absolute left-[13px] top-4 bottom-8 w-[2px] bg-slate-300 rounded-full"></div>
                   {[
                     "Registrasi akun dengan data diri dasar",
                     "Mengerjakan soal Assessment",
                     "Melihat hasil analisis kemampuan digital",
-                    "Download laporan lengkap",
+                    "Download laporan lengkap (PDF)",
                     "Menerima rekomendasi jurusan UKRIDA"
                   ].map((step, idx) => (
                     <div key={idx} className="flex items-start gap-4 pb-8 relative">
-                      <div className="w-6 h-6 rounded-full bg-slate-100 border-2 border-slate-300 flex items-center justify-center relative z-10 shrink-0 mt-0.5 shadow-sm">
-                        <span className="text-[10px] font-bold text-slate-600">{idx + 1}</span>
+                      <div className="w-7 h-7 rounded-full bg-slate-900 text-white font-black text-xs flex items-center justify-center relative z-10 shrink-0 shadow-md">
+                        {idx + 1}
                       </div>
-                      <p className="text-sm font-medium text-slate-700 pt-1">{step}</p>
+                      <p className="text-sm font-bold text-slate-800 pt-1 leading-snug">{step}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
-                <h4 className="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-200 pb-4">
-                  <Users className="w-5 h-5 text-slate-700" />
+              <div className="bg-white border-2 border-slate-200 p-6 rounded-xl shadow-sm">
+                <h4 className="font-extrabold text-slate-900 text-lg mb-6 flex items-center gap-3 border-b border-slate-200 pb-4">
+                  <div className="p-2 rounded-lg bg-slate-900 text-white">
+                    <Users className="w-5 h-5" />
+                  </div>
                   Journey Admission
                 </h4>
                 <div className="flex flex-col gap-0 relative ml-2">
-                  <div className="absolute left-[11px] top-4 bottom-8 w-[2px] bg-slate-200 rounded-full"></div>
+                  <div className="absolute left-[13px] top-4 bottom-8 w-[2px] bg-slate-300 rounded-full"></div>
                   {[
                     "Melihat dashboard ringkasan",
                     "Melihat data detail siswa & skor",
@@ -292,10 +342,10 @@ export default function DigitalAssessmentCaseStudy() {
                     "Monitoring konversi pendaftaran"
                   ].map((step, idx) => (
                     <div key={idx} className="flex items-start gap-4 pb-8 relative">
-                      <div className="w-6 h-6 rounded-full bg-slate-100 border-2 border-slate-300 flex items-center justify-center relative z-10 shrink-0 mt-0.5 shadow-sm">
-                        <span className="text-[10px] font-bold text-slate-600">{idx + 1}</span>
+                      <div className="w-7 h-7 rounded-full bg-slate-900 text-white font-black text-xs flex items-center justify-center relative z-10 shrink-0 shadow-md">
+                        {idx + 1}
                       </div>
-                      <p className="text-sm font-medium text-slate-700 pt-1">{step}</p>
+                      <p className="text-sm font-bold text-slate-800 pt-1 leading-snug">{step}</p>
                     </div>
                   ))}
                 </div>
@@ -305,91 +355,134 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-
         {/* SECTION 7: Cara Kerja Recommendation Engine */}
         <FadeIn delay={0.65}>
           <SlideFrame index="07" title="Recommendation Engine">
-            <p className="text-sm text-slate-600 mb-8 leading-relaxed">
-              Sistem rekomendasi pada Digital Skill Assessment tidak menggunakan Artificial Intelligence, tetapi menggunakan metode <strong>Rule-Based Weighted Scoring</strong>. Nilai rekomendasi dihitung berdasarkan hasil assessment kompetensi digital dan minat siswa sehingga proses penilaian bersifat transparan dan mudah dipahami.
+            <p className="text-base text-slate-800 font-semibold mb-8 leading-relaxed">
+              Sistem rekomendasi pada Digital Skill Assessment menggunakan metode <strong className="text-slate-900 font-black underline">Rule-Based Weighted Scoring</strong>. Nilai rekomendasi dihitung berdasarkan hasil assessment kompetensi digital dan minat siswa sehingga proses penilaian bersifat 100% transparan dan dapat dipertanggungjawabkan.
             </p>
 
             {/* Tahap 1 */}
-            <div className="mb-10">
-              <h4 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Tahap 1: Perhitungan Kompetensi Digital</h4>
-              <p className="text-xs text-slate-500 mb-6">
-                Setiap jawaban memiliki bobot terhadap empat kompetensi digital. Setelah seluruh assessment selesai, sistem menghitung skor setiap kompetensi dan menormalisasinya ke skala 0–100. Kompetensi yang dinilai meliputi <strong>Literasi Digital, Logika Komputasi, Computational Thinking, dan Digital Problem Solving</strong>.
+            <div className="mb-12 bg-white border-2 border-slate-200 p-6 rounded-xl shadow-sm">
+              <h4 className="font-extrabold text-slate-900 text-lg mb-3 flex items-center gap-2 border-b border-slate-200 pb-3">
+                <span className="w-3 h-3 rounded-full bg-slate-900" />
+                Tahap 1: Perhitungan Kompetensi Digital
+              </h4>
+              <p className="text-sm font-semibold text-slate-700 mb-6 leading-relaxed">
+                Setiap jawaban memiliki bobot terhadap empat kompetensi digital. Setelah seluruh assessment selesai, sistem menghitung skor setiap kompetensi dan menormalisasinya ke skala 0–100.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-between bg-slate-50 border border-slate-200 p-4 rounded-xl">
-                <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm text-xs font-bold text-slate-700 text-center w-full sm:w-auto">Jawaban Assessment</div>
-                <div className="text-slate-300 font-bold rotate-90 sm:rotate-0">→</div>
-                <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm text-xs font-bold text-slate-700 text-center w-full sm:w-auto">Akumulasi Bobot</div>
-                <div className="text-slate-300 font-bold rotate-90 sm:rotate-0">→</div>
-                <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm text-xs font-bold text-slate-700 text-center w-full sm:w-auto">Normalisasi Nilai</div>
-                <div className="text-slate-300 font-bold rotate-90 sm:rotate-0">→</div>
-                <div className="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg shadow-sm text-xs font-bold text-white text-center w-full sm:w-auto">Skor Kompetensi (0–100)</div>
+              <div className="flex flex-col sm:flex-row items-center gap-3 justify-between bg-slate-50 border border-slate-200 p-5 rounded-xl">
+                <div className="px-4 py-3 bg-white border-2 border-slate-300 rounded-lg shadow-sm text-xs font-black text-slate-900 text-center w-full sm:w-auto">Jawaban Assessment</div>
+                <div className="bg-slate-900 text-white font-black px-2.5 py-1 rounded-full text-xs shrink-0">→</div>
+                <div className="px-4 py-3 bg-white border-2 border-slate-300 rounded-lg shadow-sm text-xs font-black text-slate-900 text-center w-full sm:w-auto">Akumulasi Bobot</div>
+                <div className="bg-slate-900 text-white font-black px-2.5 py-1 rounded-full text-xs shrink-0">→</div>
+                <div className="px-4 py-3 bg-white border-2 border-slate-300 rounded-lg shadow-sm text-xs font-black text-slate-900 text-center w-full sm:w-auto">Normalisasi Nilai</div>
+                <div className="bg-slate-900 text-white font-black px-2.5 py-1 rounded-full text-xs shrink-0">→</div>
+                <div className="px-4 py-3 bg-slate-900 border-2 border-slate-900 rounded-lg shadow-md text-xs font-black text-white text-center w-full sm:w-auto">Skor Kompetensi (0–100)</div>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6 pt-4 border-t border-slate-200">
+                {["Literasi Digital", "Logika Komputasi", "Computational Thinking", "Digital Problem Solving"].map((item, idx) => (
+                  <div key={idx} className="bg-slate-100 p-3 rounded-lg border border-slate-200 text-center">
+                    <span className="text-xs font-bold text-slate-900 block">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Tahap 2 */}
-            <div className="mb-10">
-              <h4 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Tahap 2: Perhitungan Rekomendasi Program Studi</h4>
-              <p className="text-xs text-slate-500 mb-6">
+            <div className="mb-12 bg-white border-2 border-slate-200 p-6 rounded-xl shadow-sm">
+              <h4 className="font-extrabold text-slate-900 text-lg mb-3 flex items-center gap-2 border-b border-slate-200 pb-3">
+                <span className="w-3 h-3 rounded-full bg-slate-900" />
+                Tahap 2: Perhitungan Rekomendasi Program Studi
+              </h4>
+              <p className="text-sm font-semibold text-slate-700 mb-6 leading-relaxed">
                 Setiap program studi memiliki komposisi bobot kompetensi yang berbeda sehingga menghasilkan rekomendasi yang sesuai dengan karakteristik masing-masing program studi.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <div className="p-5 border border-slate-200 bg-white shadow-sm rounded-xl">
-                  <h5 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-slate-800" /> Sistem Informasi
+                <div className="p-6 border-2 border-slate-300 bg-white shadow-sm rounded-xl">
+                  <h5 className="font-extrabold text-slate-900 text-base mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                    <span>Sistem Informasi</span>
+                    <span className="text-xs font-bold bg-slate-900 text-white px-2.5 py-1 rounded-full">Prodi A</span>
                   </h5>
-                  <ul className="space-y-3">
-                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Literasi Digital</span><span className="font-bold text-slate-900">35%</span></li>
-                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Logika Komputasi</span><span className="font-bold text-slate-900">20%</span></li>
-                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Computational Thinking</span><span className="font-bold text-slate-900">20%</span></li>
-                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Digital Problem Solving</span><span className="font-bold text-slate-900">25%</span></li>
-                  </ul>
+                  <div className="space-y-4">
+                    {[
+                      { name: "Literasi Digital", val: "35%", pct: 35 },
+                      { name: "Logika Komputasi", val: "20%", pct: 20 },
+                      { name: "Computational Thinking", val: "20%", pct: 20 },
+                      { name: "Digital Problem Solving", val: "25%", pct: 25 }
+                    ].map((item, idx) => (
+                      <div key={idx}>
+                        <div className="flex justify-between items-center text-xs font-bold text-slate-800 mb-1">
+                          <span>{item.name}</span>
+                          <span className="bg-slate-900 text-white px-2 py-0.5 rounded text-[11px] font-black">{item.val}</span>
+                        </div>
+                        <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden border border-slate-200">
+                          <div className="bg-slate-900 h-full rounded-full" style={{ width: `${item.pct}%` }}></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="p-5 border border-slate-200 bg-white shadow-sm rounded-xl">
-                  <h5 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-slate-400" /> Informatika
+                <div className="p-6 border-2 border-slate-300 bg-white shadow-sm rounded-xl">
+                  <h5 className="font-extrabold text-slate-900 text-base mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                    <span>Informatika</span>
+                    <span className="text-xs font-bold bg-slate-800 text-white px-2.5 py-1 rounded-full">Prodi B</span>
                   </h5>
-                  <ul className="space-y-3">
-                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Literasi Digital</span><span className="font-bold text-slate-900">15%</span></li>
-                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Logika Komputasi</span><span className="font-bold text-slate-900">30%</span></li>
-                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Computational Thinking</span><span className="font-bold text-slate-900">35%</span></li>
-                    <li className="flex justify-between items-center text-sm"><span className="text-slate-600">Digital Problem Solving</span><span className="font-bold text-slate-900">20%</span></li>
-                  </ul>
+                  <div className="space-y-4">
+                    {[
+                      { name: "Literasi Digital", val: "15%", pct: 15 },
+                      { name: "Logika Komputasi", val: "30%", pct: 30 },
+                      { name: "Computational Thinking", val: "35%", pct: 35 },
+                      { name: "Digital Problem Solving", val: "20%", pct: 20 }
+                    ].map((item, idx) => (
+                      <div key={idx}>
+                        <div className="flex justify-between items-center text-xs font-bold text-slate-800 mb-1">
+                          <span>{item.name}</span>
+                          <span className="bg-slate-900 text-white px-2 py-0.5 rounded text-[11px] font-black">{item.val}</span>
+                        </div>
+                        <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden border border-slate-200">
+                          <div className="bg-slate-900 h-full rounded-full" style={{ width: `${item.pct}%` }}></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
               </div>
             </div>
 
             {/* Tahap 3 */}
-            <div>
-              <h4 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Tahap 3: Penyesuaian Berdasarkan Minat</h4>
-              <p className="text-xs text-slate-500 mb-6">
+            <div className="bg-white border-2 border-slate-200 p-6 rounded-xl shadow-sm">
+              <h4 className="font-extrabold text-slate-900 text-lg mb-3 flex items-center gap-2 border-b border-slate-200 pb-3">
+                <span className="w-3 h-3 rounded-full bg-slate-900" />
+                Tahap 3: Penyesuaian Berdasarkan Minat
+              </h4>
+              <p className="text-sm font-semibold text-slate-700 mb-6 leading-relaxed">
                 Hasil akhir diperoleh dari kombinasi antara skor kompetensi digital (70%) dan hasil asesmen minat siswa (30%).
               </p>
               
-              <div className="flex flex-col md:flex-row justify-center items-center gap-4 bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-md">
-                <div className="flex flex-col items-center bg-slate-800/50 p-4 rounded-lg border border-slate-700 w-full md:w-auto">
-                  <span className="text-3xl font-black text-white">70%</span>
-                  <span className="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Skor Kompetensi</span>
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4 bg-slate-950 p-8 rounded-2xl border-2 border-slate-800 shadow-xl">
+                <div className="flex flex-col items-center bg-slate-900 p-5 rounded-xl border border-slate-700 w-full md:w-auto min-w-[160px]">
+                  <span className="text-4xl font-black text-white">70%</span>
+                  <span className="text-xs font-bold text-slate-300 mt-2 uppercase tracking-wider">Skor Kompetensi</span>
                 </div>
                 
-                <span className="text-2xl font-bold text-slate-500">+</span>
+                <span className="text-3xl font-black text-slate-400">+</span>
                 
-                <div className="flex flex-col items-center bg-slate-800/50 p-4 rounded-lg border border-slate-700 w-full md:w-auto">
-                  <span className="text-3xl font-black text-white">30%</span>
-                  <span className="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">Skor Minat</span>
+                <div className="flex flex-col items-center bg-slate-900 p-5 rounded-xl border border-slate-700 w-full md:w-auto min-w-[160px]">
+                  <span className="text-4xl font-black text-white">30%</span>
+                  <span className="text-xs font-bold text-slate-300 mt-2 uppercase tracking-wider">Skor Minat</span>
                 </div>
                 
-                <span className="text-2xl font-bold text-slate-500">→</span>
+                <span className="text-3xl font-black text-slate-400 font-mono">→</span>
                 
-                <div className="flex flex-col items-center bg-white p-4 rounded-lg w-full md:w-auto">
-                  <span className="text-xl font-black text-slate-900 uppercase">Final Recommendation Score</span>
+                <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg w-full md:w-auto">
+                  <span className="text-sm font-black text-slate-900 uppercase tracking-widest text-center">Final Recommendation Score</span>
                 </div>
               </div>
             </div>
@@ -397,43 +490,43 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 08: Solusi yang Ditawarkan */}
+        {/* SECTION 8: Solusi yang Ditawarkan */}
         <FadeIn delay={0.7}>
           <SlideFrame index="08" title="Solusi yang Ditawarkan">
-            <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
-              <table className="w-full text-left border-collapse text-sm text-slate-700 min-w-[800px]">
+            <div className="overflow-x-auto rounded-xl border-2 border-slate-200 shadow-sm">
+              <table className="w-full text-left border-collapse text-sm text-slate-800 min-w-[800px]">
                 <thead>
-                  <tr className="bg-slate-100 border-b border-slate-200">
-                    <th className="p-4 font-bold text-slate-900 w-1/3">Masalah</th>
-                    <th className="p-4 font-bold text-slate-900 w-1/3">Fitur Solusi</th>
-                    <th className="p-4 font-bold text-slate-900 w-1/3">Manfaat Bisnis & User</th>
+                  <tr className="bg-slate-900 text-white">
+                    <th className="p-4 font-extrabold w-1/3">Masalah</th>
+                    <th className="p-4 font-extrabold w-1/3">Fitur Solusi</th>
+                    <th className="p-4 font-extrabold w-1/3">Manfaat Bisnis & User</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100 bg-white">
+                <tbody className="divide-y divide-slate-200 bg-white">
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4">Siswa tidak tahu potensi spesifik bidang teknologinya.</td>
-                    <td className="p-4 font-semibold text-slate-900">Interactive Assessment Engine</td>
-                    <td className="p-4 text-slate-600">Memberikan diagnosis skor per kategori skill secara instan dan objektif.</td>
+                    <td className="p-4 font-semibold">Siswa tidak tahu potensi spesifik bidang teknologinya.</td>
+                    <td className="p-4 font-extrabold text-slate-900">Interactive Assessment Engine</td>
+                    <td className="p-4 text-slate-800 font-semibold">Memberikan diagnosis skor per kategori skill secara instan dan objektif.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4">Sulit memilih program studi yang paling tepat di universitas.</td>
-                    <td className="p-4 font-semibold text-slate-900">Rule-Based Recommendation</td>
-                    <td className="p-4 text-slate-600">Mengarahkan siswa ke prodi yang relevan, menekan angka putus kuliah.</td>
+                    <td className="p-4 font-semibold">Sulit memilih program studi yang paling tepat di universitas.</td>
+                    <td className="p-4 font-extrabold text-slate-900">Rule-Based Recommendation</td>
+                    <td className="p-4 text-slate-800 font-semibold">Mengarahkan siswa ke prodi yang relevan, menekan angka putus kuliah.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4">Data pendaftar pameran tercecer & tidak terstruktur.</td>
-                    <td className="p-4 font-semibold text-slate-900">Lead Capture & Data Export</td>
-                    <td className="p-4 text-slate-600">Merapikan database untuk diolah lebih lanjut oleh tim telemarketing.</td>
+                    <td className="p-4 font-semibold">Data pendaftar pameran tercecer & tidak terstruktur.</td>
+                    <td className="p-4 font-extrabold text-slate-900">Lead Capture & Data Export</td>
+                    <td className="p-4 text-slate-800 font-semibold">Merapikan database untuk diolah lebih lanjut oleh tim telemarketing.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4">Kurangnya daya tarik booth universitas saat pameran.</td>
-                    <td className="p-4 font-semibold text-slate-900">Web-based Gamified Assessment</td>
-                    <td className="p-4 text-slate-600">Menjadi magnet audiens melalui pendekatan interaktif di lokasi pameran.</td>
+                    <td className="p-4 font-semibold">Kurangnya daya tarik booth universitas saat pameran.</td>
+                    <td className="p-4 font-extrabold text-slate-900">Web-based Gamified Assessment</td>
+                    <td className="p-4 text-slate-800 font-semibold">Menjadi magnet audiens melalui pendekatan interaktif di lokasi pameran.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4">Tidak ada laporan kemajuan minat dari waktu ke waktu.</td>
-                    <td className="p-4 font-semibold text-slate-900">Admin Analytics Dashboard</td>
-                    <td className="p-4 text-slate-600">Memberi insight berbasis data untuk strategi penerimaan mahasiswa baru.</td>
+                    <td className="p-4 font-semibold">Tidak ada laporan kemajuan minat dari waktu ke waktu.</td>
+                    <td className="p-4 font-extrabold text-slate-900">Admin Analytics Dashboard</td>
+                    <td className="p-4 text-slate-800 font-semibold">Memberi insight berbasis data untuk strategi penerimaan mahasiswa baru.</td>
                   </tr>
                 </tbody>
               </table>
@@ -441,18 +534,18 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 8: Success Metrics */}
+        {/* SECTION 9: Success Metrics */}
         <FadeIn delay={0.8}>
           <SlideFrame index="09" title="Success Metrics">
             <div className="flex flex-col gap-6">
               
-              <div className="p-6 md:p-8 bg-slate-900 rounded-xl text-white flex flex-col md:flex-row md:items-center gap-6 justify-between shadow-md">
+              <div className="p-8 bg-slate-950 rounded-2xl text-white flex flex-col md:flex-row md:items-center gap-6 justify-between shadow-xl border-2 border-slate-800">
                 <div>
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-3 flex items-center gap-2">
-                    <Target className="w-4 h-4 text-slate-400" /> North Star Metric
+                    <Target className="w-4 h-4 text-white" /> North Star Metric
                   </span>
-                  <h4 className="text-2xl md:text-3xl font-bold tracking-tight">Jumlah Assessment yang Berhasil Diselesaikan</h4>
-                  <p className="text-sm text-slate-300 mt-3 max-w-2xl leading-relaxed">
+                  <h4 className="text-2xl md:text-3xl font-extrabold tracking-tight">Jumlah Assessment yang Berhasil Diselesaikan</h4>
+                  <p className="text-sm font-semibold text-slate-300 mt-3 max-w-2xl leading-relaxed">
                     Mengindikasikan value nyata yang dinikmati pengguna dan validitas data yang diperoleh institusi secara utuh.
                   </p>
                 </div>
@@ -466,9 +559,9 @@ export default function DigitalAssessmentCaseStudy() {
                   { label: "Lead Conversion Rate", desc: "Tingkat konversi pendaftar tes menjadi calon mahasiswa resmi." },
                   { label: "Monthly Active Users", desc: "Jumlah partisipasi dari kunjungan harian maupun bulanan di event promosi." }
                 ].map((metric, idx) => (
-                  <div key={idx} className="p-5 border border-slate-200 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                    <h5 className="font-bold text-slate-900 text-sm mb-2">{metric.label}</h5>
-                    <p className="text-xs text-slate-500 leading-relaxed">{metric.desc}</p>
+                  <div key={idx} className="p-5 border-2 border-slate-200 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <h5 className="font-extrabold text-slate-900 text-base mb-2">{metric.label}</h5>
+                    <p className="text-xs font-semibold text-slate-700 leading-relaxed">{metric.desc}</p>
                   </div>
                 ))}
               </div>
@@ -476,27 +569,24 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 9: Roadmap */}
+        {/* SECTION 10: Roadmap */}
         <FadeIn delay={0.9}>
           <SlideFrame index="10" title="Roadmap">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6 relative">
-              {/* Connector Line for Desktop */}
-              <div className="hidden lg:block absolute top-6 left-10 right-10 h-[2px] bg-slate-200 z-0"></div>
-              
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 relative">
               {[
                 { phase: "Fase 1", title: "Digital Assessment Platform", desc: "Peluncuran engine utama, registrasi, dan hasil tes sederhana (MVP)." },
                 { phase: "Fase 2", title: "Recommendation Engine", desc: "Integrasi sistem Rule-Based Weighted Scoring untuk pemetaan jurusan." },
                 { phase: "Fase 3", title: "Dashboard & Analytics", desc: "Pengembangan portal admin untuk memantau data lead secara analitik." },
                 { phase: "Fase 4", title: "Mobile App & Integrasi PMB", desc: "Adaptasi ke aplikasi seluler dan sinkronisasi dengan sistem admisi kampus." },
               ].map((rd, idx) => (
-                <div key={idx} className="flex flex-col relative z-10 pt-1 lg:pt-0">
-                  <div className="w-12 h-12 rounded-full bg-slate-100 border-4 border-white shadow-sm flex items-center justify-center mb-4 lg:mx-auto">
-                    <span className="font-bold text-slate-900">{idx + 1}</span>
+                <div key={idx} className="flex flex-col relative z-10">
+                  <div className="w-12 h-12 rounded-full bg-slate-900 text-white font-black flex items-center justify-center mb-4 shadow-md">
+                    {idx + 1}
                   </div>
-                  <div className="p-5 bg-white border border-slate-200 rounded-xl h-full shadow-sm">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">{rd.phase}</span>
-                    <h4 className="font-bold text-slate-900 mb-2 text-sm">{rd.title}</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">{rd.desc}</p>
+                  <div className="p-6 bg-white border-2 border-slate-200 rounded-xl h-full shadow-sm">
+                    <span className="text-xs font-extrabold text-slate-900 uppercase tracking-widest mb-2 block">{rd.phase}</span>
+                    <h4 className="font-extrabold text-slate-900 mb-2 text-base">{rd.title}</h4>
+                    <p className="text-xs font-semibold text-slate-700 leading-relaxed">{rd.desc}</p>
                   </div>
                 </div>
               ))}
@@ -504,28 +594,28 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 10: Refleksi */}
+        {/* SECTION 11: Refleksi */}
         <FadeIn delay={1.0}>
           <SlideFrame index="11" title="Refleksi">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-4"><AlertCircle className="w-5 h-5 text-slate-700" /></div>
-                <h4 className="font-bold text-slate-900 mb-3">Tantangan</h4>
-                <p className="text-sm text-slate-600 leading-relaxed">
+              <div className="p-6 bg-white border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><AlertCircle className="w-6 h-6" /></div>
+                <h4 className="font-extrabold text-slate-900 text-lg mb-3">Tantangan</h4>
+                <p className="text-sm font-semibold text-slate-700 leading-relaxed">
                   Bagaimana merancang platform yang tidak hanya memberikan nilai diagnostik yang akurat dan bermanfaat bagi siswa, namun juga secara simultan mengumpulkan data pemasaran strategis yang dibutuhkan oleh institusi tanpa terkesan eksploitatif.
                 </p>
               </div>
-              <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-4"><ListTodo className="w-5 h-5 text-slate-700" /></div>
-                <h4 className="font-bold text-slate-900 mb-3">Trade-Off</h4>
-                <p className="text-sm text-slate-600 leading-relaxed">
+              <div className="p-6 bg-white border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><ListTodo className="w-6 h-6" /></div>
+                <h4 className="font-extrabold text-slate-900 text-lg mb-3">Trade-Off</h4>
+                <p className="text-sm font-semibold text-slate-700 leading-relaxed">
                   Pada tahap perancangan, saya memilih menggunakan metode Rule-Based Weighted Scoring karena lebih transparan, mudah diimplementasikan, dan sesuai dengan kebutuhan awal platform. Pendekatan ini memungkinkan sistem memberikan rekomendasi secara konsisten tanpa kompleksitas model machine learning.
                 </p>
               </div>
-              <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-4"><ClipboardCheck className="w-5 h-5 text-slate-700" /></div>
-                <h4 className="font-bold text-slate-900 mb-3">Rencana Pengembangan</h4>
-                <p className="text-sm text-slate-600 leading-relaxed">
+              <div className="p-6 bg-white border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><ClipboardCheck className="w-6 h-6" /></div>
+                <h4 className="font-extrabold text-slate-900 text-lg mb-3">Rencana Pengembangan</h4>
+                <p className="text-sm font-semibold text-slate-700 leading-relaxed">
                   Apabila platform dikembangkan lebih lanjut, langkah prioritas berikutnya adalah pengemasan ke dalam aplikasi mobile mandiri, gamifikasi, serta integrasi data langsung dengan sistem Penerimaan Mahasiswa Baru (PMB) kampus.
                 </p>
               </div>
@@ -536,10 +626,10 @@ export default function DigitalAssessmentCaseStudy() {
         {/* FOOTER NAV */}
         <FadeIn delay={1.1}>
           <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <Link href="/product-management/onium" className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors">
+            <Link href="/product-management/onium" className="inline-flex items-center gap-2 font-sans text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm">
               <ArrowLeft className="w-4 h-4" /> Studi Kasus Sebelumnya
             </Link>
-            <Link href="/" className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors">
+            <Link href="/" className="inline-flex items-center gap-2 font-sans text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm">
               Ke Halaman Utama <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

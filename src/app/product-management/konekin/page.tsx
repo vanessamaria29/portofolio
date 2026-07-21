@@ -7,10 +7,12 @@ import Link from "next/link"
 import Image from "next/image"
 
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
-  <div className={`bg-white/70 backdrop-blur-md border border-slate-200 rounded-xl p-8 md:p-10 shadow-sm my-8 ${className}`}>
-    <div className="border-b border-slate-200 pb-4 mb-8">
-      <span className="text-xs font-semibold text-slate-500 tracking-wider uppercase">{index} / {title.split(' ')[0]}</span>
-      <h3 className="font-serif text-2xl md:text-3xl font-semibold text-slate-900 mt-2">{title}</h3>
+  <div className={`bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-8 md:p-10 shadow-lg shadow-slate-200/40 my-8 ${className}`}>
+    <div className="border-b border-slate-200 pb-4 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-2">
+      <div>
+        <span className="text-xs font-bold text-slate-700 tracking-wider uppercase bg-slate-100 px-3 py-1 rounded border border-slate-200">{index} / {title.split(' ')[0]}</span>
+        <h3 className="font-serif text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">{title}</h3>
+      </div>
     </div>
     {children}
   </div>
