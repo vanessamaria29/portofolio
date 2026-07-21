@@ -19,14 +19,16 @@ const ProjectCard = ({ project }: { project: any }) => (
     className="flex-none w-[280px] sm:w-[320px] md:w-[360px] h-full flex flex-col group overflow-hidden border border-slate-100/80 bg-white/60 backdrop-blur-md hover:border-purple-300 transition-colors snap-start rounded-2xl shadow-sm"
   >
     <Link href={project.href} className="flex flex-col h-full outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-2xl">
-      <div className="w-full relative overflow-hidden border-b border-border aspect-[4/3]">
-        <ImageContainer 
-          src={project.imageSrc} 
-          alt={project.title} 
-          aspectRatio="video"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-      </div>
+      {project.imageSrc && (
+        <div className="w-full relative overflow-hidden border-b border-border aspect-[4/3]">
+          <ImageContainer 
+            src={project.imageSrc} 
+            alt={project.title} 
+            aspectRatio="video"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+      )}
       <div className="p-5 flex flex-col flex-grow">
         <CardTitle className="text-lg mb-2 leading-tight group-hover:text-accent-primary transition-colors">
           {project.title}
@@ -65,6 +67,11 @@ export function PortfolioShowcase() {
       description: "Platform yang membantu pedagang UMKM mengelola transaksi, piutang, dan arus kas melalui pencatatan digital yang sederhana dan mudah digunakan.",
       imageSrc: "/images/onium-ui.png",
       href: "/product-management/onium"
+    },
+    {
+      title: "Digital Skill Assessment Platform",
+      description: "Platform berbasis AI yang membantu siswa SMA memetakan kemampuan digital serta memberikan rekomendasi jurusan yang sesuai.",
+      href: "/product-management/digital-skill-assessment"
     }
   ]
 
