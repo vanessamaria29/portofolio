@@ -14,7 +14,7 @@ import Image from "next/image"
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
   <div className={`bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm my-6 ${className}`}>
     <div className="border-b border-slate-200 pb-4 mb-6">
-      <span className="text-xs font-bold text-blue-600 tracking-wider uppercase">{index} / {title.split(' ')[0]}</span>
+      <span className="text-xs font-bold text-slate-900 tracking-wider uppercase">{index} / {title.split(' ')[0]}</span>
       <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">{title}</h3>
     </div>
     {children}
@@ -62,9 +62,9 @@ export function MeetThePartnersTable() {
           {/* BARIS 2: NAMA MITRA (BERADA TEPAT DI BAWAH FOTO) */}
           <tr className="bg-slate-100/80 font-semibold text-slate-900">
             <td className="p-3 font-bold">Nama Mitra</td>
-            <td className="p-3 text-purple-700 font-bold text-base">Mitra 1: Ibu Rikky Simbolon</td>
-            <td className="p-3 text-blue-700 font-bold text-base">Mitra 2: Bang Jefry Munthe</td>
-            <td className="p-3 text-indigo-700 font-bold text-base">Mitra 3: Kak Miran Simbolon</td>
+            <td className="p-3 text-slate-900 font-bold text-base">Mitra 1: Ibu Rikky Simbolon</td>
+            <td className="p-3 text-slate-900 font-bold text-base">Mitra 2: Bang Jefry Munthe</td>
+            <td className="p-3 text-slate-900 font-bold text-base">Mitra 3: Kak Miran Simbolon</td>
           </tr>
 
           {/* BARIS 3 DAN SETERUSNYA: ANALISIS KARAKTERISTIK MITRA */}
@@ -124,7 +124,7 @@ export function FieldAnalysisTable() {
 
       {/* Header Section */}
       <div className="border-b border-slate-200 pb-4 mb-8">
-        <span className="text-xs font-semibold text-purple-600 tracking-wider uppercase">2.1 / SARINGAN DATA LAPANGAN</span>
+        <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">2.1 / SARINGAN DATA LAPANGAN</span>
         <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Memisahkan Gejala, Keluhan, & Pain Utama</h3>
         <p className="font-sans text-sm text-slate-500 mt-2 leading-relaxed">
           Bagaimana kami menyaring temuan acak di Blok Los H Pasar Induk Kramat Jati untuk menemukan krisis likuiditas harian sesungguhnya yang mengancam kelangsungan modal pedagang.
@@ -179,7 +179,7 @@ export function FieldAnalysisTable() {
             <tr className="hover:bg-slate-50/50 transition-colors">
               <td className="p-4 font-bold text-slate-800">Catatan utang di kertas nota sering hilang, basah, atau robek karena air bawang.</td>
               <td className="p-4">
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-amber-50 text-amber-700 border border-amber-100">
+                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-amber-50 text-slate-900 border border-amber-100">
                   Gejala Fisik (Symptom)
                 </span>
               </td>
@@ -193,7 +193,7 @@ export function FieldAnalysisTable() {
 
             {/* Row 4 */}
             <tr className="bg-purple-50/20 hover:bg-purple-50/40 transition-colors">
-              <td className="p-4 font-bold text-purple-900">Laci kas kosong/menipis di sore hari padahal laku keras, menyulitkan tebusan modal esok hari.</td>
+              <td className="p-4 font-bold text-slate-900">Laci kas kosong/menipis di sore hari padahal laku keras, menyulitkan tebusan modal esok hari.</td>
               <td className="p-4">
                 <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-red-100 text-red-800 border border-red-200">
                   🔴 PAIN UTAMA
@@ -202,23 +202,23 @@ export function FieldAnalysisTable() {
               <td className="p-4 text-slate-700 font-medium">
                 Momen krisis nyata yang langsung mengancam kelangsungan hidup modal harian. Pedagang terpaksa memohon kelonggaran tempo baru ke bandar, mengikis kredibilitas mereka.
               </td>
-              <td className="p-4 text-purple-950 italic">
+              <td className="p-4 text-slate-900 italic">
                 Pukul 15.30-16.15 WIB wajah pedagang tegang saat bandar datang menagih bulanan. "Pas buka laci cash, uang tunai tipis sekali. Isinya kertas bon pelanggan semua menumpuk." (Ibu Rikky)
               </td>
             </tr>
 
             {/* Row 5 */}
             <tr className="bg-purple-50/20 hover:bg-purple-50/40 transition-colors">
-              <td className="p-4 font-bold text-purple-900">Pola laci kosong muncul identik pada ketiga narasumber lintas skala usaha.</td>
+              <td className="p-4 font-bold text-slate-900">Pola laci kosong muncul identik pada ketiga narasumber lintas skala usaha.</td>
               <td className="p-4">
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-purple-100 text-purple-800 border border-purple-200">
+                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-purple-100 text-slate-900 border border-purple-200">
                   PAIN UTAMA (Triangulasi)
                 </span>
               </td>
               <td className="p-4 text-slate-700 font-medium">
                 Membuktikan masalah ini bukan kasus individual pedagang kecil saja, melainkan <strong>pola sistemik/struktural</strong> di seluruh ekosistem transaksi pasar induk.
               </td>
-              <td className="p-4 text-purple-950 italic">
+              <td className="p-4 text-slate-900 italic">
                 Lapak katering besar Kak Miran (omzet Rp80jt/hari, 16 karyawan) tetap kena krisis ini: "Sore-sore laci kas fisik kami sering kosong... Terpaksa mengemis kasbon tempo ke bandar."
               </td>
             </tr>
@@ -227,7 +227,7 @@ export function FieldAnalysisTable() {
             <tr className="hover:bg-slate-50/50 transition-colors">
               <td className="p-4 font-bold text-slate-800">Sistem bon berjalan atas asas kekeluargaan & kepercayaan, bukan kontrak tertulis formal.</td>
               <td className="p-4">
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200">
+                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-blue-100 text-slate-900 border border-blue-200">
                   AKAR MASALAH (Root Cause)
                 </span>
               </td>
@@ -243,7 +243,7 @@ export function FieldAnalysisTable() {
             <tr className="hover:bg-slate-50/50 transition-colors">
               <td className="p-4 font-bold text-slate-800">Semua uang modal, piutang, dan keuntungan bercampur baur di satu laci tanpa rekapan total.</td>
               <td className="p-4">
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200">
+                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-blue-100 text-slate-900 border border-blue-200">
                   AKAR MASALAH (Lapis 2)
                 </span>
               </td>
@@ -269,7 +269,7 @@ export function HypothesisPivot() {
 
       {/* Header */}
       <div className="border-b border-slate-200 pb-4 mb-6">
-        <span className="text-xs font-semibold text-rose-600 tracking-wider uppercase">2.2 / THE PRODUCT PIVOT</span>
+        <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">2.2 / THE PRODUCT PIVOT</span>
         <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Mematahkan Asumsi: Fisik Bawang vs Kepercayaan Sosial</h3>
       </div>
 
@@ -279,13 +279,13 @@ export function HypothesisPivot() {
         {/* ASUMSI AWAL (SALAH) */}
         <div className="border border-rose-100 bg-rose-50/20 p-5 rounded-xl flex flex-col justify-between">
           <div>
-            <span className="text-xs font-bold text-rose-500 uppercase tracking-wider block mb-2">❌ ASUMSI AWAL KAMI (HIPOTESIS)</span>
+            <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-2">❌ ASUMSI AWAL KAMI (HIPOTESIS)</span>
             <h4 className="font-serif text-lg font-bold text-slate-800 mb-2">Kerugian Terbesar Disebabkan Oleh Susut Fisik Komoditas</h4>
             <p className="font-sans text-xs md:text-sm text-slate-600 leading-relaxed">
               Kami menduga margin keuntungan pedagang hancur karena penyusutan kadar air bawang basah (20% hingga 40%) selama penyimpanan di pasar induk harian.
             </p>
           </div>
-          <div className="mt-4 pt-3 border-t border-rose-100 italic text-[10px] md:text-xs text-rose-700 font-medium">
+          <div className="mt-4 pt-3 border-t border-rose-100 italic text-[10px] md:text-xs text-slate-900 font-medium">
             "Menyusut memang ada, namanya komoditas basah... Tapi itu mah risiko biasa, tinggal diakali jual murah ke warteg. Gak bikin pusing." — Ibu Rikky
           </div>
         </div>
@@ -293,13 +293,13 @@ export function HypothesisPivot() {
         {/* KENYATAAN RIIL (BENAR) */}
         <div className="border border-purple-100 bg-purple-50/20 p-5 rounded-xl flex flex-col justify-between">
           <div>
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider block mb-2">💡 KENYATAAN LAPANGAN (DATA RIIL)</span>
+            <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-2">💡 KENYATAAN LAPANGAN (DATA RIIL)</span>
             <h4 className="font-serif text-lg font-bold text-slate-800 mb-2">Kerugian Terbesar Terjadi Akibat Kebutaan Likuiditas Kas</h4>
             <p className="font-sans text-xs md:text-sm text-slate-600 leading-relaxed">
               Penyusutan riil di lapak ternyata sangat kecil (1.5% sampai 8%). Krisis sesungguhnya adalah pedagang buta terhadap batas aman kas tunai harian mereka akibat modal tersangkut di tumpukan bon kertas pelanggan.
             </p>
           </div>
-          <div className="mt-4 pt-3 border-t border-purple-100 italic text-[10px] md:text-xs text-purple-800 font-medium font-semibold">
+          <div className="mt-4 pt-3 border-t border-purple-100 italic text-[10px] md:text-xs text-slate-900 font-medium font-semibold">
             "Masalah terbesar bukan gagal menjaga fisik barang, melainkan ketidakberdayaan mengukur batas aman dari akumulasi bon kepercayaan sosial harian." — Kesimpulan Riset
           </div>
         </div>
@@ -329,7 +329,7 @@ export function ShadowingDiary() {
     <div className="relative mt-8 pt-8 border-t border-slate-200">
       {/* Header */}
       <div className="border-b border-slate-200 pb-4 mb-6">
-        <span className="text-xs font-semibold text-purple-600 tracking-wider uppercase">2.3 / SHADOWING DIARY</span>
+        <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">2.3 / SHADOWING DIARY</span>
         <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Satu Hari di Lapak Los H: Kronologi Krisis Likuiditas</h3>
         <p className="font-sans text-xs md:text-sm text-slate-500 mt-1 leading-relaxed">
           Log observasi langsung mengamati siklus kerja fisik pedagang yang menguras kapasitas mental mereka untuk melakukan pembukuan.
@@ -341,7 +341,7 @@ export function ShadowingDiary() {
         {logActivities.map((log, index) => (
           <div key={index} className="grid grid-cols-1 md:grid-cols-12 gap-4 items-start border-l-2 border-purple-200 pl-4 md:pl-6 ml-2">
             <div className="md:col-span-3">
-              <span className="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md border border-purple-100 block w-max">
+              <span className="text-xs font-bold text-slate-900 bg-purple-50 px-2 py-1 rounded-md border border-purple-100 block w-max">
                 {log.time}
               </span>
             </div>
@@ -365,7 +365,7 @@ export function ValuePropositionCanvas() {
     <div className="bg-white/60 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-sm my-8 relative overflow-hidden">
       {/* Header */}
       <div className="border-b border-slate-200 pb-4 mb-6">
-        <span className="text-xs font-semibold text-purple-600 tracking-wider uppercase">3.1 / STRATEGI VALUE PROPOSITION</span>
+        <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">3.1 / STRATEGI VALUE PROPOSITION</span>
         <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Value Proposition Canvas (VPC)</h3>
         <p className="font-sans text-xs md:text-sm text-slate-500 mt-1 leading-relaxed">
           Menghubungkan profil sosiologis pedagang pasar induk secara jujur dengan desain kapabilitas fungsional aplikasi ONIUM.
@@ -405,25 +405,25 @@ export function ValuePropositionCanvas() {
 
         {/* VALUE MAP */}
         <div className="border border-purple-100 bg-purple-50/10 p-5 rounded-xl space-y-4">
-          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-purple-100 text-purple-800 border border-purple-200 uppercase tracking-wider">
+          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-purple-100 text-slate-900 border border-purple-200 uppercase tracking-wider">
             ⚡ Value Map (Sisi Solusi)
           </span>
 
           <div className="space-y-3 text-xs">
             <div>
-              <h5 className="font-bold text-purple-950 uppercase text-[10px] md:text-xs tracking-wider mb-1">Products & Services</h5>
+              <h5 className="font-bold text-slate-900 uppercase text-[10px] md:text-xs tracking-wider mb-1">Products & Services</h5>
               <p className="text-slate-700 leading-relaxed font-medium">
     Asisten finansial berbasis chatbot yang membantu pedagang mencatat kas, piutang, dan kewajiban pembayaran dalam satu alur percakapan sederhana.
               </p>
             </div>
             <div>
-              <h5 className="font-bold text-purple-950 uppercase text-[10px] md:text-xs tracking-wider mb-1">Pain Relievers</h5>
+              <h5 className="font-bold text-slate-900 uppercase text-[10px] md:text-xs tracking-wider mb-1">Pain Relievers</h5>
               <p className="text-slate-700 leading-relaxed">
                Mencatat transaksi secara sederhana melalui percakapan chatbot sekaligus menampilkan posisi kas dan piutang secara real-time tanpa perlu rekap manual.
               </p>
             </div>
             <div>
-              <h5 className="font-bold text-purple-950 uppercase text-[10px] md:text-xs tracking-wider mb-1">Gain Creators</h5>
+              <h5 className="font-bold text-slate-900 uppercase text-[10px] md:text-xs tracking-wider mb-1">Gain Creators</h5>
               <p className="text-slate-700 leading-relaxed">
                Memberikan peringatan dini ketika akumulasi piutang mulai mendekati batas aman kas sehingga pedagang dapat mengambil keputusan lebih cepat tanpa mengganggu hubungan dengan pelanggan.
                 </p>
@@ -435,8 +435,8 @@ export function ValuePropositionCanvas() {
 
       {/* ELEVATOR PITCH STATEMENT */}
       <div className="mt-6 border border-purple-200 bg-purple-50/30 p-4 rounded-xl">
-        <h4 className="text-xs font-bold text-purple-800 uppercase tracking-wider mb-1">Onium Value Proposition Statement</h4>
-        <p className="font-serif text-xs md:text-sm text-purple-950 italic leading-relaxed">
+        <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1">Onium Value Proposition Statement</h4>
+        <p className="font-serif text-xs md:text-sm text-slate-900 italic leading-relaxed">
           "Onium membantu pedagang grosir bawang yang menjalankan usahanya berdasarkan asas kekeluargaan untuk tetap bisa memberikan bon kepada pelanggan dengan lebih percaya diri, melalui sinyal dini otomatis saat piutang mendekati batas aman kas tunai mereka langsung di dalam Chatbot harian."
         </p>
       </div>
@@ -446,18 +446,21 @@ export function ValuePropositionCanvas() {
 
 export default function OniumCaseStudy() {
   return (
-    <div className="min-h-screen bg-transparent relative">
+    <div className="min-h-screen bg-surface-primary selection:bg-slate-200 selection:text-slate-900 relative">
       
-      {/* Ethereal Ambient Backgrounds (Konsistensi Global) */}
-      <div className="fixed top-1/4 -left-[10%] w-[800px] h-[800px] bg-gradient-to-tr from-blue-300/10 to-purple-300/10 blur-3xl -z-10 rounded-full pointer-events-none" />
-      <div className="fixed bottom-1/4 -right-[10%] w-[600px] h-[600px] bg-gradient-to-tr from-purple-300/10 to-blue-300/10 blur-3xl -z-10 rounded-full pointer-events-none" />
+      {/* Background gradients */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob" />
+        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-pink-200/40 rounded-full blur-[120px] mix-blend-multiply opacity-60 animate-blob animation-delay-4000" />
+      </div>
 
       <main className="pt-24 pb-16 max-w-7xl mx-auto px-6 relative z-0">
         
         <FadeIn>
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors mb-6"
+            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Kembali ke Beranda
@@ -494,7 +497,7 @@ export default function OniumCaseStudy() {
 
               {/* Kolom Kanan (Project Dashboard) */}
               <div className="lg:col-span-5 bg-white/50 backdrop-blur-sm border border-slate-100 rounded-lg p-6">
-                <h3 className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">Project Dashboard</h3>
+                <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">Project Dashboard</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-slate-500">Target User</span>
@@ -510,7 +513,7 @@ export default function OniumCaseStudy() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-slate-200">
                     <span className="text-[10px] uppercase font-bold text-slate-400 block mb-1">Key Insight</span>
-                    <p className="text-sm font-bold text-blue-900 leading-snug">
+                    <p className="text-sm font-bold text-slate-900 leading-snug">
                       "Skala transaksi tinggi tidak mencerminkan ketersediaan kas riil."
                     </p>
                   </div>
@@ -527,7 +530,7 @@ export default function OniumCaseStudy() {
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
-              <span className="text-xs font-semibold text-purple-600 tracking-wider uppercase">1 / LATAR BELAKANG</span>
+              <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">1 / LATAR BELAKANG</span>
               <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Strategic Assessment & Business Context</h3>
             </div>
             
@@ -547,7 +550,7 @@ export default function OniumCaseStudy() {
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
-              <span className="text-xs font-semibold text-purple-600 tracking-wider uppercase">2 / RISET LAPANGAN</span>
+              <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">2 / RISET LAPANGAN</span>
               <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Matriks Analisis Karakteristik Mitra</h3>
             </div>
 
@@ -565,7 +568,7 @@ export default function OniumCaseStudy() {
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
-              <span className="text-[10px] md:text-xs font-semibold text-purple-600 tracking-wider uppercase">3 / DIAGNOSIS</span>
+              <span className="text-[10px] md:text-xs font-semibold text-slate-900 tracking-wider uppercase">3 / DIAGNOSIS</span>
               <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Problem Discovery & Root Cause Analysis</h3>
             </div>
 
@@ -586,7 +589,7 @@ export default function OniumCaseStudy() {
                   <h4 className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-400 mb-3 border-b border-slate-100 pb-2">Problem Reframing</h4>
                   <div className="bg-white/50 p-4 rounded-lg border border-slate-200 text-sm">
                     <p className="line-through text-slate-400 mb-2">Asumsi: Kurangnya sistem Inventory Management.</p>
-                    <p className="font-bold text-blue-700">Realitas: Lemahnya Cash Visibility. Fokus harus beralih ke manajemen arus kas berbasis percakapan (Chat-based Cash Flow).</p>
+                    <p className="font-bold text-slate-900">Realitas: Lemahnya Cash Visibility. Fokus harus beralih ke manajemen arus kas berbasis percakapan (Chat-based Cash Flow).</p>
                   </div>
                 </div>
               </div>
@@ -622,9 +625,9 @@ export default function OniumCaseStudy() {
 
                   {/* Root Cause (Why 5) */}
                   <div className="flex items-center gap-3 mt-2 pt-2 border-t border-slate-100">
-                    <div className="w-[85px] text-right text-[10px] font-bold uppercase text-purple-600 leading-tight">Akar Masalah (Why 5)</div>
-                    <CornerDownRight className="w-5 h-5 text-purple-500 shrink-0" />
-                    <div className="bg-purple-50 border border-purple-200 text-purple-900 text-xs font-bold py-2.5 px-4 rounded-md flex-1 shadow-sm uppercase tracking-wide leading-relaxed">
+                    <div className="w-[85px] text-right text-[10px] font-bold uppercase text-slate-900 leading-tight">Akar Masalah (Why 5)</div>
+                    <CornerDownRight className="w-5 h-5 text-slate-900 shrink-0" />
+                    <div className="bg-purple-50 border border-purple-200 text-slate-900 text-xs font-bold py-2.5 px-4 rounded-md flex-1 shadow-sm uppercase tracking-wide leading-relaxed">
                       Pedagang tidak memiliki cara yang cepat dan sederhana untuk mengetahui kapan total piutang telah melewati batas aman kas operasional.
                     </div>
                   </div>
@@ -645,10 +648,10 @@ export default function OniumCaseStudy() {
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
-              <span className="text-[10px] md:text-xs font-semibold text-purple-600 tracking-wider uppercase">4 / PRIORITISASI FITUR</span>
+              <span className="text-[10px] md:text-xs font-semibold text-slate-900 tracking-wider uppercase">4 / PRIORITISASI FITUR</span>
               <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">MoSCoW Prioritization Matrix</h3>
               <div className="mt-4 p-4 border border-blue-100 bg-blue-50/50 rounded-lg">
-                <h4 className="text-xs font-bold text-blue-800 mb-1">Why MoSCoW?</h4>
+                <h4 className="text-xs font-bold text-slate-900 mb-1">Why MoSCoW?</h4>
                 <p className="text-xs md:text-sm text-slate-700 leading-relaxed">
                   Berdasarkan hasil wawancara, saya memprioritaskan fitur menggunakan framework MoSCoW agar solusi tetap fokus pada pain utama pengguna dan tidak mengalami feature creep.
                 </p>
@@ -668,7 +671,7 @@ export default function OniumCaseStudy() {
 
               {/* SHOULD HAVE */}
               <div className="border border-blue-100 bg-blue-50/30 p-5 rounded-lg shadow-sm">
-                <h4 className="font-bold text-blue-700 text-sm mb-3">🔵 SHOULD HAVE (Sangat Penting)</h4>
+                <h4 className="font-bold text-slate-900 text-sm mb-3">🔵 SHOULD HAVE (Sangat Penting)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-700 font-medium">
                   <li>Dashboard tren transaksi</li>
                 </ul>
@@ -676,7 +679,7 @@ export default function OniumCaseStudy() {
 
               {/* COULD HAVE */}
               <div className="border border-amber-100 bg-amber-50/30 p-5 rounded-lg shadow-sm">
-                <h4 className="font-bold text-amber-700 text-sm mb-3">🟡 COULD HAVE (Fitur Pendukung)</h4>
+                <h4 className="font-bold text-slate-900 text-sm mb-3">🟡 COULD HAVE (Fitur Pendukung)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-700 font-medium">
                   <li>Voice input</li>
                 </ul>
@@ -702,33 +705,33 @@ export default function OniumCaseStudy() {
           <div className="bg-white/60 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 md:p-10 shadow-sm relative overflow-hidden mb-12">
             {/* 1. Header Section */}
             <div className="border-b border-slate-200 pb-4 mb-8">
-              <span className="text-[10px] md:text-xs font-semibold text-purple-600 tracking-wider uppercase">5 / SOLUSI & ARSITEKTUR</span>
+              <span className="text-[10px] md:text-xs font-semibold text-slate-900 tracking-wider uppercase">5 / SOLUSI & ARSITEKTUR</span>
               <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Solution Architecture & Interactive Mockup</h3>
             </div>
 
             {/* PM LENS DEFINITION */}
             <div className="mb-8 p-6 border border-purple-100 bg-purple-50/50 rounded-xl shadow-sm">
-              <h4 className="text-sm font-bold text-purple-800 mb-2">Definisi Produk:</h4>
+              <h4 className="text-sm font-bold text-slate-900 mb-2">Definisi Produk:</h4>
               <p className="text-sm md:text-base text-slate-800 font-bold mb-6">PWA (Progressive Web App) dengan integrasi Chatbot.</p>
               
-              <h4 className="text-xs font-bold text-purple-800 uppercase tracking-wider mb-4 border-b border-purple-200 pb-2">Alasan Teknis & Desain (PM Lens):</h4>
+              <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-purple-200 pb-2">Alasan Teknis & Desain (PM Lens):</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <span className="text-purple-600 mt-0.5">⚡</span>
+                  <span className="text-slate-900 mt-0.5">⚡</span>
                   <div className="text-xs md:text-sm text-slate-700">
-                    <strong className="text-purple-900">Zero Learning Curve:</strong> Menggunakan kenyamanan antarmuka percakapan (conversational interface / chatbot) untuk meminimalkan friksi kognitif bagi pedagang yang sudah sangat kelelahan fisik.
+                    <strong className="text-slate-900">Zero Learning Curve:</strong> Menggunakan kenyamanan antarmuka percakapan (conversational interface / chatbot) untuk meminimalkan friksi kognitif bagi pedagang yang sudah sangat kelelahan fisik.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-purple-600 mt-0.5">🌐</span>
+                  <span className="text-slate-900 mt-0.5">🌐</span>
                   <div className="text-xs md:text-sm text-slate-700">
-                    <strong className="text-purple-900">Standalone PWA:</strong> Bertindak sebagai aplikasi web mandiri yang bisa diakses tanpa instalasi langsung di layar HP pedagang, tanpa bergantung pada restriksi, aturan kaku, atau biaya mahal dari API WhatsApp Business resmi.
+                    <strong className="text-slate-900">Standalone PWA:</strong> Bertindak sebagai aplikasi web mandiri yang bisa diakses tanpa instalasi langsung di layar HP pedagang, tanpa bergantung pada restriksi, aturan kaku, atau biaya mahal dari API WhatsApp Business resmi.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-purple-600 mt-0.5">📶</span>
+                  <span className="text-slate-900 mt-0.5">📶</span>
                   <div className="text-xs md:text-sm text-slate-700">
-                    <strong className="text-purple-900">Offline-First Capability:</strong> Memastikan sistem pencatatan tetap dapat mendata transaksi secara instan di dalam pasar induk yang bising meskipun koneksi internet sedang tidak stabil atau terputus harian menggunakan IndexedDB dan Service Worker.
+                    <strong className="text-slate-900">Offline-First Capability:</strong> Memastikan sistem pencatatan tetap dapat mendata transaksi secara instan di dalam pasar induk yang bising meskipun koneksi internet sedang tidak stabil atau terputus harian menggunakan IndexedDB dan Service Worker.
                   </div>
                 </li>
               </ul>
@@ -810,7 +813,7 @@ export default function OniumCaseStudy() {
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
-              <span className="text-[10px] md:text-xs font-semibold text-purple-600 tracking-wider uppercase">6 / PENUTUP</span>
+              <span className="text-[10px] md:text-xs font-semibold text-slate-900 tracking-wider uppercase">6 / PENUTUP</span>
               <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Lessons Learned (Retrospective)</h3>
             </div>
 

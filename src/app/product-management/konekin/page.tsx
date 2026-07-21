@@ -18,11 +18,14 @@ const SlideFrame = ({ children, title, index, className = "" }: { children: Reac
 
 export default function KonekinCaseStudy() {
   return (
-    <div className="min-h-screen bg-slate-50/50 relative">
+    <div className="min-h-screen bg-surface-primary selection:bg-slate-200 selection:text-slate-900 relative">
       
-      {/* Latar Belakang Minimalis */}
-      <div className="fixed top-0 left-0 w-full h-full bg-slate-50 -z-10 pointer-events-none" />
-      <div className="fixed top-0 left-0 w-full h-1/2 bg-gradient-to-b from-blue-50/30 to-transparent -z-10 pointer-events-none" />
+      {/* Background gradients */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob" />
+        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-pink-200/40 rounded-full blur-[120px] mix-blend-multiply opacity-60 animate-blob animation-delay-4000" />
+      </div>
 
       <main className="pt-24 pb-20 max-w-7xl mx-auto px-6 relative z-0">
         
@@ -80,7 +83,7 @@ export default function KonekinCaseStudy() {
               </div>
 
               <div className="lg:col-span-5 bg-white/50 backdrop-blur-sm border border-slate-100 rounded-lg p-6 flex flex-col gap-4">
-                <h3 className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 border-b border-slate-200 pb-2">Kajian Produk</h3>
+                <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2 border-b border-slate-200 pb-2">Kajian Produk</h3>
                 
                 <div className="space-y-4 text-xs md:text-sm text-slate-700 leading-relaxed">
                   <div>
@@ -671,7 +674,7 @@ export default function KonekinCaseStudy() {
                   <p className="text-sm text-slate-700">Takut tertipu saat menggunakan layanan digital dari penyedia yang belum terpercaya.</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
-                  <span className="text-[10px] font-semibold text-blue-600 uppercase tracking-wider block mb-1">Fitur Solusi</span>
+                  <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Fitur Solusi</span>
                   <p className="text-sm font-semibold text-slate-900">Sistem Escrow</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
@@ -686,7 +689,7 @@ export default function KonekinCaseStudy() {
                   <p className="text-sm text-slate-700">Sering terjadi miskomunikasi karena kebutuhan proyek tidak dijelaskan secara rinci.</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
-                  <span className="text-[10px] font-semibold text-blue-600 uppercase tracking-wider block mb-1">Fitur Solusi</span>
+                  <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Fitur Solusi</span>
                   <p className="text-sm font-semibold text-slate-900">Brief Proyek Terstruktur</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
@@ -701,7 +704,7 @@ export default function KonekinCaseStudy() {
                   <p className="text-sm text-slate-700">Mahasiswa butuh bukti pengalaman nyata.</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
-                  <span className="text-[10px] font-semibold text-blue-600 uppercase tracking-wider block mb-1">Fitur Solusi</span>
+                  <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Fitur Solusi</span>
                   <p className="text-sm font-semibold text-slate-900">Riwayat Portofolio Publik</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
@@ -716,7 +719,7 @@ export default function KonekinCaseStudy() {
                   <p className="text-sm text-slate-700">UMKM sulit memilih talenta yang sesuai dengan anggaran.</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
-                  <span className="text-[10px] font-semibold text-blue-600 uppercase tracking-wider block mb-1">Fitur Solusi</span>
+                  <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Fitur Solusi</span>
                   <p className="text-sm font-semibold text-slate-900">Sistem Penawaran (Bidding)</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
