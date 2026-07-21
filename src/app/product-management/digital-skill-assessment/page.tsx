@@ -88,13 +88,13 @@ export default function DigitalAssessmentCaseStudy() {
               </div>
 
               {/* Kolom Kanan: Logo UKRIDA */}
-              <div className="lg:col-span-4 flex items-center justify-center p-6 bg-white/90 border border-slate-200/90 rounded-2xl shadow-sm">
+              <div className="lg:col-span-4 flex items-center justify-center p-4">
                 <Image 
                   src="/images/Logo_UKRIDA_300x300.png"
                   alt="Logo UKRIDA"
                   width={300}
                   height={300}
-                  className="w-48 md:w-56 h-auto object-contain hover:scale-105 transition-transform duration-300"
+                  className="w-48 md:w-60 h-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-sm"
                   priority
                 />
               </div>
