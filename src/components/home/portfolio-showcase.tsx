@@ -65,66 +65,6 @@ export function PortfolioShowcase() {
       description: "Platform yang membantu pedagang UMKM mengelola transaksi, piutang, dan arus kas melalui pencatatan digital yang sederhana dan mudah digunakan.",
       imageSrc: "/images/onium-ui.png",
       href: "/product-management/onium"
-    },
-    {
-      title: "Campus Ride-Sharing",
-      description: "MVP platform pencocokan rute otomatis untuk mahasiswa yang menghemat biaya transportasi harian hingga 40%.",
-      imageSrc: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=600&auto=format&fit=crop",
-      href: "#"
-    },
-    {
-      title: "Fintech Onboarding",
-      description: "Optimasi alur KYC melalui progressive disclosure yang meningkatkan tingkat konversi pengguna sebesar 25%.",
-      imageSrc: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop",
-      href: "#"
-    },
-    {
-      title: "Library Booking",
-      description: "Sistem reservasi kursi perpustakaan real-time menggunakan sensor IoT untuk mengurangi waktu pencarian kursi.",
-      imageSrc: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
-      href: "#"
-    }
-  ]
-
-  const uxProjects = [
-    {
-      title: "E-Commerce Checkout Redesign",
-      description: "Riset dan desain ulang alur pembayaran yang memangkas waktu checkout hingga 30 detik.",
-      imageSrc: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=600&auto=format&fit=crop",
-      href: "#"
-    },
-    {
-      title: "Health App Dashboard",
-      description: "Merancang visualisasi data metrik kesehatan harian dengan fokus pada aksesibilitas dan kemudahan baca pengguna lansia.",
-      imageSrc: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop",
-      href: "#"
-    },
-    {
-      title: "EdTech Learning Flow",
-      description: "Wireframing dan user testing untuk modul pembelajaran interaktif yang meningkatkan tingkat penyelesaian kursus.",
-      imageSrc: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=600&auto=format&fit=crop",
-      href: "#"
-    }
-  ]
-
-  const webProjects = [
-    {
-      title: "University Portal",
-      description: "Mengembangkan dashboard akademik responsif menggunakan Next.js dan Tailwind CSS.",
-      imageSrc: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop",
-      href: "#"
-    },
-    {
-      title: "Event Ticketing System",
-      description: "Aplikasi web full-stack untuk manajemen dan penjualan tiket acara tahunan kampus.",
-      imageSrc: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop",
-      href: "#"
-    },
-    {
-      title: "Company Profile Generator",
-      description: "Platform pembuat landing page dinamis berbasis React dengan fitur drag-and-drop.",
-      imageSrc: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=600&auto=format&fit=crop",
-      href: "#"
     }
   ]
 
@@ -147,44 +87,6 @@ export function PortfolioShowcase() {
               className="flex overflow-x-auto pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 gap-6 snap-x snap-mandatory hide-scrollbar"
             >
               {pmProjects.map((project, idx) => (
-                <ProjectCard key={idx} project={project} />
-              ))}
-            </motion.div>
-          </div>
-
-          {/* UI/UX Design */}
-          <div className="flex flex-col gap-6">
-            <FadeIn direction="up">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">UI/UX Design</h2>
-              <p className="text-lg text-slate-600 mt-2">Riset pengguna, wireframing, dan desain antarmuka.</p>
-            </FadeIn>
-            <motion.div 
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-100px" }}
-              className="flex overflow-x-auto pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 gap-6 snap-x snap-mandatory hide-scrollbar"
-            >
-              {uxProjects.map((project, idx) => (
-                <ProjectCard key={idx} project={project} />
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Web Development */}
-          <div className="flex flex-col gap-6">
-            <FadeIn direction="up">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">Web Development</h2>
-              <p className="text-lg text-slate-600 mt-2">Implementasi teknis menggunakan teknologi web modern.</p>
-            </FadeIn>
-            <motion.div 
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-100px" }}
-              className="flex overflow-x-auto pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 gap-6 snap-x snap-mandatory hide-scrollbar"
-            >
-              {webProjects.map((project, idx) => (
                 <ProjectCard key={idx} project={project} />
               ))}
             </motion.div>
