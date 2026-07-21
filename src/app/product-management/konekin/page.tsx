@@ -4,6 +4,7 @@ import React from "react"
 import { FadeIn } from "@/components/animations/fade-in"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
   <div className={`bg-white/70 backdrop-blur-md border border-slate-200 rounded-xl p-8 md:p-10 shadow-sm my-8 ${className}`}>
@@ -43,6 +44,16 @@ export default function KonekinCaseStudy() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
               
               <div className="lg:col-span-7 flex flex-col justify-center">
+                <div className="mb-6 w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm relative aspect-video">
+                  <Image 
+                    src="/images/konekin-cover.png"
+                    alt="KONEKIN Cover"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+
                 <div className="inline-flex items-center gap-2 mb-4">
                   <span className="w-2 h-2 rounded-full bg-blue-500" />
                   <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Case Study</span>

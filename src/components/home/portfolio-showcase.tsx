@@ -57,7 +57,7 @@ export function PortfolioShowcase() {
     {
       title: "KONEKIN",
       description: "Platform yang menghubungkan UMKM dengan talenta mahasiswa untuk menyediakan layanan digital secara aman, terverifikasi, dan transparan.",
-      imageSrc: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
+      imageSrc: "/images/konekin-cover.png",
       href: "/product-management/konekin"
     },
     {
