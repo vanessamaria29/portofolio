@@ -514,29 +514,29 @@ export default function DigitalAssessmentCaseStudy() {
                 </thead>
                 <tbody className="divide-y divide-slate-200 bg-white/80 backdrop-blur-sm">
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-semibold">Siswa tidak tahu potensi spesifik bidang teknologinya.</td>
+                    <td className="p-4 font-semibold">Siswa belum mengetahui kompetensi digital yang dimiliki.</td>
                     <td className="p-4 font-extrabold text-slate-900">Interactive Assessment Engine</td>
-                    <td className="p-4 text-slate-800 font-semibold">Memberikan diagnosis skor per kategori skill secara instan dan objektif.</td>
+                    <td className="p-4 text-slate-800 font-semibold">Membantu siswa memahami kekuatan dan area pengembangan melalui hasil assessment yang terukur.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-semibold">Sulit memilih program studi yang paling tepat di universitas.</td>
+                    <td className="p-4 font-semibold">Siswa kesulitan menentukan program studi yang sesuai.</td>
                     <td className="p-4 font-extrabold text-slate-900">Rule-Based Recommendation</td>
-                    <td className="p-4 text-slate-800 font-semibold">Mengarahkan siswa ke prodi yang relevan, menekan angka putus kuliah.</td>
+                    <td className="p-4 text-slate-800 font-semibold">Memberikan rekomendasi program studi berdasarkan hasil kompetensi dan minat secara transparan.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-semibold">Data pendaftar pameran tercecer & tidak terstruktur.</td>
+                    <td className="p-4 font-semibold">Tim admission kesulitan mengelola data calon mahasiswa secara terpusat.</td>
                     <td className="p-4 font-extrabold text-slate-900">Lead Capture & Data Export</td>
-                    <td className="p-4 text-slate-800 font-semibold">Merapikan database untuk diolah lebih lanjut oleh tim telemarketing.</td>
+                    <td className="p-4 text-slate-800 font-semibold">Mempermudah pengelolaan data prospek dan mendukung proses tindak lanjut calon mahasiswa.</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-semibold">Kurangnya daya tarik booth universitas saat pameran.</td>
-                    <td className="p-4 font-extrabold text-slate-900">Web-based Gamified Assessment</td>
-                    <td className="p-4 text-slate-800 font-semibold">Menjadi magnet audiens melalui pendekatan interaktif di lokasi pameran.</td>
-                  </tr>
-                  <tr className="hover:bg-slate-50 transition-colors">
-                    <td className="p-4 font-semibold">Tidak ada laporan kemajuan minat dari waktu ke waktu.</td>
+                    <td className="p-4 font-semibold">Tim admission belum memiliki insight mengenai profil calon mahasiswa.</td>
                     <td className="p-4 font-extrabold text-slate-900">Admin Analytics Dashboard</td>
-                    <td className="p-4 text-slate-800 font-semibold">Memberi insight berbasis data untuk strategi penerimaan mahasiswa baru.</td>
+                    <td className="p-4 text-slate-800 font-semibold">Menyediakan visualisasi data hasil assessment sebagai dasar pengambilan keputusan dan strategi promosi.</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50 transition-colors">
+                    <td className="p-4 font-semibold">Siswa membutuhkan hasil assessment yang dapat disimpan atau dibagikan.</td>
+                    <td className="p-4 font-extrabold text-slate-900">PDF Report Generation</td>
+                    <td className="p-4 text-slate-800 font-semibold">Menghasilkan laporan assessment yang dapat diunduh sebagai dokumentasi hasil tes.</td>
                   </tr>
                 </tbody>
               </table>
