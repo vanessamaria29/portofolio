@@ -24,9 +24,9 @@ export default function KonekinCaseStudy() {
       
       {/* Background gradients */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob" />
-        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob animation-delay-2000" />
-        <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-pink-200/40 rounded-full blur-[120px] mix-blend-multiply opacity-60 animate-blob animation-delay-4000" />
+        <div className="absolute -top-10 left-1/4 w-[600px] h-[600px] bg-purple-300/70 rounded-full blur-[90px] mix-blend-multiply opacity-90 animate-blob" />
+        <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-blue-300/70 rounded-full blur-[90px] mix-blend-multiply opacity-90 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-10 left-1/3 w-[700px] h-[700px] bg-pink-300/60 rounded-full blur-[100px] mix-blend-multiply opacity-80 animate-blob animation-delay-4000" />
       </div>
 
       <main className="pt-24 pb-20 max-w-7xl mx-auto px-6 relative z-0">
