@@ -57,11 +57,13 @@ export function ExperiencePreview() {
           <div className="max-w-4xl mx-auto flex flex-col gap-16 md:gap-20">
             
             {/* Prestasi Utama */}
-            <div className="flex flex-col md:flex-row gap-4 md:gap-12">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
               <div className="md:w-1/3 flex-shrink-0">
-                <h3 className="text-lg font-bold text-slate-900 border-b-2 border-slate-200 pb-3 md:pb-4 uppercase tracking-widest text-sm">Prestasi Utama</h3>
+                <div className="inline-flex items-center justify-center bg-white shadow-md hover:shadow-lg transition-shadow rounded-full px-6 py-3 border border-slate-100">
+                  <h3 className="font-bold text-slate-800 uppercase tracking-widest text-sm">Prestasi Utama</h3>
+                </div>
               </div>
-              <div className="md:w-2/3 flex flex-col gap-6 pt-1 md:pt-0">
+              <div className="md:w-2/3 flex flex-col gap-6 pt-2 md:pt-0">
                 {achievements.map((item, index) => {
                   const [title, ...descArr] = item.split(" | ")
                   const desc = descArr.join(" | ")
@@ -76,11 +78,13 @@ export function ExperiencePreview() {
             </div>
 
             {/* Pengalaman Kerja */}
-            <div className="flex flex-col md:flex-row gap-4 md:gap-12">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
               <div className="md:w-1/3 flex-shrink-0">
-                <h3 className="text-lg font-bold text-slate-900 border-b-2 border-slate-200 pb-3 md:pb-4 uppercase tracking-widest text-sm">Pengalaman Kerja</h3>
+                <div className="inline-flex items-center justify-center bg-white shadow-md hover:shadow-lg transition-shadow rounded-full px-6 py-3 border border-slate-100">
+                  <h3 className="font-bold text-slate-800 uppercase tracking-widest text-sm">Pengalaman Kerja</h3>
+                </div>
               </div>
-              <div className="md:w-2/3 flex flex-col gap-10 pt-1 md:pt-0">
+              <div className="md:w-2/3 flex flex-col gap-10 pt-2 md:pt-0">
                 {workExperience.map((work, index) => (
                   <div key={index} className="flex flex-col">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-3">
@@ -104,11 +108,13 @@ export function ExperiencePreview() {
             </div>
 
             {/* Organisasi */}
-            <div className="flex flex-col md:flex-row gap-4 md:gap-12">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
               <div className="md:w-1/3 flex-shrink-0">
-                <h3 className="text-lg font-bold text-slate-900 border-b-2 border-slate-200 pb-3 md:pb-4 uppercase tracking-widest text-sm">Organisasi</h3>
+                <div className="inline-flex items-center justify-center bg-white shadow-md hover:shadow-lg transition-shadow rounded-full px-6 py-3 border border-slate-100">
+                  <h3 className="font-bold text-slate-800 uppercase tracking-widest text-sm">Organisasi</h3>
+                </div>
               </div>
-              <div className="md:w-2/3 flex flex-col gap-5 pt-1 md:pt-0">
+              <div className="md:w-2/3 flex flex-col gap-5 pt-2 md:pt-0">
                 {organizations.map((item, index) => {
                   const [role, ...descArr] = item.split(" | ")
                   const desc = descArr.join(" | ")
