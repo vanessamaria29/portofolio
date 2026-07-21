@@ -196,7 +196,7 @@ export function FieldAnalysisTable() {
               <td className="p-4 font-bold text-slate-900">Laci kas kosong/menipis di sore hari padahal laku keras, menyulitkan tebusan modal esok hari.</td>
               <td className="p-4">
                 <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-red-100 text-red-800 border border-red-200">
-                  🔴 PAIN UTAMA
+                   PAIN UTAMA
                 </span>
               </td>
               <td className="p-4 text-slate-700 font-medium">
@@ -279,7 +279,7 @@ export function HypothesisPivot() {
         {/* ASUMSI AWAL (SALAH) */}
         <div className="border border-rose-100 bg-rose-50/20 p-5 rounded-xl flex flex-col justify-between">
           <div>
-            <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-2">❌ ASUMSI AWAL KAMI (HIPOTESIS)</span>
+            <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-2"> ASUMSI AWAL KAMI (HIPOTESIS)</span>
             <h4 className="font-serif text-lg font-bold text-slate-800 mb-2">Kerugian Terbesar Disebabkan Oleh Susut Fisik Komoditas</h4>
             <p className="font-sans text-xs md:text-sm text-slate-600 leading-relaxed">
               Kami menduga margin keuntungan pedagang hancur karena penyusutan kadar air bawang basah (20% hingga 40%) selama penyimpanan di pasar induk harian.
@@ -293,7 +293,7 @@ export function HypothesisPivot() {
         {/* KENYATAAN RIIL (BENAR) */}
         <div className="border border-purple-100 bg-purple-50/20 p-5 rounded-xl flex flex-col justify-between">
           <div>
-            <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-2">💡 KENYATAAN LAPANGAN (DATA RIIL)</span>
+            <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-2"> KENYATAAN LAPANGAN (DATA RIIL)</span>
             <h4 className="font-serif text-lg font-bold text-slate-800 mb-2">Kerugian Terbesar Terjadi Akibat Kebutaan Likuiditas Kas</h4>
             <p className="font-sans text-xs md:text-sm text-slate-600 leading-relaxed">
               Penyusutan riil di lapak ternyata sangat kecil (1.5% sampai 8%). Krisis sesungguhnya adalah pedagang buta terhadap batas aman kas tunai harian mereka akibat modal tersangkut di tumpukan bon kertas pelanggan.
@@ -378,7 +378,7 @@ export function ValuePropositionCanvas() {
         {/* CUSTOMER PROFILE */}
         <div className="border border-slate-200 bg-slate-50/30 p-5 rounded-xl space-y-4">
           <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200 uppercase tracking-wider">
-            👤 Customer Profile (Sisi Manusia)
+             Customer Profile (Sisi Manusia)
           </span>
           
           <div className="space-y-3 text-xs">
@@ -406,7 +406,7 @@ export function ValuePropositionCanvas() {
         {/* VALUE MAP */}
         <div className="border border-purple-100 bg-purple-50/10 p-5 rounded-xl space-y-4">
           <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-purple-100 text-slate-900 border border-purple-200 uppercase tracking-wider">
-            ⚡ Value Map (Sisi Solusi)
+             Value Map (Sisi Solusi)
           </span>
 
           <div className="space-y-3 text-xs">
@@ -661,7 +661,7 @@ export default function OniumCaseStudy() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* MUST HAVE */}
               <div className="border border-red-100 bg-red-50/30 p-5 rounded-lg shadow-sm">
-                <h4 className="font-bold text-red-700 text-sm mb-3">🔴 MUST HAVE (Fitur Utama Wajib)</h4>
+                <h4 className="font-bold text-red-700 text-sm mb-3"> MUST HAVE (Fitur Utama Wajib)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-700 font-medium">
                   <li>Cash visibility</li>
                   <li>Piutang tracking</li>
@@ -671,7 +671,7 @@ export default function OniumCaseStudy() {
 
               {/* SHOULD HAVE */}
               <div className="border border-blue-100 bg-blue-50/30 p-5 rounded-lg shadow-sm">
-                <h4 className="font-bold text-slate-900 text-sm mb-3">🔵 SHOULD HAVE (Sangat Penting)</h4>
+                <h4 className="font-bold text-slate-900 text-sm mb-3"> SHOULD HAVE (Sangat Penting)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-700 font-medium">
                   <li>Dashboard tren transaksi</li>
                 </ul>
@@ -679,7 +679,7 @@ export default function OniumCaseStudy() {
 
               {/* COULD HAVE */}
               <div className="border border-amber-100 bg-amber-50/30 p-5 rounded-lg shadow-sm">
-                <h4 className="font-bold text-slate-900 text-sm mb-3">🟡 COULD HAVE (Fitur Pendukung)</h4>
+                <h4 className="font-bold text-slate-900 text-sm mb-3"> COULD HAVE (Fitur Pendukung)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-700 font-medium">
                   <li>Voice input</li>
                 </ul>
@@ -687,7 +687,7 @@ export default function OniumCaseStudy() {
 
               {/* WON'T HAVE */}
               <div className="border border-slate-200 bg-slate-50/50 p-5 rounded-lg shadow-sm">
-                <h4 className="font-bold text-slate-600 text-sm mb-3">⚪ WON'T HAVE (v1)</h4>
+                <h4 className="font-bold text-slate-600 text-sm mb-3"> WON'T HAVE (v1)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-600 font-medium">
                   <li>AI forecasting</li>
                   <li>Multi-user role</li>
@@ -717,19 +717,19 @@ export default function OniumCaseStudy() {
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-purple-200 pb-2">Alasan Teknis & Desain (PM Lens):</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <span className="text-slate-900 mt-0.5">⚡</span>
+                  <span className="text-slate-900 mt-0.5"></span>
                   <div className="text-xs md:text-sm text-slate-700">
                     <strong className="text-slate-900">Zero Learning Curve:</strong> Menggunakan kenyamanan antarmuka percakapan (conversational interface / chatbot) untuk meminimalkan friksi kognitif bagi pedagang yang sudah sangat kelelahan fisik.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-slate-900 mt-0.5">🌐</span>
+                  <span className="text-slate-900 mt-0.5"></span>
                   <div className="text-xs md:text-sm text-slate-700">
                     <strong className="text-slate-900">Standalone PWA:</strong> Bertindak sebagai aplikasi web mandiri yang bisa diakses tanpa instalasi langsung di layar HP pedagang, tanpa bergantung pada restriksi, aturan kaku, atau biaya mahal dari API WhatsApp Business resmi.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-slate-900 mt-0.5">📶</span>
+                  <span className="text-slate-900 mt-0.5"></span>
                   <div className="text-xs md:text-sm text-slate-700">
                     <strong className="text-slate-900">Offline-First Capability:</strong> Memastikan sistem pencatatan tetap dapat mendata transaksi secara instan di dalam pasar induk yang bising meskipun koneksi internet sedang tidak stabil atau terputus harian menggunakan IndexedDB dan Service Worker.
                   </div>
