@@ -629,21 +629,21 @@ export default function DigitalAssessmentCaseStudy() {
                 <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><AlertCircle className="w-6 h-6" /></div>
                 <h4 className="font-extrabold text-slate-900 text-lg mb-3">Tantangan</h4>
                 <p className="text-sm font-semibold text-slate-700 leading-relaxed">
-                  Tantangan terbesar adalah merancang platform yang mampu memberikan manfaat bagi dua pihak sekaligus. Di satu sisi, siswa membutuhkan hasil assessment yang mudah dipahami dan relevan. Di sisi lain, institusi membutuhkan data yang dapat dimanfaatkan untuk mendukung proses admission tanpa mengurangi kenyamanan pengguna.
+                  Menyeimbangkan kebutuhan siswa yang menginginkan hasil assessment yang mudah dipahami dengan kebutuhan institusi untuk memperoleh data yang bermanfaat bagi proses admission.
                 </p>
               </div>
               <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><ListTodo className="w-6 h-6" /></div>
                 <h4 className="font-extrabold text-slate-900 text-lg mb-3">Trade-Off</h4>
                 <p className="text-sm font-semibold text-slate-700 leading-relaxed">
-                  Pada tahap perancangan, saya memilih menggunakan metode Rule-Based Weighted Scoring dibandingkan pendekatan berbasis machine learning karena lebih transparan, mudah divalidasi, dan sesuai dengan kebutuhan awal produk. Pendekatan ini juga memudahkan stakeholder memahami dasar rekomendasi yang dihasilkan.
+                  Saya memilih menggunakan Rule-Based Weighted Scoring karena lebih transparan, mudah divalidasi, dan sesuai dengan kebutuhan produk pada tahap awal.
                 </p>
               </div>
               <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><ClipboardCheck className="w-6 h-6" /></div>
                 <h4 className="font-extrabold text-slate-900 text-lg mb-3">Rencana Pengembangan</h4>
                 <p className="text-sm font-semibold text-slate-700 leading-relaxed">
-                  Apabila platform dikembangkan lebih lanjut, fitur seperti aplikasi mobile, dashboard analitik yang lebih komprehensif, dan integrasi dengan sistem PMB dapat dipertimbangkan untuk meningkatkan pengalaman pengguna dan efisiensi proses admission.
+                  Apabila dikembangkan lebih lanjut, platform dapat menambahkan dashboard analitik yang lebih lengkap, aplikasi mobile, dan integrasi dengan sistem PMB.
                 </p>
               </div>
             </div>
