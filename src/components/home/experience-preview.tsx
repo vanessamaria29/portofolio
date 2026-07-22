@@ -16,7 +16,7 @@ export function ExperiencePreview() {
       date: "Januari 2026",
       points: [
         "Memimpin product discovery, riset kebutuhan pengguna, dan penyusunan BRD/PRD untuk platform rekomendasi jurusan SMA berbasis AI.",
-        "Merancang alur UI/UX serta mengimplementasikan antarmuka front-end responsif menggunakan Next.js dan TailwindCSS.",
+        "Merancang alur UI/UX serta mengimplementasikan antarmuka front-end responsif menggunakan Laravel (PHP) dan Tailwind CSS.",
         "Melakukan pengujian usability langsung bersama siswa & pengajar UKRIDA untuk memvalidasi akurasi rekomendasi jurusan."
       ],
       href: "/product-management/digital-skill-assessment"
