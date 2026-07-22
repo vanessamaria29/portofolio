@@ -22,8 +22,7 @@ export function PortfolioShowcase() {
       title: "Digital Skill Assessment Platform",
       description: "Platform digital rekomendasi jurusan SMA berbasis AI dengan pengujian kognitif dan pembobotan kompetensi digital.",
       imageSrc: "/images/Logo_UKRIDA_300x300.png",
-      href: "/projects/digital-assessment",
-      isDevelopment: true
+      href: "/projects/digital-assessment"
     },
     {
       title: "KONEKIN",

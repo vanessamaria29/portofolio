@@ -15,7 +15,7 @@ interface Project {
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const isDev = project.isDevelopment || project.title.includes("Digital Skill Assessment")
+  const isLogoImage = project.imageSrc?.includes("Logo_UKRIDA")
 
   return (
     <motion.div 
@@ -27,25 +27,15 @@ const ProjectCard = ({ project }: { project: Project }) => {
       className="flex-none w-[280px] sm:w-[320px] md:w-[360px] h-full flex flex-col group overflow-hidden border border-slate-200/80 bg-white/70 backdrop-blur-md hover:border-slate-400 transition-all snap-start rounded-2xl shadow-xs"
     >
       <Link href={project.href} className="flex flex-col h-full outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-2xl cursor-pointer active:scale-[0.99] transition-transform">
-        {isDev ? (
-          <div className="w-full relative overflow-hidden border-b border-slate-800 aspect-[4/3] bg-gradient-to-br from-slate-800 via-slate-900 to-black p-6 flex flex-col justify-end group-hover:scale-105 transition-transform duration-700">
-            <div className="z-10 flex items-center gap-2 text-slate-300">
-              <Code2 className="w-5 h-5 text-sky-400" />
-              <span className="text-xs font-bold tracking-wide text-white">Preview Studi Kasus</span>
-            </div>
-            <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-sky-500/10 rounded-full blur-2xl pointer-events-none" />
+        {project.imageSrc && (
+          <div className="w-full relative overflow-hidden border-b border-slate-100 aspect-[4/3] bg-white flex items-center justify-center p-6">
+            <ImageContainer 
+              src={project.imageSrc} 
+              alt={project.title} 
+              aspectRatio="video"
+              className={isLogoImage ? "w-28 md:w-32 h-auto object-contain transition-transform duration-700 group-hover:scale-105" : "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"}
+            />
           </div>
-        ) : (
-          project.imageSrc && (
-            <div className="w-full relative overflow-hidden border-b border-slate-100 aspect-[4/3]">
-              <ImageContainer 
-                src={project.imageSrc} 
-                alt={project.title} 
-                aspectRatio="video"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-          )
         )}
         <div className="p-5 flex flex-col flex-grow">
           <CardTitle className="text-lg mb-2 font-bold text-slate-900 leading-tight">
