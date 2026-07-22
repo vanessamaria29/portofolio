@@ -16,11 +16,11 @@ const ProjectCard = ({ project }: { project: any }) => (
       hidden: { opacity: 0, x: 20 },
       show: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 100, damping: 15 } }
     }}
-    className="flex-none w-[280px] sm:w-[320px] md:w-[360px] h-full flex flex-col group overflow-hidden border border-slate-100/80 bg-white/60 backdrop-blur-md hover:border-purple-300 transition-colors snap-start rounded-2xl shadow-sm"
+    className="flex-none w-[280px] sm:w-[320px] md:w-[360px] h-full flex flex-col group overflow-hidden border border-slate-200/80 bg-white/70 backdrop-blur-md hover:border-slate-400 transition-all snap-start rounded-2xl shadow-xs"
   >
-    <Link href={project.href} className="flex flex-col h-full outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-2xl">
+    <Link href={project.href} className="flex flex-col h-full outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-2xl cursor-pointer active:scale-[0.99] transition-transform">
       {project.imageSrc && (
-        <div className="w-full relative overflow-hidden border-b border-border aspect-[4/3]">
+        <div className="w-full relative overflow-hidden border-b border-slate-100 aspect-[4/3]">
           <ImageContainer 
             src={project.imageSrc} 
             alt={project.title} 
@@ -30,14 +30,15 @@ const ProjectCard = ({ project }: { project: any }) => (
         </div>
       )}
       <div className="p-5 flex flex-col flex-grow">
-        <CardTitle className="text-lg mb-2 leading-tight group-hover:text-accent-primary transition-colors">
+        <CardTitle className="text-lg mb-2 font-bold text-slate-900 leading-tight">
           {project.title}
         </CardTitle>
-        <p className="text-xs text-slate-600 line-clamp-3 mb-4 flex-grow leading-relaxed">
+        <p className="text-xs text-slate-600 line-clamp-3 mb-4 flex-grow leading-relaxed font-normal">
           {project.description}
         </p>
-        <div className="flex items-center text-xs font-bold text-accent-primary mt-auto pt-4 border-t border-border/50 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0">
-          Lihat Detail <ArrowRight className="ml-1 h-3 w-3" />
+        <div className="flex items-center text-xs font-bold text-slate-900 mt-auto pt-3 border-t border-slate-100">
+          <span>Lihat Detail</span>
+          <ArrowRight className="ml-1.5 h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
         </div>
       </div>
     </Link>

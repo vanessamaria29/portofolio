@@ -37,7 +37,7 @@ export default function DigitalAssessmentCaseStudy() {
         <FadeIn>
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 font-sans text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors mb-8 bg-white/80 backdrop-blur-md border border-slate-200 px-4 py-2 rounded-full shadow-sm"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all mb-8 bg-white border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none relative z-20"
           >
             <ArrowLeft className="w-4 h-4" />
             Kembali ke Beranda
@@ -652,28 +652,28 @@ export default function DigitalAssessmentCaseStudy() {
 
         {/* FOOTER NAV */}
         <FadeIn delay={1.1}>
-          <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-20">
             <Link 
               href="/product-management/onium" 
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white/80 backdrop-blur-md border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4 text-slate-500" />
               <span>Studi Kasus Sebelumnya: <strong className="text-slate-900">Onium</strong></span>
             </Link>
 
             <Link 
               href="/" 
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white/80 backdrop-blur-md border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               Ke Halaman Utama
             </Link>
 
             <Link 
               href="/product-management/glacier" 
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white/80 backdrop-blur-md border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">Glacier</strong></span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-slate-500" />
             </Link>
           </div>
         </FadeIn>
