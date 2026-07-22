@@ -14,19 +14,20 @@ export function PortfolioShowcase() {
     },
     {
       title: "Onium",
-      description: "Platform yang membantu pedagang UMKM mengelola transaksi, piutang, dan arus kas melalui pencatatan digital yang sederhana dan mudah digunakan.",
+      description: "Progressive Web App (PWA) offline-first untuk membantu pedagang pasar tradisional mengelola arus kas harian dan pencatatan piutang.",
       imageSrc: "/images/onium-ui.png",
       href: "/projects/onium"
     },
     {
       title: "Digital Skill Assessment Platform",
-      description: "Platform digital yang membantu siswa SMA memetakan kemampuan digital serta memberikan rekomendasi jurusan yang sesuai.",
+      description: "Platform digital rekomendasi jurusan SMA berbasis AI dengan pengujian kognitif dan pembobotan kompetensi digital.",
       imageSrc: "/images/Logo_UKRIDA_300x300.png",
-      href: "/projects/digital-assessment"
+      href: "/projects/digital-assessment",
+      isDevelopment: true
     },
     {
       title: "Glacier",
-      description: "Platform operasional berbasis web yang membantu Sahabat Mixue Group mengelola stok, menghitung HPP, dan memantau performa cabang secara terintegrasi.",
+      description: "Dashboard operasional terpusat untuk mengotomatisasi kalkulasi HPP dan pemantauan stok real-time di jaringan cabang Sahabat Mixue Group.",
       imageSrc: "/images/glacier-logo.png",
       href: "/projects/glacier"
     }
@@ -38,7 +39,7 @@ export function PortfolioShowcase() {
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-6">
             <FadeIn direction="up">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">Portfolio & Case Studies</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">Portofolio & Studi Kasus</h2>
             </FadeIn>
             <ProjectGrid projects={pmProjects} />
           </div>

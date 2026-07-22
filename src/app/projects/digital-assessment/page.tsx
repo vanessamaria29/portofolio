@@ -149,16 +149,26 @@ export default function DigitalAssessmentCaseStudy() {
                 </div>
               </div>
 
-              {/* Kolom Kanan: Logo UKRIDA */}
-              <div className="lg:col-span-4 flex items-center justify-center p-4">
+              {/* Kolom Kanan: Visual Card Preview */}
+              <div className="lg:col-span-4 flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700/80 shadow-lg relative overflow-hidden group min-h-[260px]">
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-white/10 backdrop-blur-md text-white border border-white/20 shadow-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                    Dalam Pengembangan
+                  </span>
+                </div>
                 <Image 
                   src="/images/Logo_UKRIDA_300x300.png"
-                  alt="Logo UKRIDA"
-                  width={300}
-                  height={300}
-                  className="w-48 md:w-60 h-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+                  alt="Logo UKRIDA - Digital Skill Assessment"
+                  width={160}
+                  height={160}
+                  className="w-28 md:w-36 h-auto object-contain opacity-80 group-hover:scale-105 transition-all duration-300 drop-shadow-md z-10"
                   priority
                 />
+                <span className="mt-4 text-xs font-bold text-slate-300 z-10 tracking-wide">
+                  Preview Studi Kasus
+                </span>
+                <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-sky-500/10 rounded-full blur-2xl pointer-events-none" />
               </div>
 
             </div>

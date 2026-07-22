@@ -2,37 +2,11 @@ import * as React from "react"
 import { Section } from "@/components/layout/section"
 import { Container } from "@/components/layout/container"
 import { FadeIn } from "@/components/animations/fade-in"
-import { Briefcase, Trophy, Users, ArrowRight, Award, GraduationCap } from "lucide-react"
+import { Briefcase, Trophy, Users, ArrowRight, Award, GraduationCap, FolderKanban } from "lucide-react"
 import Link from "next/link"
 
 export function ExperiencePreview() {
-  const experiences = [
-    {
-      title: "Product Manager & Front-End Developer",
-      subtitle: "Digital Skill Assessment Platform",
-      badge: "Project",
-      badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
-      date: "Januari 2026",
-      points: [
-        "Memimpin product discovery, riset kebutuhan pengguna, dan penyusunan BRD/PRD untuk platform rekomendasi jurusan SMA berbasis AI.",
-        "Merancang alur UI/UX serta mengimplementasikan antarmuka front-end responsif menggunakan Laravel (PHP) dan Tailwind CSS.",
-        "Melakukan pengujian usability langsung bersama siswa & pengajar UKRIDA untuk memvalidasi akurasi rekomendasi jurusan."
-      ],
-      href: "/projects/digital-assessment"
-    },
-    {
-      title: "Product Manager",
-      subtitle: "Glacier (Sahabat Mixue Group Digitalization)",
-      badge: "Project",
-      badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
-      date: "2025",
-      points: [
-        "Merancang platform manajemen operasional & kalkulasi HPP otomatis untuk jaringan cabang Sahabat Mixue Group.",
-        "Mentransformasi pencatatan manual spreadsheet menjadi sistem terpusat berbasis web dengan pemantauan stok real-time.",
-        "Mengelola alur pengembangan iteratif menggunakan Scrum Framework & Trello Board."
-      ],
-      href: "/projects/glacier"
-    },
+  const professionalExperiences = [
     {
       title: "Marketing & School Outreach Intern",
       subtitle: "TU FTIK UKRIDA",
@@ -40,11 +14,53 @@ export function ExperiencePreview() {
       badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
       date: "Januari 2026 – Sekarang",
       points: [
-        "Menyusun jadwal, strategi outreach, dan target sosialisasi ke berbagai SMA/SMK mitra.",
-        "Berkoordinasi dengan pemangku kepentingan sekolah untuk membangun kemitraan strategis & kunjungan edukasi.",
-        "Mempresentasikan program akademik FTIK UKRIDA dan menyusun laporan evaluasi potensi pendaftaran."
+        "Menyusun strategi sosialisasi dan mengelola pipeline kemitraan dengan sekolah mitra SMA/SMK di wilayah Jakarta & Tangerang.",
+        "Berkoordinasi dengan stakeholder lintas fungsi (pihak sekolah dan dosen universitas) untuk mendorong inisiatif kemitraan edukasi.",
+        "Mempresentasikan program akademik FTIK kepada prospective students serta mengevaluasi data konversi pendaftaran untuk strategi institusi."
       ],
       href: null
+    }
+  ]
+
+  const productCaseStudies = [
+    {
+      title: "Lead Product Manager & Front-End Developer",
+      subtitle: "Digital Skill Assessment Platform",
+      badge: "Case Study",
+      badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
+      date: "Januari 2026",
+      points: [
+        "Memimpin product discovery dan riset pengguna untuk menyusun dokumen kebutuhan produk (BRD/PRD) platform rekomendasi jurusan SMA berbasis AI.",
+        "Merancang alur UI/UX high-fidelity dan membangun antarmuka front-end yang responsif menggunakan Laravel dan Tailwind CSS.",
+        "Melakukan usability testing bersama siswa dan pengajar untuk memvalidasi akurasi algoritma serta kemudahan antarmuka."
+      ],
+      href: "/projects/digital-assessment"
+    },
+    {
+      title: "Product Manager",
+      subtitle: "Glacier (Sahabat Mixue Group Digitalization)",
+      badge: "Case Study",
+      badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
+      date: "2025",
+      points: [
+        "Merancang arsitektur dashboard operasional terpusat untuk mengotomatisasi kalkulasi HPP dan pemantauan stok di berbagai cabang.",
+        "Mentransformasi alur kerja spreadsheet manual menjadi aplikasi web real-time untuk mempermudah rekonsiliasi stok antarcabang.",
+        "Mengelola sprint backlog dan alur pengembangan iteratif menggunakan kerangka kerja Scrum dan Trello."
+      ],
+      href: "/projects/glacier"
+    },
+    {
+      title: "Product Manager & Business Analyst",
+      subtitle: "Onium",
+      badge: "Case Study",
+      badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
+      date: "2026",
+      points: [
+        "Mencetuskan konsep Progressive Web App (PWA) offline-first untuk membantu pedagang pasar tradisional mengelola arus kas harian dan pencatatan piutang.",
+        "Mendefinisikan arsitektur sistem berbasis logika aturan regex dan IndexedDB sisi klien demi keandalan penggunaan secara offline.",
+        "Menyusun dokumen kebutuhan fungsional secara komprehensif serta diagram alur data (ERD/PlantUML) untuk diimplementasikan oleh tim developer."
+      ],
+      href: "/projects/onium"
     }
   ]
 
@@ -82,13 +98,13 @@ export function ExperiencePreview() {
       role: "Sekretaris Umum",
       organization: "BEM FTIK UKRIDA",
       period: "2025 – 2026",
-      desc: "Mengelola seluruh tata kelola administrasi, surat-menyurat, dan koordinasi antar divisi organisasi fakultas."
+      desc: "Memimpin operasional organisasi, standar dokumentasi, dan komunikasi lintas fungsi di 5 divisi internal untuk berbagai inisiatif tingkat fakultas."
     },
     {
-      role: "Sekretaris Pelaksana",
+      role: "Sekretaris Pelaksana & Operasional Acara",
       organization: "PKKMB FTIK & BEM Muda",
       period: "2025",
-      desc: "Menyusun dokumen operasional, tata tertib, dan koordinasi rangkaian pembekalan mahasiswa baru."
+      desc: "Mengelola dokumentasi operasional, panduan kepatuhan acara, dan alur kerja logistik untuk rangkaian program orientasi universitas."
     },
     {
       role: "Divisi Acara",
@@ -115,56 +131,100 @@ export function ExperiencePreview() {
               Career & Track Record
             </span>
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-slate-900 mb-3">
-              Experience, Achievements & Leadership
+              Pengalaman, Studi Kasus & Kepemimpinan
             </h2>
             <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-[65ch] mx-auto font-normal">
-              Fokus utama pada pengembangan produk digital nyata melalui pengalaman proyek, internship, serta kepemimpinan organisasi dan prestasi kompetisi nasional.
+              Menampilkan kerangka berpikir produk end-to-end, eksekusi berbasis data, kepemimpinan organisasi, serta kolaborasi teknis.
             </p>
           </FadeIn>
         </div>
 
-        {/* 3-Column Redesigned Layout (55% / 22% / 23%) */}
+        {/* 3-Column Layout (55% / 22% / 23%) */}
         <FadeIn direction="up" delay={0.1}>
           <div className="flex flex-col lg:flex-row gap-6 items-start">
             
-            {/* COLUMN 1: Experience (55% width) - Main Highlight */}
-            <div className="w-full lg:w-[55%] flex flex-col gap-6 bg-white/70 backdrop-blur-md border border-slate-200/90 p-6 md:p-8 rounded-2xl shadow-xs">
-              <div className="flex items-center justify-between border-b border-slate-200 pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center shadow-xs">
-                    <Briefcase className="w-4 h-4" />
+            {/* COLUMN 1: Experience & Case Studies (55% width) */}
+            <div className="w-full lg:w-[55%] flex flex-col gap-8 bg-white/70 backdrop-blur-md border border-slate-200/90 p-6 md:p-8 rounded-2xl shadow-xs">
+              
+              {/* Category A: Pengalaman Profesional */}
+              <div className="flex flex-col gap-5">
+                <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shadow-xs">
+                      <Briefcase className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-lg font-bold text-slate-900 tracking-tight">Pengalaman Profesional</h3>
+                      <p className="text-xs font-medium text-slate-500">Magang & Pengalaman Kerja</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-serif text-xl font-bold text-slate-900 tracking-tight">Experience</h3>
-                    <p className="text-xs font-medium text-slate-500">Product Management & Internship</p>
-                  </div>
+                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md uppercase tracking-wider">
+                    Internship
+                  </span>
                 </div>
-                <span className="text-[11px] font-bold text-slate-700 bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md uppercase tracking-wider">
-                  Main Highlight
-                </span>
-              </div>
 
-              {/* Vertical Experience Timeline Cards */}
-              <div className="flex flex-col gap-6 relative before:absolute before:left-3.5 before:top-3 before:bottom-3 before:w-0.5 before:bg-slate-200">
-                {experiences.map((exp, idx) => (
-                  <div 
-                    key={idx} 
-                    className="relative pl-9 flex flex-col gap-3 group"
-                  >
-                    {/* Timeline Node */}
-                    <div className="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-white border-2 border-slate-900 shadow-xs group-hover:scale-110 group-hover:bg-slate-900 transition-all z-10" />
-
-                    {/* Card Content */}
-                    <div className="bg-white border border-slate-200 p-5 rounded-xl shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col gap-3">
+                <div className="flex flex-col gap-4">
+                  {professionalExperiences.map((exp, idx) => (
+                    <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col gap-3">
                       <div className="flex flex-wrap items-start justify-between gap-2">
                         <div>
                           <span className={`inline-block text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-md border ${exp.badgeColor} mb-1.5`}>
                             {exp.badge}
                           </span>
-                          <h4 className="text-base md:text-lg font-bold text-slate-900 leading-snug">
+                          <h4 className="text-base font-bold text-slate-900 leading-snug">
                             {exp.title}
                           </h4>
-                          <p className="text-xs md:text-sm font-semibold text-slate-700 mt-0.5">
+                          <p className="text-xs font-semibold text-slate-700 mt-0.5">
+                            {exp.subtitle}
+                          </p>
+                        </div>
+                        <span className="text-xs font-bold text-slate-500 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-100">
+                          {exp.date}
+                        </span>
+                      </div>
+
+                      <ul className="flex flex-col gap-2 pt-1 border-t border-slate-100">
+                        {exp.points.map((pt, pIdx) => (
+                          <li key={pIdx} className="flex items-start gap-2.5 text-xs md:text-sm text-slate-600 leading-relaxed">
+                            <span className="text-slate-400 mt-1 flex-shrink-0">•</span>
+                            <span>{pt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Category B: Studi Kasus Produk Unggulan */}
+              <div className="flex flex-col gap-5 pt-2 border-t border-slate-200/80">
+                <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center shadow-xs">
+                      <FolderKanban className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-lg font-bold text-slate-900 tracking-tight">Studi Kasus Produk Unggulan</h3>
+                      <p className="text-xs font-medium text-slate-500">Proyek Utama Product Management</p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-md uppercase tracking-wider">
+                    PM Projects
+                  </span>
+                </div>
+
+                <div className="flex flex-col gap-5">
+                  {productCaseStudies.map((exp, idx) => (
+                    <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col gap-3">
+                      <div className="flex flex-wrap items-start justify-between gap-2">
+                        <div>
+                          <span className={`inline-block text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-md border ${exp.badgeColor} mb-1.5`}>
+                            {exp.badge}
+                          </span>
+                          <h4 className="text-base font-bold text-slate-900 leading-snug">
+                            {exp.title}
+                          </h4>
+                          <p className="text-xs font-semibold text-slate-700 mt-0.5">
                             {exp.subtitle}
                           </p>
                         </div>
@@ -188,15 +248,16 @@ export function ExperiencePreview() {
                             href={exp.href}
                             className="inline-flex items-center gap-2 text-xs font-bold text-slate-800 bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-lg shadow-2xs hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all group/btn"
                           >
-                            <span>View Project</span>
+                            <span>Lihat Studi Kasus</span>
                             <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
                           </Link>
                         </div>
                       )}
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+
             </div>
 
             {/* COLUMN 2: Achievements (22% width) - Compact & Clean */}
