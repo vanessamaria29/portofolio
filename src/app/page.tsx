@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { HeroSection } from "@/components/home/hero-section"
 import { PortfolioShowcase } from "@/components/home/portfolio-showcase"
 import { ExperiencePreview } from "@/components/home/experience-preview"
-import { Capabilities } from "@/components/home/capabilities"
 import { ContactCTA } from "@/components/home/contact-cta"
 import { GlobalAmbientBackground } from "@/components/layout/global-ambient"
 
@@ -59,7 +58,6 @@ export default function Home() {
         <HeroSection />
         <PortfolioShowcase />
         <ExperiencePreview />
-        <Capabilities />
         <ContactCTA />
       </div>
     </>
