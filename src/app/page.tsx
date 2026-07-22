@@ -6,8 +6,8 @@ import { ContactCTA } from "@/components/home/contact-cta"
 import { GlobalAmbientBackground } from "@/components/layout/global-ambient"
 
 export const metadata: Metadata = {
-  title: "Vanessa | Product Manager Portfolio",
-  description: "Portofolio Product Management dari Vanessa, mahasiswi Sistem Informasi semester 5 di Universitas Kristen Krida Wacana. Pengalaman dalam Product Management & IT Project Management untuk KONEKIN, ONIUM, Digital Skill Assessment, dan Glacier.",
+  title: "Vanessa | Product Manager & IT Business Analyst Portfolio",
+  description: "Mahasiswi Sistem Informasi semester 5 yang berpengalaman mengerjakan berbagai studi kasus dan proyek digital bersama stakeholder nyata. Tertarik berkarier di Product Management, IT Business Analysis, dan IT Project Management.",
   openGraph: {
     title: "Vanessa | Product Manager Portfolio",
     description: "Portofolio Product Management dari Vanessa, mahasiswi Sistem Informasi semester 5 di UKRIDA.",

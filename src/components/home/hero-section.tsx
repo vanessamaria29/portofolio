@@ -13,8 +13,8 @@ export function HeroSection() {
           {/* Left Column: Content */}
           <div className="flex-1 flex flex-col items-start gap-8 w-full max-w-[70ch]">
             <FadeIn direction="up">
-              <div className="inline-flex items-center rounded-full border border-accent-primary/20 bg-accent-primary/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent-primary shadow-sm">
-                Available for Product Management Internship
+              <div className="inline-flex items-center rounded-full border border-accent-primary/20 bg-accent-primary/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent-primary shadow-sm text-left">
+                Available for Product Management, IT Business Analyst, & IT Project Management Internship
               </div>
             </FadeIn>
             
@@ -26,7 +26,7 @@ export function HeroSection() {
 
             <FadeIn direction="up" delay={0.2}>
               <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
-                Mahasiswi Sistem Informasi semester 5 di Universitas Kristen Krida Wacana yang berfokus pada Product Management dan IT Project Management. Memiliki pengalaman mengembangkan solusi digital melalui riset pengguna, observasi lapangan, dan kolaborasi lintas tim dalam proyek akademik, kompetisi, organisasi, serta magang. Saat ini sedang mencari kesempatan magang untuk berkontribusi dalam pengembangan produk digital sekaligus memperdalam pengalaman di bidang Product Management.
+                Mahasiswi Sistem Informasi semester 5 yang berpengalaman mengerjakan berbagai studi kasus dan proyek digital bersama stakeholder nyata. Terbiasa melakukan user research, requirement gathering, dan menerjemahkan kebutuhan bisnis menjadi solusi digital yang terstruktur. Tertarik berkarier di Product Management, IT Business Analysis, dan IT Project Management.
               </p>
             </FadeIn>
           </div>
