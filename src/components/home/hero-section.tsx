@@ -14,7 +14,7 @@ export function HeroSection() {
           <div className="flex-1 flex flex-col items-start gap-8 w-full max-w-[70ch]">
             <FadeIn direction="up">
               <div className="inline-flex items-center rounded-full border border-accent-primary/20 bg-accent-primary/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent-primary shadow-sm text-left">
-                Terbuka untuk Magang Product Management
+                Available for Product Management, IT Business Analyst, & IT Project Management Internship
               </div>
             </FadeIn>
             
@@ -26,7 +26,7 @@ export function HeroSection() {
 
             <FadeIn direction="up" delay={0.2}>
               <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
-                Mahasiswi Sistem Informasi yang berfokus pada Product Management & IT Business Analysis. Berpengalaman dalam product discovery, riset pengguna, wireframing, dan eksekusi agile. Memiliki passion untuk menjembatani kebutuhan pengguna, tujuan bisnis, dan batasan teknis demi membangun solusi digital yang berdampak tinggi.
+                Mahasiswi Sistem Informasi semester 5 yang berpengalaman mengerjakan berbagai studi kasus dan proyek digital bersama stakeholder nyata. Terbiasa melakukan user research, requirement gathering, dan menerjemahkan kebutuhan bisnis menjadi solusi digital yang terstruktur. Tertarik berkarier di Product Management, IT Business Analysis, dan IT Project Management.
               </p>
             </FadeIn>
           </div>
