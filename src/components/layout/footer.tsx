@@ -66,7 +66,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                   WhatsApp <ArrowUpRight className="ml-1 h-3 w-3" />
                 </a>
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/vanessamaria29" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center"

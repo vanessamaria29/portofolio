@@ -77,6 +77,7 @@ const homeJsonLd = {
       "sameAs": [
         "https://www.linkedin.com/in/vanessa-maria-2a630b362",
         "https://wa.me/6285695886864",
+        "https://github.com/vanessamaria29",
         "mailto:vanessapardedemaria@gmail.com"
       ]
     },
