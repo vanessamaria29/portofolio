@@ -133,7 +133,7 @@ export function MeetThePartnersTable() {
           <tr>
             <td className="p-3 font-semibold bg-slate-50/40">Lokasi Lapak</td>
             <td className="p-3 font-medium text-slate-800">Los H No. 153</td>
-            <td className="p-3 font-medium text-slate-800">Los H No. 205 (UD. Jefeery Munthe)</td>
+            <td className="p-3 font-medium text-slate-800">Los H No. 205 (UD. Jefry Munthe)</td>
             <td className="p-3 font-medium text-slate-800">Los H No. 147 (BL. Miran Simbolon)</td>
           </tr>
           <tr>
@@ -830,7 +830,7 @@ export default function OniumCaseStudy() {
               <div className="bg-white/50 border border-slate-100 p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
                 <span className="text-lg font-black text-slate-300 block mb-2">4</span>
                 <p className="text-sm text-slate-700 leading-relaxed font-medium">
-                  <strong>Less is More:</strong> Memotong fitur yang "keren" demi fitur yang "berfungsi" sangat penting agar MVP dapat langsung divalidasi dengan cepat.
+                  <strong>Pelajaran Kunci:</strong> Pedagang pasar tidak punya waktu menekan 3 layar berbeda hanya untuk mencatat utang Rp20.000. Memotong fitur kategori produk dan laporan grafik rumit lalu menyisakan alur sederhana "input nominal + nama" terbukti menjadi kunci utama aplikasi ini mau diterima di lapangan.
                 </p>
               </div>
             </div>

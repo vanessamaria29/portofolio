@@ -639,27 +639,22 @@ export default function DigitalAssessmentCaseStudy() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
                   { 
-                    label: "Assessment Completion Rate", 
-                    subtitle: "Persentase peserta yang menyelesaikan seluruh assessment.", 
-                    desc: "Mengukur apakah alur assessment cukup mudah diselesaikan pengguna." 
+                    label: "Completion Rate Target", 
+                    subtitle: "Target Penyelesaian 80%+", 
+                    desc: "Menargetkan 80%+ siswa menyelesaikan assessment 20 soal tanpa membatalkan sesi di tengah jalan." 
                   },
                   { 
-                    label: "Report Download Rate", 
-                    subtitle: "Persentase peserta yang mengunduh hasil assessment.", 
-                    desc: "Mengindikasikan bahwa hasil assessment dianggap bernilai dan layak disimpan." 
+                    label: "Recommendation Relevance Rate", 
+                    subtitle: "Tingkat Relevansi Rekomendasi", 
+                    desc: "Mengukur persentase siswa yang menilai rekomendasi jurusan 'Sangat Sesuai' melalui survei singkat pasca-assessment." 
                   },
                   { 
-                    label: "Lead Conversion Rate", 
-                    subtitle: "Persentase peserta assessment yang melanjutkan ke proses pendaftaran atau dihubungi oleh tim admission.", 
-                    desc: "Mengukur efektivitas assessment sebagai media akuisisi calon mahasiswa." 
-                  },
-                  { 
-                    label: "Average Assessment Completion Time", 
-                    subtitle: "Rata-rata waktu yang dibutuhkan peserta untuk menyelesaikan assessment.", 
-                    desc: "Membantu mengevaluasi apakah jumlah soal dan alur assessment sudah efisien." 
+                    label: "Average Completion Time", 
+                    subtitle: "Durasi Pengerjaan Optimal < 10 Menit", 
+                    desc: "Menjaga durasi pengerjaan rata-rata di bawah 10 menit agar tidak memicu kelelahan kognitif peserta." 
                   }
                 ].map((metric, idx) => (
                   <div key={idx} className="p-5 border-2 border-slate-200 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
@@ -696,12 +691,19 @@ export default function DigitalAssessmentCaseStudy() {
         {/* SECTION 11: Refleksi */}
         <FadeIn delay={0.95}>
           <SlideFrame index="11" title="Refleksi">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
                 <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><AlertCircle className="w-6 h-6" /></div>
                 <h4 className="font-extrabold text-slate-900 text-lg mb-3">Tantangan</h4>
                 <p className="text-sm font-semibold text-slate-700 leading-relaxed">
                   Menyeimbangkan kebutuhan siswa yang menginginkan hasil assessment yang mudah dipahami dengan kebutuhan institusi untuk memperoleh data yang bermanfaat bagi proses admission.
+                </p>
+              </div>
+              <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><CheckCircle2 className="w-6 h-6" /></div>
+                <h4 className="font-extrabold text-slate-900 text-lg mb-3">Temuan Usability Testing (UT)</h4>
+                <p className="text-sm font-semibold text-slate-700 leading-relaxed">
+                  Pada pengujian awal bersama 10 siswa SMA, 4 di antaranya mengaku bingung membaca grafik radar. Berdasarkan temuan tersebut, kami menyederhanakan halaman hasil akhir menjadi ringkasan deskriptif dengan 3 rekomendasi jurusan teratas.
                 </p>
               </div>
               <div className="p-6 bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all">

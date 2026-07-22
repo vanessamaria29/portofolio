@@ -14,10 +14,10 @@ export function ContactCTA() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent" />
             
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-6">
-              Mari bangun produk digital yang berdampak bersama.
+              Siap mengeksekusi ide produk menjadi sistem nyata?
             </h2>
             <p className="text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed">
-              Saya sedang mencari peluang magang di bidang Product Management & IT Project Management. Jika tim Anda mencari seseorang yang mampu menjembatani sisi teknis, bisnis, dan kebutuhan pengguna, mari berdiskusi.
+              Saya sedang mencari kesempatan magang PM / Business Analyst untuk membantu tim Anda meriset masalah pengguna dan menyusun spesifikasi produk yang presisi. Mari berdiskusi.
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-4">

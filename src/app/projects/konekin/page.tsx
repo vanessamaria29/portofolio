@@ -242,14 +242,14 @@ export default function KonekinCaseStudy() {
               <div className="bg-white border border-slate-200 rounded-lg shadow-sm p-8 flex flex-col">
                 <div className="mb-6 pb-4 border-b border-slate-100">
                   <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 block">Persona 1</span>
-                  <h4 className="font-serif text-xl font-semibold text-slate-900 mb-1">Paijo</h4>
-                  <span className="text-sm font-medium text-slate-700 block">Pemilik UMKM Bakso</span>
+                  <h4 className="font-serif text-xl font-semibold text-slate-900 mb-1">Pak Aris <span className="text-xs font-normal text-slate-500">(Nama disamarkan)</span></h4>
+                  <span className="text-sm font-medium text-slate-700 block">Pemilik Usaha Katering — Mewakili pola kebutuhan dari 5 pemilik UMKM yang diwawancarai</span>
                 </div>
                 
                 <div className="mb-6">
                   <strong className="block text-slate-900 mb-2 text-sm">Profil Singkat</strong>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Pemilik Bakso Paijo yang telah menjalankan usaha sejak tahun 2015. Awalnya berjualan menggunakan gerobak di depan Polsek, kemudian berkembang menjadi usaha yang dikenal luas. Saat ini telah memanfaatkan GoFood, GrabFood, ShopeeFood, serta Instagram sebagai media pemasaran dan pernah beberapa kali diliput oleh televisi.
+                    Pemilik usaha katering yang mewakili pola kebutuhan, kendala anggaran promosi, serta kekhawatiran dari 5 pemilik UMKM yang diwawancarai selama riset kebutuhan lapangan.
                   </p>
                 </div>
 

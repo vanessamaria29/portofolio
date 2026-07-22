@@ -779,7 +779,7 @@ export default function GlacierCaseStudy() {
                 <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-4"><AlertCircle className="w-6 h-6" /></div>
                 <h4 className="font-bold text-slate-900 text-base mb-2">Tantangan</h4>
                 <p className="text-xs md:text-sm font-normal text-slate-600 leading-relaxed">
-                  Tantangan terbesar adalah menerjemahkan alur kerja operasional manual yang kompleks berbasis Excel menjadi sistem berbasis web yang lebih efisien tanpa mengganggu kebiasaan dan alur kerja harian pengguna yang sudah familiar di lapangan.
+                  Tantangan terbesar: Supervisor cabang sudah 3+ tahun terbiasa bergantung pada spreadsheet Excel buatan sendiri. Pada minggu pertama uji coba, tim operasional sempat enggan beralih karena khawatir kehilangan historis catatan manual mereka. Kami merancang sesi onboarding singkat dan menambahkan fitur ekspor-satu-klik ke Excel agar transisi terasa aman bagi supervisor.
                 </p>
               </div>
               <div className="p-5 md:p-6 bg-white border border-slate-200 rounded-xl shadow-xs">

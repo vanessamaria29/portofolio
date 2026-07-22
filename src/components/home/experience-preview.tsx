@@ -130,12 +130,9 @@ export function ExperiencePreview() {
               <Briefcase className="w-3.5 h-3.5 text-slate-700" />
               Career & Track Record
             </span>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-slate-900 mb-3">
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-slate-900">
               Pengalaman, Studi Kasus & Kepemimpinan
             </h2>
-            <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-[65ch] mx-auto font-normal">
-              Menampilkan kerangka berpikir produk end-to-end, eksekusi berbasis data, kepemimpinan organisasi, serta kolaborasi teknis.
-            </p>
           </FadeIn>
         </div>
 

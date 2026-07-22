@@ -25,7 +25,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 Product Manager & IT Project Manager
               </span>
               <p className="text-sm text-text-secondary leading-relaxed max-w-md">
-                Mahasiswi Sistem Informasi yang berfokus pada pengembangan produk digital berbasis riset pengguna, strategi produk, dan otomatisasi operasional bisnis.
+                Dibuat oleh Vanessa — Mahasiswi Sistem Informasi & Aspiring PM / Business Analyst.
               </p>
             </div>
             
