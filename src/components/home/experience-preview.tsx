@@ -24,17 +24,17 @@ export function ExperiencePreview() {
 
   const productCaseStudies = [
     {
-      title: "Lead Product Manager & Front-End Developer",
-      subtitle: "Digital Skill Assessment Platform",
+      title: "Product Manager & Business Analyst",
+      subtitle: "Onium",
       badge: "Case Study",
       badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
-      date: "Januari 2026",
+      date: "2026",
       points: [
-        "Memimpin product discovery dan riset pengguna untuk menyusun dokumen kebutuhan produk (BRD/PRD) platform rekomendasi jurusan SMA berbasis AI.",
-        "Merancang alur UI/UX high-fidelity dan membangun antarmuka front-end yang responsif menggunakan Laravel dan Tailwind CSS.",
-        "Melakukan usability testing bersama siswa dan pengajar untuk memvalidasi akurasi algoritma serta kemudahan antarmuka."
+        "Mencetuskan konsep Progressive Web App (PWA) offline-first untuk membantu pedagang pasar tradisional mengelola arus kas harian dan pencatatan piutang.",
+        "Mendefinisikan arsitektur sistem berbasis logika aturan regex dan IndexedDB sisi klien demi keandalan penggunaan secara offline.",
+        "Menyusun dokumen kebutuhan fungsional secara komprehensif serta diagram alur data (ERD/PlantUML) untuk diimplementasikan oleh tim developer."
       ],
-      href: "/projects/digital-assessment"
+      href: "/projects/onium"
     },
     {
       title: "Product Manager",
@@ -50,17 +50,30 @@ export function ExperiencePreview() {
       href: "/projects/glacier"
     },
     {
-      title: "Product Manager & Business Analyst",
-      subtitle: "Onium",
+      title: "Lead Product Manager & Front-End Developer",
+      subtitle: "Digital Skill Assessment Platform",
       badge: "Case Study",
       badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
-      date: "2026",
+      date: "Januari 2026",
       points: [
-        "Mencetuskan konsep Progressive Web App (PWA) offline-first untuk membantu pedagang pasar tradisional mengelola arus kas harian dan pencatatan piutang.",
-        "Mendefinisikan arsitektur sistem berbasis logika aturan regex dan IndexedDB sisi klien demi keandalan penggunaan secara offline.",
-        "Menyusun dokumen kebutuhan fungsional secara komprehensif serta diagram alur data (ERD/PlantUML) untuk diimplementasikan oleh tim developer."
+        "Memimpin product discovery dan riset pengguna untuk menyusun dokumen kebutuhan produk (BRD/PRD) platform rekomendasi jurusan SMA berbasis AI.",
+        "Merancang alur UI/UX high-fidelity dan membangun antarmuka front-end yang responsif menggunakan Laravel dan Tailwind CSS.",
+        "Melakukan usability testing bersama siswa dan pengajar untuk memvalidasi akurasi algoritma serta kemudahan antarmuka."
       ],
-      href: "/projects/onium"
+      href: "/projects/digital-assessment"
+    },
+    {
+      title: "Product Manager & Team Lead",
+      subtitle: "KONEKIN",
+      badge: "Case Study",
+      badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
+      date: "2025",
+      points: [
+        "Mencetuskan platform penghubung UMKM dan mahasiswa dengan fitur pembayaran aman (escrow) serta verifikasi identitas mahasiswa.",
+        "Melakukan validasi pasar terhadap 5 pemilik UMKM dan 35 mahasiswa untuk merumuskan kebutuhan produk dan model bisnis.",
+        "Menyusun Lean Canvas, User Journey Map, dan dokumen prioritas fitur (RICE Framework) untuk pengembangan MVP."
+      ],
+      href: "/projects/konekin"
     }
   ]
 

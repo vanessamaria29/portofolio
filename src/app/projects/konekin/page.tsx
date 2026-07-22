@@ -860,11 +860,11 @@ export default function KonekinCaseStudy() {
         <FadeIn delay={1.1}>
           <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-20">
             <Link 
-              href="/projects/glacier" 
+              href="/projects/digital-assessment" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <ArrowLeft className="w-4 h-4 text-slate-500" />
-              <span>Studi Kasus Sebelumnya: <strong className="text-slate-900">Glacier</strong></span>
+              <span>Studi Kasus Sebelumnya: <strong className="text-slate-900">Digital Skill Assessment</strong></span>
             </Link>
 
             <Link 

@@ -856,10 +856,10 @@ export default function OniumCaseStudy() {
             </Link>
 
             <Link 
-              href="/projects/digital-assessment" 
+              href="/projects/glacier" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
-              <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">Digital Skill Assessment</strong></span>
+              <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">Glacier</strong></span>
               <ArrowRight className="w-4 h-4 text-slate-500" />
             </Link>
           </div>

@@ -7,16 +7,16 @@ import { ProjectGrid } from "@/components/home/project-grid"
 export function PortfolioShowcase() {
   const pmProjects = [
     {
-      title: "KONEKIN",
-      description: "Platform yang menghubungkan UMKM dengan talenta mahasiswa untuk menyediakan layanan digital secara aman, terverifikasi, dan transparan.",
-      imageSrc: "/images/konekin-cover.png",
-      href: "/projects/konekin"
-    },
-    {
       title: "Onium",
       description: "Progressive Web App (PWA) offline-first untuk membantu pedagang pasar tradisional mengelola arus kas harian dan pencatatan piutang.",
       imageSrc: "/images/onium-ui.png",
       href: "/projects/onium"
+    },
+    {
+      title: "Glacier",
+      description: "Dashboard operasional terpusat untuk mengotomatisasi kalkulasi HPP dan pemantauan stok real-time di jaringan cabang Sahabat Mixue Group.",
+      imageSrc: "/images/glacier-logo.png",
+      href: "/projects/glacier"
     },
     {
       title: "Digital Skill Assessment Platform",
@@ -26,10 +26,10 @@ export function PortfolioShowcase() {
       isDevelopment: true
     },
     {
-      title: "Glacier",
-      description: "Dashboard operasional terpusat untuk mengotomatisasi kalkulasi HPP dan pemantauan stok real-time di jaringan cabang Sahabat Mixue Group.",
-      imageSrc: "/images/glacier-logo.png",
-      href: "/projects/glacier"
+      title: "KONEKIN",
+      description: "Platform yang menghubungkan UMKM dengan talenta mahasiswa untuk menyediakan layanan digital secara aman, terverifikasi, dan transparan.",
+      imageSrc: "/images/konekin-cover.png",
+      href: "/projects/konekin"
     }
   ]
 
