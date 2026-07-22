@@ -7,7 +7,7 @@ import { ArrowRight, Mail, MessageCircle } from "lucide-react"
 
 export function ContactCTA() {
   return (
-    <Section className="py-24 md:py-32 lg:py-40 bg-transparent">
+    <Section id="contact" className="py-24 md:py-32 lg:py-40 bg-transparent scroll-mt-20">
       <Container>
         <FadeIn direction="up">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto p-10 md:p-16 rounded-3xl bg-gradient-to-r from-blue-50/50 to-purple-50/50 border border-slate-100 shadow-sm backdrop-blur-sm relative overflow-hidden">
