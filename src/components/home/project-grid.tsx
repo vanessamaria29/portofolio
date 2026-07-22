@@ -28,13 +28,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
     >
       <Link href={project.href} className="flex flex-col h-full outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-2xl cursor-pointer active:scale-[0.99] transition-transform">
         {isDev ? (
-          <div className="w-full relative overflow-hidden border-b border-slate-800 aspect-[4/3] bg-gradient-to-br from-slate-800 via-slate-900 to-black p-6 flex flex-col justify-between group-hover:scale-105 transition-transform duration-700">
-            <div className="flex justify-between items-start z-10">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-white/10 backdrop-blur-md text-white border border-white/20 shadow-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                Dalam Pengembangan
-              </span>
-            </div>
+          <div className="w-full relative overflow-hidden border-b border-slate-800 aspect-[4/3] bg-gradient-to-br from-slate-800 via-slate-900 to-black p-6 flex flex-col justify-end group-hover:scale-105 transition-transform duration-700">
             <div className="z-10 flex items-center gap-2 text-slate-300">
               <Code2 className="w-5 h-5 text-sky-400" />
               <span className="text-xs font-bold tracking-wide text-white">Preview Studi Kasus</span>

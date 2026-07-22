@@ -123,24 +123,32 @@ export default function DigitalAssessmentCaseStudy() {
                 </h1>
                 
                 <p className="text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-3xl">
-                  Platform digital yang membantu siswa SMA memetakan kompetensi digital dan memberikan rekomendasi program studi menggunakan metode <strong className="text-slate-900 font-extrabold underline decoration-slate-300">Rule-Based Weighted Scoring</strong>.
+                  Platform digital yang membantu siswa SMA memahami kompetensi digital mereka melalui assessment interaktif serta mendukung proses admission UKRIDA dengan pengelolaan data calon mahasiswa yang lebih terstruktur.
                 </p>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-200 mt-2">
                   <div className="flex flex-col gap-1.5">
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Peran</span>
-                    <span className="font-bold text-slate-900 text-sm md:text-base">Product Manager, Full Stack Dev</span>
+                    <span className="font-bold text-slate-900 text-sm md:text-base">Product Manager & Frontend Developer</span>
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Jenis Proyek</span>
+                    <span className="font-bold text-slate-900 text-sm md:text-base">Institutional Digital Product</span>
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Durasi</span>
-                    <span className="font-bold text-slate-900 text-sm md:text-base">3 Bulan</span>
+                    <span className="font-bold text-slate-900 text-sm md:text-base">3 Months</span>
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Status</span>
+                    <span className="font-bold text-slate-900 text-sm md:text-base">Implemented at UKRIDA</span>
                   </div>
                 </div>
 
                 <div className="pt-6 border-t border-slate-200 mt-2">
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-4">Frameworks & Methodologies</span>
                   <div className="flex flex-wrap gap-2.5">
-                    {["Scrum", "Requirement Gathering", "Stakeholder Analysis", "User Journey Mapping", "MoSCoW Prioritization", "Rule-Based Weighted Scoring", "Success Metrics"].map((framework) => (
+                    {["Scrum", "Requirement Gathering", "Stakeholder Analysis", "User Journey Mapping", "MoSCoW Prioritization", "Rule-Based Weighted Scoring"].map((framework) => (
                       <span key={framework} className="px-3.5 py-2 bg-slate-100/90 text-slate-900 text-xs font-bold rounded-lg border border-slate-200 shadow-sm">
                         {framework}
                       </span>
@@ -151,12 +159,6 @@ export default function DigitalAssessmentCaseStudy() {
 
               {/* Kolom Kanan: Visual Card Preview */}
               <div className="lg:col-span-4 flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700/80 shadow-lg relative overflow-hidden group min-h-[260px]">
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-white/10 backdrop-blur-md text-white border border-white/20 shadow-xs">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                    Dalam Pengembangan
-                  </span>
-                </div>
                 <Image 
                   src="/images/Logo_UKRIDA_300x300.png"
                   alt="Logo UKRIDA - Digital Skill Assessment"
