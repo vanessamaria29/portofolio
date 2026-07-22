@@ -99,8 +99,8 @@ export function ExperiencePreview() {
       highlight: false
     },
     {
-      title: "GPA 3.84",
-      subtitle: "IPS Sempurna 4.00 (Semester 3)",
+      title: "IPK Kumulatif 3.84 / 4.00",
+      subtitle: "Program Studi Sistem Informasi UKRIDA",
       badge: "Academic",
       highlight: true
     }

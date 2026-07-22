@@ -242,14 +242,14 @@ export default function KonekinCaseStudy() {
               <div className="bg-white border border-slate-200 rounded-lg shadow-sm p-8 flex flex-col">
                 <div className="mb-6 pb-4 border-b border-slate-100">
                   <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 block">Persona 1</span>
-                  <h4 className="font-serif text-xl font-semibold text-slate-900 mb-1">Pak Aris <span className="text-xs font-normal text-slate-500">(Nama disamarkan)</span></h4>
-                  <span className="text-sm font-medium text-slate-700 block">Pemilik Usaha Katering — Mewakili pola kebutuhan dari 5 pemilik UMKM yang diwawancarai</span>
+                  <h4 className="font-serif text-xl font-semibold text-slate-900 mb-1">Persona Komposit: Pak Aris</h4>
+                  <span className="text-sm font-medium text-slate-700 block">Pemilik Usaha Katering — Merupakan gabungan profil, kebiasaan, dan kebutuhan utama dari 5 pemilik UMKM yang kami wawancarai.</span>
                 </div>
                 
                 <div className="mb-6">
                   <strong className="block text-slate-900 mb-2 text-sm">Profil Singkat</strong>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Pemilik usaha katering yang mewakili pola kebutuhan, kendala anggaran promosi, serta kekhawatiran dari 5 pemilik UMKM yang diwawancarai selama riset kebutuhan lapangan.
+                    Pemilik usaha katering komposit yang merangkum gabungan profil, pola kebutuhan, kendala anggaran promosi, serta kekhawatiran dari 5 pemilik UMKM yang kami wawancarai selama riset lapangan.
                   </p>
                 </div>
 
@@ -469,10 +469,6 @@ export default function KonekinCaseStudy() {
               </div>
             </div>
 
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-lg text-sm text-slate-700 leading-relaxed">
-              <span className="block text-xs font-semibold text-slate-900 uppercase tracking-widest mb-3">Kesimpulan Validasi</span>
-              "Hasil wawancara terhadap 5 UMKM dan survei kepada 35 mahasiswa menunjukkan adanya kebutuhan dari kedua sisi. UMKM membutuhkan layanan digital yang aman, terpercaya, dan terjangkau, sedangkan mahasiswa membutuhkan proyek nyata untuk membangun portofolio profesional. Temuan ini menjadi dasar dalam merancang solusi KONEKIN."
-            </div>
 
           </SlideFrame>
         </FadeIn>

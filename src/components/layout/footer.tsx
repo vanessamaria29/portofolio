@@ -22,7 +22,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 Vanessa.
               </span>
               <span className="text-xs font-bold uppercase tracking-widest text-accent-primary mb-4">
-                Product Manager & IT Project Manager
+                Aspiring Product Manager
               </span>
               <p className="text-sm text-text-secondary leading-relaxed max-w-md">
                 Dibuat oleh Vanessa — Mahasiswi Sistem Informasi & Aspiring PM / Business Analyst.
