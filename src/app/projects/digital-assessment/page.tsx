@@ -112,7 +112,7 @@ export default function DigitalAssessmentCaseStudy() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
               {/* Kolom Kiri: Informasi Case Study */}
-              <div className="lg:col-span-8 flex flex-col gap-6">
+              <div className="lg:col-span-7 flex flex-col gap-6">
                 <span className="inline-flex items-center gap-2 text-xs font-extrabold text-slate-800 uppercase tracking-widest bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full w-fit">
                   <span className="w-2.5 h-2.5 rounded-full bg-slate-900" />
                   Case Study
@@ -158,13 +158,13 @@ export default function DigitalAssessmentCaseStudy() {
               </div>
 
               {/* Kolom Kanan: Logo UKRIDA */}
-              <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 md:p-8 rounded-2xl bg-white border border-slate-200/90 shadow-sm relative overflow-hidden group min-h-[300px]">
+              <div className="lg:col-span-5 flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl bg-white border-2 border-slate-200/90 shadow-md relative overflow-hidden group min-h-[320px] md:min-h-[360px]">
                 <Image 
                   src="/images/Logo_UKRIDA_300x300.png"
                   alt="Logo UKRIDA - Digital Skill Assessment"
-                  width={300}
-                  height={300}
-                  className="w-52 sm:w-60 md:w-72 lg:w-80 h-auto max-h-[260px] object-contain group-hover:scale-105 transition-all duration-300 drop-shadow-md z-10"
+                  width={450}
+                  height={450}
+                  className="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[400px] lg:max-w-[440px] h-auto max-h-[320px] object-contain group-hover:scale-105 transition-all duration-300 drop-shadow-md z-10"
                   priority
                 />
               </div>

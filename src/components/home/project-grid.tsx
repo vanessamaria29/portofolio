@@ -15,7 +15,7 @@ interface Project {
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const isLogoImage = project.imageSrc?.includes("Logo_UKRIDA")
+  const isLogoImage = project.imageSrc?.includes("Logo_UKRIDA") || project.imageSrc?.includes("glacier-logo")
 
   return (
     <motion.div 
@@ -28,18 +28,19 @@ const ProjectCard = ({ project }: { project: Project }) => {
     >
       <Link href={project.href} className="flex flex-col h-full outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-2xl cursor-pointer active:scale-[0.99] transition-transform">
         {project.imageSrc && (
-          <div className="w-full relative overflow-hidden border-b border-slate-100 aspect-[4/3] bg-white flex items-center justify-center p-3 sm:p-4">
+          <div className="w-full relative overflow-hidden border-b border-slate-100 aspect-[4/3] bg-white flex items-center justify-center">
             {isLogoImage ? (
+              <div className="p-3 sm:p-4 w-full h-full flex items-center justify-center">
+                <img 
+                  src={project.imageSrc} 
+                  alt={project.title} 
+                  className="w-full h-auto max-w-[280px] max-h-[210px] object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-sm"
+                />
+              </div>
+            ) : (
               <img 
                 src={project.imageSrc} 
                 alt={project.title} 
-                className="w-48 sm:w-56 md:w-64 h-auto max-h-[210px] object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-sm"
-              />
-            ) : (
-              <ImageContainer 
-                src={project.imageSrc} 
-                alt={project.title} 
-                aspectRatio="video"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             )}
