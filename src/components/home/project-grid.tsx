@@ -29,12 +29,20 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <Link href={project.href} className="flex flex-col h-full outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-2xl cursor-pointer active:scale-[0.99] transition-transform">
         {project.imageSrc && (
           <div className="w-full relative overflow-hidden border-b border-slate-100 aspect-[4/3] bg-white flex items-center justify-center p-6">
-            <ImageContainer 
-              src={project.imageSrc} 
-              alt={project.title} 
-              aspectRatio="video"
-              className={isLogoImage ? "w-28 md:w-32 h-auto object-contain transition-transform duration-700 group-hover:scale-105" : "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"}
-            />
+            {isLogoImage ? (
+              <img 
+                src={project.imageSrc} 
+                alt={project.title} 
+                className="w-36 sm:w-40 md:w-44 h-auto max-h-[140px] object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-xs"
+              />
+            ) : (
+              <ImageContainer 
+                src={project.imageSrc} 
+                alt={project.title} 
+                aspectRatio="video"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            )}
           </div>
         )}
         <div className="p-5 flex flex-col flex-grow">

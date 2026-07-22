@@ -157,14 +157,14 @@ export default function DigitalAssessmentCaseStudy() {
                 </div>
               </div>
 
-              {/* Kolom Kanan: Visual Card Preview */}
+              {/* Kolom Kanan: Logo UKRIDA */}
               <div className="lg:col-span-4 flex flex-col items-center justify-center p-8 rounded-2xl bg-white border border-slate-200/90 shadow-sm relative overflow-hidden group min-h-[260px]">
                 <Image 
                   src="/images/Logo_UKRIDA_300x300.png"
                   alt="Logo UKRIDA - Digital Skill Assessment"
-                  width={160}
-                  height={160}
-                  className="w-32 md:w-40 h-auto object-contain group-hover:scale-105 transition-all duration-300 drop-shadow-xs z-10"
+                  width={200}
+                  height={200}
+                  className="w-36 md:w-48 h-auto object-contain group-hover:scale-105 transition-all duration-300 drop-shadow-sm z-10"
                   priority
                 />
               </div>
