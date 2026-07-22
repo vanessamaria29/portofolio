@@ -72,7 +72,7 @@ export function ExperiencePreview() {
     },
     {
       title: "GPA 3.84",
-      subtitle: "IPK Sempurna 4.00 (Semester 3)",
+      subtitle: "IPS Sempurna 4.00 (Semester 3)",
       badge: "Academic",
       highlight: true
     }
