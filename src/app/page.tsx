@@ -2,23 +2,24 @@ import { Metadata } from "next"
 import { HeroSection } from "@/components/home/hero-section"
 import { PortfolioShowcase } from "@/components/home/portfolio-showcase"
 import { ExperiencePreview } from "@/components/home/experience-preview"
-
+import { Capabilities } from "@/components/home/capabilities"
 import { ContactCTA } from "@/components/home/contact-cta"
+import { GlobalAmbientBackground } from "@/components/layout/global-ambient"
 
 export const metadata: Metadata = {
-  title: "Vanessa | Product Management Portfolio",
-  description: "Portofolio Product Management dari Vanessa, mahasiswi Sistem Informasi semester 5 yang mencari kesempatan magang di bidang Product Management & IT Project Management.",
+  title: "Vanessa | Product Manager Portfolio",
+  description: "Portofolio Product Management dari Vanessa, mahasiswi Sistem Informasi semester 5 di Universitas Kristen Krida Wacana. Pengalaman dalam Product Management & IT Project Management untuk KONEKIN, ONIUM, Digital Skill Assessment, dan Glacier.",
   openGraph: {
-    title: "Vanessa | Product Management Portfolio",
-    description: "Portofolio Product Management dari Vanessa, mahasiswi Sistem Informasi semester 5.",
-    url: "https://portfolio.com",
+    title: "Vanessa | Product Manager Portfolio",
+    description: "Portofolio Product Management dari Vanessa, mahasiswi Sistem Informasi semester 5 di UKRIDA.",
+    url: "https://vanessamaria.dev",
     siteName: "Vanessa Portfolio",
     images: [
       {
-        url: "https://portfolio.com/og-image.jpg",
+        url: "https://vanessamaria.dev/images/profile.jpeg",
         width: 1200,
         height: 630,
-        alt: "Vanessa - Product Management Portfolio",
+        alt: "Vanessa - Product Manager Portfolio",
       },
     ],
     locale: "id_ID",
@@ -26,13 +27,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vanessa | Product Management Portfolio",
+    title: "Vanessa | Product Manager Portfolio",
     description: "Portofolio Product Management dari Vanessa.",
-    images: ["https://portfolio.com/twitter-image.jpg"],
+    images: ["https://vanessamaria.dev/images/profile.jpeg"],
   },
 }
-
-import { GlobalAmbientBackground } from "@/components/layout/global-ambient"
 
 export default function Home() {
   const structuredData = {
@@ -40,10 +39,10 @@ export default function Home() {
     "@type": "Person",
     name: "Vanessa",
     jobTitle: "Product Management Intern",
-    url: "https://portfolio.com",
+    url: "https://vanessamaria.dev",
     sameAs: [
-      "https://linkedin.com/in/vanessa",
-      "https://github.com/vanessa",
+      "https://linkedin.com",
+      "https://github.com",
     ],
   }
 
@@ -58,6 +57,7 @@ export default function Home() {
         <HeroSection />
         <PortfolioShowcase />
         <ExperiencePreview />
+        <Capabilities />
         <ContactCTA />
       </div>
     </>

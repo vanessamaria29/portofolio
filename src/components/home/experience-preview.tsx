@@ -1,4 +1,3 @@
-"use client"
 import * as React from "react"
 import { Section } from "@/components/layout/section"
 import { Container } from "@/components/layout/container"
