@@ -121,7 +121,7 @@ const Navigation = React.forwardRef<HTMLElement, NavigationProps>(
 
             <div className="flex items-center gap-3">
               <Link 
-                href="mailto:vanessa.maria2905@gmail.com" 
+                href="mailto:vanessapardedemaria@gmail.com" 
                 className="hidden md:inline-flex h-10 items-center justify-center rounded-xl bg-slate-900 px-5 text-xs font-bold text-white transition-all hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 shadow-xs active:scale-95 cursor-pointer select-none"
               >
                 Let's Connect
@@ -194,7 +194,7 @@ const Navigation = React.forwardRef<HTMLElement, NavigationProps>(
 
               <div className="pt-4 border-t border-slate-100 flex flex-col gap-3">
                 <Link
-                  href="mailto:vanessa.maria2905@gmail.com"
+                  href="mailto:vanessapardedemaria@gmail.com"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-slate-900 text-white font-bold text-sm shadow-xs hover:bg-slate-800 transition-all active:scale-98 cursor-pointer"
                 >

@@ -17,7 +17,7 @@ export function AboutHero() {
           <FadeIn direction="up" delay={0.1}>
             <div className="flex flex-col gap-6 text-lg text-text-secondary sm:text-xl leading-relaxed">
               <p>
-                My name is Alex. I am a Product Manager with a foundation in UX strategy and frontend engineering. I don't just manage backlogs; I orchestrate the delivery of meaningful solutions to complex user problems.
+                My name is Vanessa. I am an Information Systems student & Aspiring Product Manager. I don't just manage backlogs; I orchestrate the delivery of meaningful solutions to complex user problems.
               </p>
               <p>
                 My current focus is on building B2B SaaS platforms that empower teams to work more efficiently, bringing consumer-grade design to enterprise software.

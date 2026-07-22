@@ -22,10 +22,10 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 Vanessa.
               </span>
               <span className="text-xs font-bold uppercase tracking-widest text-accent-primary mb-4">
-                Aspiring Product Manager
+                Product Manager & IT Project Manager
               </span>
               <p className="text-sm text-text-secondary leading-relaxed max-w-md">
-                An Informatics student driven by curiosity. I believe the best products are built at the intersection of deep user empathy, beautiful design, and robust engineering. 
+                Mahasiswi Sistem Informasi yang berfokus pada pengembangan produk digital berbasis riset pengguna, strategi produk, dan otomatisasi operasional bisnis.
               </p>
             </div>
             
@@ -33,13 +33,9 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
             <div className="md:col-span-6 lg:col-span-3 flex flex-col">
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-text-tertiary mb-6">Navigation</h4>
               <nav className="flex flex-col gap-4">
-                <a href="/about" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium">About Me</a>
-
+                <a href="/#about" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium">About Me</a>
+                <a href="/#portfolio" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium">Portofolio & Projects</a>
                 <a href="/#experience" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium">Experience</a>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center">
-                  Resume
-                  <ArrowUpRight className="ml-1 h-3 w-3" />
-                </a>
               </nav>
             </div>
 
@@ -47,17 +43,35 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
             <div className="md:col-span-6 lg:col-span-4 flex flex-col">
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-text-tertiary mb-6">Connect</h4>
               <div className="grid grid-cols-2 gap-4">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center">
+                <a 
+                  href="https://www.linkedin.com/in/vanessa-maria-2a630b362" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center"
+                >
                   LinkedIn <ArrowUpRight className="ml-1 h-3 w-3" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center">
-                  GitHub <ArrowUpRight className="ml-1 h-3 w-3" />
-                </a>
-                <a href="mailto:vanessa@example.com" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center">
+                <a 
+                  href="mailto:vanessapardedemaria@gmail.com" 
+                  className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center"
+                >
                   Email <ArrowUpRight className="ml-1 h-3 w-3" />
                 </a>
-                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center">
-                  Dribbble <ArrowUpRight className="ml-1 h-3 w-3" />
+                <a 
+                  href="https://wa.me/6285695886864" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center"
+                >
+                  WhatsApp <ArrowUpRight className="ml-1 h-3 w-3" />
+                </a>
+                <a 
+                  href="https://github.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-text-secondary hover:text-accent-primary transition-colors font-medium flex items-center"
+                >
+                  GitHub <ArrowUpRight className="ml-1 h-3 w-3" />
                 </a>
               </div>
             </div>

@@ -75,8 +75,9 @@ const homeJsonLd = {
       "jobTitle": "Product Manager",
       "url": "https://vanessamaria.dev",
       "sameAs": [
-        "https://linkedin.com",
-        "https://github.com"
+        "https://www.linkedin.com/in/vanessa-maria-2a630b362",
+        "https://wa.me/6285695886864",
+        "mailto:vanessapardedemaria@gmail.com"
       ]
     },
     {

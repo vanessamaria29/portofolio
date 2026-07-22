@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   title: "About",
   description: "Learn more about my professional journey, product mindset, core values, and what drives me to build meaningful digital products.",
   openGraph: {
-    title: "About Alex | Product Manager",
+    title: "About Vanessa | Product Manager",
     description: "Learn more about my professional journey, product mindset, and core values.",
-    url: "https://portfolio.com/about",
+    url: "https://vanessamaria.dev/about",
   }
 }
 
@@ -24,8 +24,8 @@ export default function AboutPage() {
     "@type": "ProfilePage",
     "mainEntity": {
       "@type": "Person",
-      "name": "Alex",
-      "jobTitle": "Senior Product Manager",
+      "name": "Vanessa",
+      "jobTitle": "Product Manager",
       "description": "Product Manager with a background in UX design and frontend engineering.",
     }
   }
