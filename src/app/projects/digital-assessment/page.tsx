@@ -1,10 +1,68 @@
-"use client"
-
 import React from "react"
+import type { Metadata } from "next"
 import { FadeIn } from "@/components/animations/fade-in"
 import { ArrowLeft, ArrowRight, User, Building2, Users, CheckCircle2, Target, AlertCircle, ListTodo, ClipboardCheck, Sparkles, BarChart3, Layers } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Digital Skill Assessment | Product Management Case Study | Vanessa",
+  description: "Platform assessment digital berbasis Rule-Based Weighted Scoring untuk membantu siswa SMA memetakan kemampuan digital dan rekomendasi program studi.",
+  alternates: {
+    canonical: "https://vanessamaria.dev/projects/digital-assessment",
+  },
+  openGraph: {
+    title: "Digital Skill Assessment | Product Management Case Study | Vanessa",
+    description: "Platform assessment digital berbasis Rule-Based Weighted Scoring untuk membantu siswa SMA memetakan kemampuan digital dan rekomendasi program studi.",
+    url: "https://vanessamaria.dev/projects/digital-assessment",
+    siteName: "Vanessa Portfolio",
+    images: [
+      {
+        url: "/images/Logo_UKRIDA_300x300.png",
+        width: 1200,
+        height: 630,
+        alt: "Digital Skill Assessment Cover",
+      },
+    ],
+    locale: "id_ID",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Skill Assessment | Product Management Case Study | Vanessa",
+    description: "Platform assessment digital berbasis Rule-Based Weighted Scoring untuk membantu siswa SMA memetakan kemampuan digital.",
+    images: ["/images/Logo_UKRIDA_300x300.png"],
+  },
+}
+
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Digital Skill Assessment Case Study",
+      "headline": "Digital Skill Assessment Platform - Assessment Berbasis Rule-Based Weighted Scoring",
+      "description": "Platform assessment digital berbasis Rule-Based Weighted Scoring untuk membantu siswa SMA memetakan kemampuan digital dan rekomendasi program studi.",
+      "author": {
+        "@type": "Person",
+        "name": "Vanessa"
+      },
+      "dateCreated": "2026"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Digital Skill Assessment Platform",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Person",
+        "name": "Vanessa"
+      },
+      "description": "Rule-Based Weighted Scoring assessment tool for high school students.",
+      "programmingLanguage": "PHP, Laravel, Next.js, Tailwind CSS"
+    }
+  ]
+}
 
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
   <div className={`bg-white/75 backdrop-blur-md border border-slate-200/90 rounded-2xl p-6 md:p-10 shadow-sm my-8 ${className}`}>
@@ -24,6 +82,10 @@ const SlideFrame = ({ children, title, index, className = "" }: { children: Reac
 export default function DigitalAssessmentCaseStudy() {
   return (
     <div className="min-h-screen bg-surface-primary selection:bg-slate-200 selection:text-slate-900 relative text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+      />
       
       {/* Background gradients - Vivid Blue, Purple, & Pink */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -276,7 +338,7 @@ export default function DigitalAssessmentCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* SECTION 5: Key Features (Menggantikan Modul Sistem) */}
+        {/* SECTION 5: Key Features */}
         <FadeIn delay={0.5}>
           <SlideFrame index="05" title="Key Features">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -654,7 +716,7 @@ export default function DigitalAssessmentCaseStudy() {
         <FadeIn delay={1.1}>
           <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-20">
             <Link 
-              href="/product-management/onium" 
+              href="/projects/onium" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <ArrowLeft className="w-4 h-4 text-slate-500" />
@@ -669,7 +731,7 @@ export default function DigitalAssessmentCaseStudy() {
             </Link>
 
             <Link 
-              href="/product-management/glacier" 
+              href="/projects/glacier" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">Glacier</strong></span>

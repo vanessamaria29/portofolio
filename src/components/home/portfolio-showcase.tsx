@@ -61,25 +61,25 @@ export function PortfolioShowcase() {
       title: "KONEKIN",
       description: "Platform yang menghubungkan UMKM dengan talenta mahasiswa untuk menyediakan layanan digital secara aman, terverifikasi, dan transparan.",
       imageSrc: "/images/konekin-cover.png",
-      href: "/product-management/konekin"
+      href: "/projects/konekin"
     },
     {
       title: "Onium",
       description: "Platform yang membantu pedagang UMKM mengelola transaksi, piutang, dan arus kas melalui pencatatan digital yang sederhana dan mudah digunakan.",
       imageSrc: "/images/onium-ui.png",
-      href: "/product-management/onium"
+      href: "/projects/onium"
     },
     {
       title: "Digital Skill Assessment Platform",
       description: "Platform digital yang membantu siswa SMA memetakan kemampuan digital serta memberikan rekomendasi jurusan yang sesuai.",
       imageSrc: "/images/Logo_UKRIDA_300x300.png",
-      href: "/product-management/digital-skill-assessment"
+      href: "/projects/digital-assessment"
     },
     {
       title: "Glacier",
       description: "Platform operasional berbasis web yang membantu Sahabat Mixue Group mengelola stok, menghitung HPP, dan memantau performa cabang secara terintegrasi.",
       imageSrc: "/images/glacier-logo.png",
-      href: "/product-management/glacier"
+      href: "/projects/glacier"
     }
   ]
 

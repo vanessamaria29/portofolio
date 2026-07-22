@@ -19,7 +19,7 @@ export function ExperiencePreview() {
         "Merancang alur UI/UX serta mengimplementasikan antarmuka front-end responsif menggunakan Laravel (PHP) dan Tailwind CSS.",
         "Melakukan pengujian usability langsung bersama siswa & pengajar UKRIDA untuk memvalidasi akurasi rekomendasi jurusan."
       ],
-      href: "/product-management/digital-skill-assessment"
+      href: "/projects/digital-assessment"
     },
     {
       title: "Product Manager",
@@ -32,7 +32,7 @@ export function ExperiencePreview() {
         "Mentransformasi pencatatan manual spreadsheet menjadi sistem terpusat berbasis web dengan pemantauan stok real-time.",
         "Mengelola alur pengembangan iteratif menggunakan Scrum Framework & Trello Board."
       ],
-      href: "/product-management/glacier"
+      href: "/projects/glacier"
     },
     {
       title: "Marketing & School Outreach Intern",

@@ -1,10 +1,68 @@
-"use client"
-
 import React from "react"
+import type { Metadata } from "next"
 import { FadeIn } from "@/components/animations/fade-in"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "KONEKIN | Product Management Case Study | Vanessa",
+  description: "Case study mengenai platform yang menghubungkan UMKM dengan mahasiswa untuk menyediakan layanan digital secara aman, terverifikasi, dan transparan.",
+  alternates: {
+    canonical: "https://vanessamaria.dev/projects/konekin",
+  },
+  openGraph: {
+    title: "KONEKIN | Product Management Case Study | Vanessa",
+    description: "Case study mengenai platform yang menghubungkan UMKM dengan mahasiswa untuk layanan digital secara aman, terverifikasi, dan transparan.",
+    url: "https://vanessamaria.dev/projects/konekin",
+    siteName: "Vanessa Portfolio",
+    images: [
+      {
+        url: "/images/konekin-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "KONEKIN Case Study Cover",
+      },
+    ],
+    locale: "id_ID",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KONEKIN | Product Management Case Study | Vanessa",
+    description: "Case study mengenai platform yang menghubungkan UMKM dengan mahasiswa untuk layanan digital secara aman, terverifikasi, dan transparan.",
+    images: ["/images/konekin-cover.png"],
+  },
+}
+
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "KONEKIN Case Study",
+      "headline": "KONEKIN - Platform Penghubung UMKM & Mahasiswa",
+      "description": "Case study mengenai platform yang menghubungkan UMKM dengan mahasiswa untuk layanan digital secara aman, terverifikasi, dan transparan.",
+      "author": {
+        "@type": "Person",
+        "name": "Vanessa"
+      },
+      "dateCreated": "2025"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "KONEKIN",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Person",
+        "name": "Vanessa"
+      },
+      "description": "Platform digital escrow & verifikasi mahasiswa untuk layanan UMKM.",
+      "programmingLanguage": "TypeScript, Next.js, Tailwind CSS"
+    }
+  ]
+}
 
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
   <div className={`bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-8 md:p-10 shadow-lg shadow-slate-200/40 my-8 ${className}`}>
@@ -21,6 +79,10 @@ const SlideFrame = ({ children, title, index, className = "" }: { children: Reac
 export default function KonekinCaseStudy() {
   return (
     <div className="min-h-screen bg-surface-primary selection:bg-slate-200 selection:text-slate-900 relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+      />
       
       {/* Background gradients */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -41,9 +103,7 @@ export default function KonekinCaseStudy() {
           </Link>
         </FadeIn>
 
-        {/* =========================================
-            01. PROJECT OVERVIEW
-            ========================================= */}
+        {/* 01. PROJECT OVERVIEW */}
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12 relative overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
@@ -111,9 +171,7 @@ export default function KonekinCaseStudy() {
           </div>
         </FadeIn>
 
-        {/* =========================================
-            02. PROBLEM STATEMENT
-            ========================================= */}
+        {/* 02. PROBLEM STATEMENT */}
         <FadeIn direction="up">
           <SlideFrame index="1" title="Pernyataan Masalah">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -150,9 +208,7 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            03. PRODUCT GOALS
-            ========================================= */}
+        {/* 03. PRODUCT GOALS */}
         <FadeIn direction="up">
           <SlideFrame index="2" title="Tujuan Produk">
             <div className="mb-6">
@@ -178,14 +234,11 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            04. USER PERSONA
-            ========================================= */}
+        {/* 04. USER PERSONA */}
         <FadeIn direction="up">
           <SlideFrame index="3" title="User Persona">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
               
-              {/* Persona 1 */}
               <div className="bg-white border border-slate-200 rounded-lg shadow-sm p-8 flex flex-col">
                 <div className="mb-6 pb-4 border-b border-slate-100">
                   <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 block">Persona 1</span>
@@ -228,7 +281,6 @@ export default function KonekinCaseStudy() {
                 </div>
               </div>
 
-              {/* Persona 2 */}
               <div className="bg-white border border-slate-200 rounded-lg shadow-sm p-8 flex flex-col">
                 <div className="mb-6 pb-4 border-b border-slate-100">
                   <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 block">Persona 2</span>
@@ -272,14 +324,10 @@ export default function KonekinCaseStudy() {
               </div>
 
             </div>
-
-
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            05. PRODUCT SCOPE
-            ========================================= */}
+        {/* 05. PRODUCT SCOPE */}
         <FadeIn direction="up">
           <SlideFrame index="4" title="Cakupan MVP (Minimum Viable Product)">
             <div className="mb-6">
@@ -330,9 +378,7 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            06. MARKET VALIDATION
-            ========================================= */}
+        {/* 06. MARKET VALIDATION */}
         <FadeIn direction="up">
           <SlideFrame index="5" title="Validasi Pasar & Riset">
             <div className="mb-10">
@@ -341,7 +387,6 @@ export default function KonekinCaseStudy() {
               </p>
             </div>
 
-            {/* Statistik Utama */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               <div className="bg-white border border-slate-200 p-8 rounded-lg text-center shadow-sm">
                 <span className="block text-5xl font-serif font-bold text-slate-900 mb-2">5</span>
@@ -354,7 +399,6 @@ export default function KonekinCaseStudy() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-              {/* Temuan UMKM */}
               <div>
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
                   <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
@@ -381,7 +425,6 @@ export default function KonekinCaseStudy() {
                 </ul>
               </div>
 
-              {/* Temuan Mahasiswa */}
               <div>
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
                   <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
@@ -393,7 +436,6 @@ export default function KonekinCaseStudy() {
                   </div>
                 </div>
                 
-                {/* Visual Grafik Sederhana (Tailwind) */}
                 <div className="space-y-6 mb-6">
                   <div>
                     <div className="flex justify-between text-xs font-medium text-slate-700 mb-2">
@@ -427,7 +469,6 @@ export default function KonekinCaseStudy() {
               </div>
             </div>
 
-            {/* Kesimpulan */}
             <div className="bg-slate-50 border border-slate-200 p-8 rounded-lg text-sm text-slate-700 leading-relaxed">
               <span className="block text-xs font-semibold text-slate-900 uppercase tracking-widest mb-3">Kesimpulan Validasi</span>
               "Hasil wawancara terhadap 5 UMKM dan survei kepada 35 mahasiswa menunjukkan adanya kebutuhan dari kedua sisi. UMKM membutuhkan layanan digital yang aman, terpercaya, dan terjangkau, sedangkan mahasiswa membutuhkan proyek nyata untuk membangun portofolio profesional. Temuan ini menjadi dasar dalam merancang solusi KONEKIN."
@@ -436,25 +477,22 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            07. LEAN CANVAS
-            ========================================= */}
+        {/* 07. LEAN CANVAS */}
         <FadeIn direction="up">
           <SlideFrame index="6" title="Lean Canvas">
             <div className="w-full bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
-              <img 
+              <Image 
                 src="/images/konekin-lean-canvas.png" 
                 alt="Lean Canvas KONEKIN" 
+                width={1200}
+                height={700}
                 className="w-full h-auto rounded-md object-contain border border-slate-100"
               />
-
             </div>
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            08. SWOT ANALYSIS
-            ========================================= */}
+        {/* 08. SWOT ANALYSIS */}
         <FadeIn direction="up">
           <SlideFrame index="7" title="Analisis SWOT">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -493,9 +531,7 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            09. USER JOURNEY
-            ========================================= */}
+        {/* 09. USER JOURNEY */}
         <FadeIn direction="up">
           <SlideFrame index="8" title="Pemetaan Perjalanan Pengguna">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -600,9 +636,7 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            10. RICE PRIORITIZATION
-            ========================================= */}
+        {/* 10. RICE PRIORITIZATION */}
         <FadeIn direction="up">
           <SlideFrame index="9" title="Prioritas Fitur (RICE)">
             <div className="overflow-x-auto">
@@ -657,9 +691,7 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            11. VALUE-DRIVEN SOLUTIONS
-            ========================================= */}
+        {/* 11. VALUE-DRIVEN SOLUTIONS */}
         <FadeIn direction="up">
           <SlideFrame index="10" title="Solusi yang Ditawarkan">
             <div className="mb-8">
@@ -718,15 +750,15 @@ export default function KonekinCaseStudy() {
               <div className="bg-white border border-slate-200 p-5 rounded-lg flex flex-col gap-3">
                 <div>
                   <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">Masalah</span>
-                  <p className="text-sm text-slate-700">UMKM sulit memilih talenta yang sesuai dengan anggaran.</p>
+                  <p className="text-sm text-slate-700">Sulit membedakan mahasiswa yang benar-benar serius dan memiliki kemampuan dasar.</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
                   <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Fitur Solusi</span>
-                  <p className="text-sm font-semibold text-slate-900">Sistem Penawaran (Bidding)</p>
+                  <p className="text-sm font-semibold text-slate-900">Verifikasi Identitas Mahasiswa</p>
                 </div>
                 <div className="border-t border-slate-100 pt-3">
                   <span className="text-[10px] font-semibold text-slate-900 uppercase tracking-wider block mb-1">Manfaat</span>
-                  <p className="text-sm text-slate-700">Mahasiswa dapat mengajukan harga sesuai ruang lingkup proyek, sehingga UMKM memiliki beberapa alternatif sebelum menentukan pilihan.</p>
+                  <p className="text-sm text-slate-700">Meningkatkan kepercayaan UMKM bahwa mahasiswa yang bergabung memiliki identitas yang jelas dan dapat dipertanggungjawabkan.</p>
                 </div>
               </div>
 
@@ -734,69 +766,68 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            12. SUCCESS METRICS
-            ========================================= */}
+        {/* 12. PRODUCT ROADMAP */}
         <FadeIn direction="up">
-          <SlideFrame index="11" title="Indikator Keberhasilan">
-            <div className="bg-slate-900 rounded-lg p-8 mb-8 text-center">
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-3">North Star Metric</span>
-              <h4 className="text-2xl font-semibold text-white mb-4">Jumlah Proyek yang Berhasil Diselesaikan</h4>
-              <p className="text-sm text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                Semakin banyak proyek yang berhasil diselesaikan, semakin besar nilai yang diberikan KONEKIN kepada UMKM maupun mahasiswa.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white border border-slate-200 p-6 rounded-lg flex flex-col">
-                <span className="font-semibold text-slate-900 block mb-2 text-sm">Tingkat Pencocokan Berhasil</span>
-                <p className="text-sm text-slate-600 mb-4 border-b border-slate-100 pb-4 flex-1">Persentase proyek yang berhasil menemukan mahasiswa yang sesuai.</p>
-              </div>
-              <div className="bg-white border border-slate-200 p-6 rounded-lg flex flex-col">
-                <span className="font-semibold text-slate-900 block mb-2 text-sm">Tingkat Penyelesaian Proyek</span>
-                <p className="text-sm text-slate-600 mb-4 border-b border-slate-100 pb-4 flex-1">Persentase proyek yang selesai hingga pembayaran berhasil dicairkan.</p>
-              </div>
-              <div className="bg-white border border-slate-200 p-6 rounded-lg flex flex-col">
-                <span className="font-semibold text-slate-900 block mb-2 text-sm">Tingkat Penggunaan Kembali</span>
-                <p className="text-sm text-slate-600 mb-4 border-b border-slate-100 pb-4 flex-1">Persentase UMKM yang kembali menggunakan KONEKIN.</p>
-              </div>
-              <div className="bg-white border border-slate-200 p-6 rounded-lg flex flex-col">
-                <span className="font-semibold text-slate-900 block mb-2 text-sm">Rata-rata Waktu Mendapatkan Talenta</span>
-                <p className="text-sm text-slate-600 mb-4 border-b border-slate-100 pb-4 flex-1">Rata-rata waktu yang dibutuhkan UMKM hingga memperoleh mahasiswa yang sesuai.</p>
-              </div>
+          <SlideFrame index="11" title="Peta Jalan Produk (Product Roadmap)">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  phase: "Fase 1: Peluncuran MVP (Bulan 1–2)",
+                  focus: "Fokus pada fitur utama: Registrasi, Verifikasi Mahasiswa, Pembuatan Proyek, dan Pembayaran Escrow.",
+                  metric: "Metrik Sukses: 20 UMKM aktif dan 50 mahasiswa terverifikasi."
+                },
+                {
+                  phase: "Fase 2: Peningkatan Pengalaman (Bulan 3–4)",
+                  focus: "Menambahkan fitur ulasan, rating, dan perbaikan tampilan antarmuka.",
+                  metric: "Metrik Sukses: Tingkat penyelesaian proyek mencapai 80%."
+                },
+                {
+                  phase: "Fase 3: Pengembangan Lanjutan (Bulan 5–6)",
+                  focus: "Eksplorasi fitur rekomendasi talenta dan paket langganan bagi UMKM.",
+                  metric: "Metrik Sukses: Pertumbuhan jumlah transaksi bulanan sebesar 30%."
+                }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white border border-slate-200 p-6 rounded-lg flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-semibold text-slate-900 text-sm mb-3 pb-2 border-b border-slate-100">{item.phase}</h4>
+                    <p className="text-sm text-slate-600 leading-relaxed mb-4">{item.focus}</p>
+                  </div>
+                  <div className="pt-3 border-t border-slate-100 text-xs font-medium text-slate-800">
+                    {item.metric}
+                  </div>
+                </div>
+              ))}
             </div>
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            13. PRODUCT ROADMAP
-            ========================================= */}
+        {/* 13. SUCCESS METRICS */}
         <FadeIn direction="up">
-          <SlideFrame index="12" title="Rencana Pengembangan (Roadmap)">
-            <div className="space-y-4">
+          <SlideFrame index="12" title="Ukuran Keberhasilan (Success Metrics)">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { 
-                  phase: "Fase 1: Transaksi Aman (MVP)", 
-                  title: "Membangun Kepercayaan", 
-                  reason: "Registrasi, verifikasi identitas, pencocokan talenta, escrow, dan chat."
+                {
+                  metric: "Tingkat Penyelesaian Proyek",
+                  target: "Target: > 85%",
+                  reason: "Menunjukkan bahwa sebagian besar proyek yang dimulai berhasil diselesaikan dengan baik."
                 },
-                { 
-                  phase: "Fase 2: Pengembangan Portofolio", 
-                  title: "Meningkatkan Daya Tarik Profil", 
-                  reason: "Portofolio Digital, Sistem Ulasan, dan Badge Talenta Terverifikasi."
+                {
+                  metric: "Tingkat Kepuasan UMKM",
+                  target: "Target: > 4.5 / 5.0",
+                  reason: "Menandakan bahwa layanan digital yang diberikan mahasiswa memenuhi harapan UMKM."
                 },
-                { 
-                  phase: "Fase 3: Monetisasi Platform", 
-                  title: "Pertumbuhan Bisnis Jangka Panjang", 
-                  reason: "Premium UMKM, dashboard analitik, dan fitur pendukung bisnis."
+                {
+                  metric: "Jumlah Proyek per Mahasiswa",
+                  target: "Target: Rata-rata 2 Proyek",
+                  reason: "Menunjukkan bahwa mahasiswa benar-benar memperoleh pengalaman proyek nyata untuk membangun portofolio mereka."
                 }
               ].map((item, idx) => (
-                <div key={idx} className="bg-white border border-slate-200 p-6 rounded-lg flex flex-col md:flex-row md:items-center gap-6">
-                  <div className="md:w-1/3">
-                    <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">{item.phase}</span>
-                    <h4 className="font-semibold text-slate-900">{item.title}</h4>
+                <div key={idx} className="bg-white border border-slate-200 p-6 rounded-lg flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-semibold text-slate-900 text-base mb-2">{item.metric}</h4>
+                    <span className="inline-block px-2.5 py-1 bg-slate-100 text-slate-800 text-xs font-semibold rounded mb-3">{item.target}</span>
                   </div>
-                  <div className="md:w-2/3 md:border-l md:border-slate-200 md:pl-6 text-sm text-slate-700 leading-relaxed">
+                  <div className="text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
                     <strong className="text-slate-900">Fokus:</strong> {item.reason}
                   </div>
                 </div>
@@ -805,9 +836,7 @@ export default function KonekinCaseStudy() {
           </SlideFrame>
         </FadeIn>
 
-        {/* =========================================
-            14. REFLECTION
-            ========================================= */}
+        {/* 14. REFLECTION */}
         <FadeIn direction="up">
           <SlideFrame index="13" title="Refleksi dan Pembelajaran">
             <div className="bg-white border border-slate-200 p-8 rounded-lg space-y-6 text-sm text-slate-700 leading-relaxed">
@@ -831,7 +860,7 @@ export default function KonekinCaseStudy() {
         <FadeIn delay={1.1}>
           <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-20">
             <Link 
-              href="/product-management/glacier" 
+              href="/projects/glacier" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <ArrowLeft className="w-4 h-4 text-slate-500" />
@@ -846,7 +875,7 @@ export default function KonekinCaseStudy() {
             </Link>
 
             <Link 
-              href="/product-management/onium" 
+              href="/projects/onium" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">Onium</strong></span>

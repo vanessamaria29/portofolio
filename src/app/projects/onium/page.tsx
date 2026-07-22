@@ -1,7 +1,5 @@
-"use client"
-
 import React from "react"
-import { motion } from "framer-motion"
+import type { Metadata } from "next"
 import { FadeIn } from "@/components/animations/fade-in"
 import { 
   ArrowLeft, ArrowRight, CheckCircle2, Zap, Database, 
@@ -10,6 +8,65 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Onium | Cash Visibility for Traditional Merchants | Vanessa",
+  description: "PWA Chatbot Berbasis Voice-to-Text untuk Solusi Pencatatan Keuangan dan Visibilitas Kas Pedagang Bawang Grosir di Pasar Induk Kramat Jati.",
+  alternates: {
+    canonical: "https://vanessamaria.dev/projects/onium",
+  },
+  openGraph: {
+    title: "Onium | Cash Visibility for Traditional Merchants | Vanessa",
+    description: "PWA Chatbot Berbasis Voice-to-Text untuk Solusi Pencatatan Keuangan dan Visibilitas Kas Pedagang Bawang Grosir di Pasar Induk Kramat Jati.",
+    url: "https://vanessamaria.dev/projects/onium",
+    siteName: "Vanessa Portfolio",
+    images: [
+      {
+        url: "/images/onium-ui.png",
+        width: 1200,
+        height: 630,
+        alt: "Onium UI Mockup",
+      },
+    ],
+    locale: "id_ID",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Onium | Cash Visibility for Traditional Merchants | Vanessa",
+    description: "PWA Chatbot Berbasis Voice-to-Text untuk Solusi Pencatatan Keuangan dan Visibilitas Kas Pedagang Bawang Grosir.",
+    images: ["/images/onium-ui.png"],
+  },
+}
+
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Onium Case Study",
+      "headline": "Onium - Cash Visibility for Traditional Merchants",
+      "description": "PWA Chatbot Berbasis Voice-to-Text untuk Solusi Pencatatan Keuangan dan Visibilitas Kas Pedagang Bawang Grosir di Pasar Induk Kramat Jati.",
+      "author": {
+        "@type": "Person",
+        "name": "Vanessa"
+      },
+      "dateCreated": "2025"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Onium",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser / PWA",
+      "author": {
+        "@type": "Person",
+        "name": "Vanessa"
+      },
+      "description": "Chatbot-based cash visibility solution for traditional merchants.",
+      "programmingLanguage": "TypeScript, Next.js, Tailwind CSS"
+    }
+  ]
+}
 
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
   <div className={`bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-6 md:p-8 shadow-lg shadow-slate-200/40 my-6 ${className}`}>
@@ -28,32 +85,37 @@ export function MeetThePartnersTable() {
     <div className="relative overflow-x-auto rounded-lg border border-slate-200 mt-2">
       <table className="w-full text-left border-collapse text-[10px] md:text-sm text-slate-700 min-w-[800px]">
         <thead>
-          {/* BARIS 1: FOTO DOKUMENTASI NYATA (BERADA DI PALING ATAS TABEL) */}
           <tr className="border-b border-slate-200 bg-slate-50/50">
             <th className="p-3 font-semibold text-slate-900 w-1/5">Foto Dokumentasi</th>
             <th className="p-3 w-4/15">
               <div className="w-full h-36 rounded-lg overflow-hidden border border-slate-200 bg-slate-50 relative shadow-sm hover:shadow-md transition-all duration-300">
-                <img 
+                <Image 
                   src="/images/onium-evidence-1.jpeg" 
                   alt="Wawancara Ibu Rikky di Los H 153" 
+                  width={300}
+                  height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
             </th>
             <th className="p-3 w-4/15">
               <div className="w-full h-36 rounded-lg overflow-hidden border border-slate-200 bg-slate-50 relative shadow-sm hover:shadow-md transition-all duration-300">
-                <img 
+                <Image 
                   src="/images/onium-evidence-2.jpeg" 
                   alt="Observasi Lapak Bang Jefry di Los H 205" 
+                  width={300}
+                  height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
             </th>
             <th className="p-3 w-4/15">
               <div className="w-full h-36 rounded-lg overflow-hidden border border-slate-200 bg-slate-50 relative shadow-sm hover:shadow-md transition-all duration-300">
-                <img 
+                <Image 
                   src="/images/onium-evidence-3.jpeg" 
                   alt="Diskusi Sistem PO Kak Miran di Los H 147" 
+                  width={300}
+                  height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -61,7 +123,6 @@ export function MeetThePartnersTable() {
           </tr>
         </thead>
         <tbody className="divide-y divide-slate-100">
-          {/* BARIS 2: NAMA MITRA (BERADA TEPAT DI BAWAH FOTO) */}
           <tr className="bg-slate-100/80 font-semibold text-slate-900">
             <td className="p-3 font-bold">Nama Mitra</td>
             <td className="p-3 text-slate-900 font-bold text-base">Mitra 1: Ibu Rikky Simbolon</td>
@@ -69,7 +130,6 @@ export function MeetThePartnersTable() {
             <td className="p-3 text-slate-900 font-bold text-base">Mitra 3: Kak Miran Simbolon</td>
           </tr>
 
-          {/* BARIS 3 DAN SETERUSNYA: ANALISIS KARAKTERISTIK MITRA */}
           <tr>
             <td className="p-3 font-semibold bg-slate-50/40">Lokasi Lapak</td>
             <td className="p-3 font-medium text-slate-800">Los H No. 153</td>
@@ -121,10 +181,8 @@ export function MeetThePartnersTable() {
 export function FieldAnalysisTable() {
   return (
     <div className="relative mt-8 pt-8 border-t border-slate-200">
-      {/* Glow Effect */}
       <div className="absolute w-72 h-72 rounded-full bg-gradient-to-tr from-purple-300/10 to-blue-300/10 blur-3xl -z-10 -top-10 -right-10" />
 
-      {/* Header Section */}
       <div className="border-b border-slate-200 pb-4 mb-8">
         <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">2.1 / SARINGAN DATA LAPANGAN</span>
         <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Memisahkan Gejala, Keluhan, & Pain Utama</h3>
@@ -133,7 +191,6 @@ export function FieldAnalysisTable() {
         </p>
       </div>
 
-      {/* McKinsey High-Density Table */}
       <div className="overflow-x-auto rounded-xl border border-slate-200/80">
         <table className="w-full text-left border-collapse text-xs md:text-sm text-slate-700 min-w-[900px]">
           <thead>
@@ -145,7 +202,6 @@ export function FieldAnalysisTable() {
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
-            {/* Row 1 */}
             <tr className="hover:bg-slate-50/50 transition-colors">
               <td className="p-4 font-bold text-slate-800">Stok masuk hanya dicek sekilas jumlah karungnya, tidak ditimbang ulang.</td>
               <td className="p-4">
@@ -161,7 +217,6 @@ export function FieldAnalysisTable() {
               </td>
             </tr>
 
-            {/* Row 2 */}
             <tr className="hover:bg-slate-50/50 transition-colors">
               <td className="p-4 font-bold text-slate-800">Susut berat bawang setelah disimpan 2 sampai 3 hari.</td>
               <td className="p-4">
@@ -177,7 +232,6 @@ export function FieldAnalysisTable() {
               </td>
             </tr>
 
-            {/* Row 3 */}
             <tr className="hover:bg-slate-50/50 transition-colors">
               <td className="p-4 font-bold text-slate-800">Catatan utang di kertas nota sering hilang, basah, atau robek karena air bawang.</td>
               <td className="p-4">
@@ -193,7 +247,6 @@ export function FieldAnalysisTable() {
               </td>
             </tr>
 
-            {/* Row 4 */}
             <tr className="bg-purple-50/20 hover:bg-purple-50/40 transition-colors">
               <td className="p-4 font-bold text-slate-900">Laci kas kosong/menipis di sore hari padahal laku keras, menyulitkan tebusan modal esok hari.</td>
               <td className="p-4">
@@ -209,7 +262,6 @@ export function FieldAnalysisTable() {
               </td>
             </tr>
 
-            {/* Row 5 */}
             <tr className="bg-purple-50/20 hover:bg-purple-50/40 transition-colors">
               <td className="p-4 font-bold text-slate-900">Pola laci kosong muncul identik pada ketiga narasumber lintas skala usaha.</td>
               <td className="p-4">
@@ -225,7 +277,6 @@ export function FieldAnalysisTable() {
               </td>
             </tr>
 
-            {/* Row 6 */}
             <tr className="hover:bg-slate-50/50 transition-colors">
               <td className="p-4 font-bold text-slate-800">Sistem bon berjalan atas asas kekeluargaan & kepercayaan, bukan kontrak tertulis formal.</td>
               <td className="p-4">
@@ -241,7 +292,6 @@ export function FieldAnalysisTable() {
               </td>
             </tr>
 
-            {/* Row 7 */}
             <tr className="hover:bg-slate-50/50 transition-colors">
               <td className="p-4 font-bold text-slate-800">Semua uang modal, piutang, dan keuntungan bercampur baur di satu laci tanpa rekapan total.</td>
               <td className="p-4">
@@ -266,19 +316,14 @@ export function FieldAnalysisTable() {
 export function HypothesisPivot() {
   return (
     <div className="relative mt-8 pt-8 border-t border-slate-200">
-      {/* Glow Effect */}
       <div className="absolute w-64 h-64 rounded-full bg-gradient-to-tr from-rose-300/10 to-purple-300/10 blur-3xl -z-10 -bottom-10 -left-10" />
 
-      {/* Header */}
       <div className="border-b border-slate-200 pb-4 mb-6">
         <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">2.2 / THE PRODUCT PIVOT</span>
         <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Mematahkan Asumsi: Fisik Bawang vs Kepercayaan Sosial</h3>
       </div>
 
-      {/* Grid Comparison */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-        
-        {/* ASUMSI AWAL (SALAH) */}
         <div className="border border-rose-100 bg-rose-50/20 p-5 rounded-xl flex flex-col justify-between">
           <div>
             <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-2"> ASUMSI AWAL KAMI (HIPOTESIS)</span>
@@ -292,7 +337,6 @@ export function HypothesisPivot() {
           </div>
         </div>
 
-        {/* KENYATAAN RIIL (BENAR) */}
         <div className="border border-purple-100 bg-purple-50/20 p-5 rounded-xl flex flex-col justify-between">
           <div>
             <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-2"> KENYATAAN LAPANGAN (DATA RIIL)</span>
@@ -301,11 +345,10 @@ export function HypothesisPivot() {
               Penyusutan riil di lapak ternyata sangat kecil (1.5% sampai 8%). Krisis sesungguhnya adalah pedagang buta terhadap batas aman kas tunai harian mereka akibat modal tersangkut di tumpukan bon kertas pelanggan.
             </p>
           </div>
-          <div className="mt-4 pt-3 border-t border-purple-100 italic text-[10px] md:text-xs text-slate-900 font-medium font-semibold">
+          <div className="mt-4 pt-3 border-t border-purple-100 italic text-[10px] md:text-xs text-slate-900 font-semibold">
             "Masalah terbesar bukan gagal menjaga fisik barang, melainkan ketidakberdayaan mengukur batas aman dari akumulasi bon kepercayaan sosial harian." — Kesimpulan Riset
           </div>
         </div>
-
       </div>
     </div>
   );
@@ -329,7 +372,6 @@ export function ShadowingDiary() {
 
   return (
     <div className="relative mt-8 pt-8 border-t border-slate-200">
-      {/* Header */}
       <div className="border-b border-slate-200 pb-4 mb-6">
         <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">2.3 / SHADOWING DIARY</span>
         <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Satu Hari di Lapak Los H: Kronologi Krisis Likuiditas</h3>
@@ -338,7 +380,6 @@ export function ShadowingDiary() {
         </p>
       </div>
 
-      {/* Timeline Layout */}
       <div className="space-y-6">
         {logActivities.map((log, index) => (
           <div key={index} className="grid grid-cols-1 md:grid-cols-12 gap-4 items-start border-l-2 border-purple-200 pl-4 md:pl-6 ml-2">
@@ -365,7 +406,6 @@ export function ShadowingDiary() {
 export function ValuePropositionCanvas() {
   return (
     <div className="bg-white/60 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-sm my-8 relative overflow-hidden">
-      {/* Header */}
       <div className="border-b border-slate-200 pb-4 mb-6">
         <span className="text-xs font-semibold text-slate-900 tracking-wider uppercase">3.1 / STRATEGI VALUE PROPOSITION</span>
         <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Value Proposition Canvas (VPC)</h3>
@@ -374,10 +414,7 @@ export function ValuePropositionCanvas() {
         </p>
       </div>
 
-      {/* VPC Grid 2-Kolom */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        
-        {/* CUSTOMER PROFILE */}
         <div className="border border-slate-200 bg-slate-50/30 p-5 rounded-xl space-y-4">
           <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200 uppercase tracking-wider">
              Customer Profile (Sisi Manusia)
@@ -394,18 +431,17 @@ export function ValuePropositionCanvas() {
               <h5 className="font-bold text-slate-800 uppercase text-[10px] md:text-xs tracking-wider mb-1">Pains</h5>
               <p className="text-slate-600 leading-relaxed">
                 Kepanikan saat laci kas kosong di sore hari meskipun penjualan terlihat ramai, rasa malu harus meminta tambahan tempo kepada bandar, serta kekhawatiran kehilangan pelanggan jika menagih piutang terlalu agresif.
-                </p>
+              </p>
             </div>
             <div>
               <h5 className="font-bold text-slate-800 uppercase text-[10px] md:text-xs tracking-wider mb-1">Gains</h5>
               <p className="text-slate-600 leading-relaxed">
-              Tetap dipercaya pelanggan, mengetahui batas aman kas secara instan, dan memahami kondisi keuntungan usaha tanpa perlu rekap manual.
+                Tetap dipercaya pelanggan, mengetahui batas aman kas secara instan, dan memahami kondisi keuntungan usaha tanpa perlu rekap manual.
               </p>
             </div>
           </div>
         </div>
 
-        {/* VALUE MAP */}
         <div className="border border-purple-100 bg-purple-50/10 p-5 rounded-xl space-y-4">
           <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-purple-100 text-slate-900 border border-purple-200 uppercase tracking-wider">
              Value Map (Sisi Solusi)
@@ -415,27 +451,25 @@ export function ValuePropositionCanvas() {
             <div>
               <h5 className="font-bold text-slate-900 uppercase text-[10px] md:text-xs tracking-wider mb-1">Products & Services</h5>
               <p className="text-slate-700 leading-relaxed font-medium">
-    Asisten finansial berbasis chatbot yang membantu pedagang mencatat kas, piutang, dan kewajiban pembayaran dalam satu alur percakapan sederhana.
+                Asisten finansial berbasis chatbot yang membantu pedagang mencatat kas, piutang, dan kewajiban pembayaran dalam satu alur percakapan sederhana.
               </p>
             </div>
             <div>
               <h5 className="font-bold text-slate-900 uppercase text-[10px] md:text-xs tracking-wider mb-1">Pain Relievers</h5>
               <p className="text-slate-700 leading-relaxed">
-               Mencatat transaksi secara sederhana melalui percakapan chatbot sekaligus menampilkan posisi kas dan piutang secara real-time tanpa perlu rekap manual.
+                Mencatat transaksi secara sederhana melalui percakapan chatbot sekaligus menampilkan posisi kas dan piutang secara real-time tanpa perlu rekap manual.
               </p>
             </div>
             <div>
               <h5 className="font-bold text-slate-900 uppercase text-[10px] md:text-xs tracking-wider mb-1">Gain Creators</h5>
               <p className="text-slate-700 leading-relaxed">
-               Memberikan peringatan dini ketika akumulasi piutang mulai mendekati batas aman kas sehingga pedagang dapat mengambil keputusan lebih cepat tanpa mengganggu hubungan dengan pelanggan.
-                </p>
+                Memberikan peringatan dini ketika akumulasi piutang mulai mendekati batas aman kas sehingga pedagang dapat mengambil keputusan lebih cepat tanpa mengganggu hubungan dengan pelanggan.
+              </p>
             </div>
           </div>
         </div>
-
       </div>
 
-      {/* ELEVATOR PITCH STATEMENT */}
       <div className="mt-6 border border-purple-200 bg-purple-50/30 p-4 rounded-xl">
         <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1">Onium Value Proposition Statement</h4>
         <p className="font-serif text-xs md:text-sm text-slate-900 italic leading-relaxed">
@@ -449,6 +483,10 @@ export function ValuePropositionCanvas() {
 export default function OniumCaseStudy() {
   return (
     <div className="min-h-screen bg-surface-primary selection:bg-slate-200 selection:text-slate-900 relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+      />
       
       {/* Background gradients */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -469,14 +507,11 @@ export default function OniumCaseStudy() {
           </Link>
         </FadeIn>
 
-        {/* =========================================
-            01. EXECUTIVE SUMMARY (HERO & DASHBOARD)
-            ========================================= */}
+        {/* 01. EXECUTIVE SUMMARY */}
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
               
-              {/* Kolom Kiri */}
               <div className="lg:col-span-7 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 mb-4">
                   <span className="w-2 h-2 rounded-full bg-blue-500" />
@@ -497,7 +532,6 @@ export default function OniumCaseStudy() {
                 </div>
               </div>
 
-              {/* Kolom Kanan (Project Dashboard) */}
               <div className="lg:col-span-5 bg-white/50 backdrop-blur-sm border border-slate-100 rounded-lg p-6">
                 <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">Project Dashboard</h3>
                 <div className="space-y-3">
@@ -526,9 +560,7 @@ export default function OniumCaseStudy() {
           </div>
         </FadeIn>
 
-        {/* =========================================
-            1. STRATEGIC ASSESSMENT (CONTEXT)
-            ========================================= */}
+        {/* 1. STRATEGIC ASSESSMENT */}
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
@@ -546,9 +578,7 @@ export default function OniumCaseStudy() {
           </div>
         </FadeIn>
 
-        {/* =========================================
-            2. RISET LAPANGAN & MARKET MATRIX
-            ========================================= */}
+        {/* 2. RISET LAPANGAN & MARKET MATRIX */}
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
@@ -557,16 +587,13 @@ export default function OniumCaseStudy() {
             </div>
 
             <MeetThePartnersTable />
-
             <FieldAnalysisTable />
             <HypothesisPivot />
             <ShadowingDiary />
           </div>
         </FadeIn>
 
-        {/* =========================================
-            3. DIAGNOSIS SLIDE (FINDINGS, REFRAMING, 5 WHYS)
-            ========================================= */}
+        {/* 3. DIAGNOSIS SLIDE */}
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
@@ -576,7 +603,6 @@ export default function OniumCaseStudy() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
               
-              {/* Kolom Kiri: Findings & Reframing */}
               <div className="lg:col-span-5 flex flex-col gap-8 lg:pr-8">
                 <div>
                   <h4 className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-400 mb-3 border-b border-slate-100 pb-2">Key Findings</h4>
@@ -596,12 +622,10 @@ export default function OniumCaseStudy() {
                 </div>
               </div>
 
-              {/* Kolom Kanan: Horizontal 5 Whys (Original Data) */}
               <div className="lg:col-span-7 lg:pl-8 flex flex-col justify-center pt-8 lg:pt-0">
                 <h4 className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 text-center border-b border-slate-100 pb-2">5 Whys Causal Chain</h4>
                 
                 <div className="flex flex-col gap-3">
-                  {/* Gejala Masalah */}
                   <div className="flex items-center gap-3">
                     <div className="w-[85px] text-right text-[10px] font-bold uppercase text-slate-400 leading-tight">Gejala Masalah</div>
                     <div className="bg-slate-900 text-white text-xs font-bold py-2.5 px-4 rounded-md flex-1">
@@ -609,7 +633,6 @@ export default function OniumCaseStudy() {
                     </div>
                   </div>
                   
-                  {/* Whys - Horizontal Chain */}
                   {[
                     "Sebagian besar penjualan harian masih berupa piutang bon yang belum berubah menjadi kas tunai.",
                     "Pedagang tidak pernah mengetahui total piutang yang masih beredar sehingga hanya mengandalkan isi laci kas dan intuisi.",
@@ -625,7 +648,6 @@ export default function OniumCaseStudy() {
                     </div>
                   ))}
 
-                  {/* Root Cause (Why 5) */}
                   <div className="flex items-center gap-3 mt-2 pt-2 border-t border-slate-100">
                     <div className="w-[85px] text-right text-[10px] font-bold uppercase text-slate-900 leading-tight">Akar Masalah (Why 5)</div>
                     <CornerDownRight className="w-5 h-5 text-slate-900 shrink-0" />
@@ -644,9 +666,7 @@ export default function OniumCaseStudy() {
           <ValuePropositionCanvas />
         </FadeIn>
 
-        {/* =========================================
-            4. PRODUCT SCOPING (MoSCoW MATRIX)
-            ========================================= */}
+        {/* 4. PRODUCT SCOPING */}
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
@@ -661,7 +681,6 @@ export default function OniumCaseStudy() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* MUST HAVE */}
               <div className="border border-red-100 bg-red-50/30 p-5 rounded-lg shadow-sm">
                 <h4 className="font-bold text-red-700 text-sm mb-3"> MUST HAVE (Fitur Utama Wajib)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-700 font-medium">
@@ -671,7 +690,6 @@ export default function OniumCaseStudy() {
                 </ul>
               </div>
 
-              {/* SHOULD HAVE */}
               <div className="border border-blue-100 bg-blue-50/30 p-5 rounded-lg shadow-sm">
                 <h4 className="font-bold text-slate-900 text-sm mb-3"> SHOULD HAVE (Sangat Penting)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-700 font-medium">
@@ -679,7 +697,6 @@ export default function OniumCaseStudy() {
                 </ul>
               </div>
 
-              {/* COULD HAVE */}
               <div className="border border-amber-100 bg-amber-50/30 p-5 rounded-lg shadow-sm">
                 <h4 className="font-bold text-slate-900 text-sm mb-3"> COULD HAVE (Fitur Pendukung)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-700 font-medium">
@@ -687,7 +704,6 @@ export default function OniumCaseStudy() {
                 </ul>
               </div>
 
-              {/* WON'T HAVE */}
               <div className="border border-slate-200 bg-slate-50/50 p-5 rounded-lg shadow-sm">
                 <h4 className="font-bold text-slate-600 text-sm mb-3"> WON'T HAVE (v1)</h4>
                 <ul className="list-disc list-inside text-xs space-y-3 text-slate-600 font-medium">
@@ -700,18 +716,14 @@ export default function OniumCaseStudy() {
           </div>
         </FadeIn>
 
-        {/* =========================================
-            05. SOLUTION ARCHITECTURE (MAPPING & MOCKUP)
-            ========================================= */}
+        {/* 05. SOLUTION ARCHITECTURE */}
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 md:p-10 shadow-sm relative overflow-hidden mb-12">
-            {/* 1. Header Section */}
             <div className="border-b border-slate-200 pb-4 mb-8">
               <span className="text-[10px] md:text-xs font-semibold text-slate-900 tracking-wider uppercase">5 / SOLUSI & ARSITEKTUR</span>
               <h3 className="font-serif text-2xl font-bold text-slate-900 mt-1">Solution Architecture & Interactive Mockup</h3>
             </div>
 
-            {/* PM LENS DEFINITION */}
             <div className="mb-8 p-6 border border-purple-100 bg-purple-50/50 rounded-xl shadow-sm">
               <h4 className="text-sm font-bold text-slate-900 mb-2">Definisi Produk:</h4>
               <p className="text-sm md:text-base text-slate-800 font-bold mb-6">PWA (Progressive Web App) dengan integrasi Chatbot.</p>
@@ -719,19 +731,16 @@ export default function OniumCaseStudy() {
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-purple-200 pb-2">Alasan Teknis & Desain (PM Lens):</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <span className="text-slate-900 mt-0.5"></span>
                   <div className="text-xs md:text-sm text-slate-700">
                     <strong className="text-slate-900">Zero Learning Curve:</strong> Menggunakan kenyamanan antarmuka percakapan (conversational interface / chatbot) untuk meminimalkan friksi kognitif bagi pedagang yang sudah sangat kelelahan fisik.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-slate-900 mt-0.5"></span>
                   <div className="text-xs md:text-sm text-slate-700">
                     <strong className="text-slate-900">Standalone PWA:</strong> Bertindak sebagai aplikasi web mandiri yang bisa diakses tanpa instalasi langsung di layar HP pedagang, tanpa bergantung pada restriksi, aturan kaku, atau biaya mahal dari API WhatsApp Business resmi.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-slate-900 mt-0.5"></span>
                   <div className="text-xs md:text-sm text-slate-700">
                     <strong className="text-slate-900">Offline-First Capability:</strong> Memastikan sistem pencatatan tetap dapat mendata transaksi secara instan di dalam pasar induk yang bising meskipun koneksi internet sedang tidak stabil atau terputus harian menggunakan IndexedDB dan Service Worker.
                   </div>
@@ -739,10 +748,7 @@ export default function OniumCaseStudy() {
               </ul>
             </div>
 
-            {/* 2. Container Konten Utama */}
             <div className="flex flex-col space-y-8">
-              
-              {/* BARIS 1 (FULL WIDTH): PRODUCT ARCHITECTURE OVERVIEW (Gambar Horizontal) */}
               <div className="w-full">
                 <h4 className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Product Architecture Overview</h4>
                 <div className="bg-white/40 backdrop-blur-md border border-slate-200/60 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
@@ -757,10 +763,7 @@ export default function OniumCaseStudy() {
                 </div>
               </div>
 
-              {/* BARIS 2 (GRID 12-KOLOM): DUA ASSET PORTRAIT BERDAMPINGAN */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                
-                {/* KOLOM KIRI (7/12): USER & SYSTEM WORKFLOW MAPPING (Gambar Vertikal) */}
                 <div className="lg:col-span-7 flex flex-col h-full">
                   <h4 className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">User & System Workflow Mapping</h4>
                   <div className="bg-white/40 backdrop-blur-md border border-slate-200/60 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex-grow flex flex-col justify-center">
@@ -774,44 +777,27 @@ export default function OniumCaseStudy() {
                   </div>
                 </div>
 
-                {/* KOLOM KANAN (5/12): MOCKUP (Gambar Vertikal) */}
                 <div className="lg:col-span-5 flex flex-col h-full relative">
                   <h4 className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Mockup</h4>
                   <div className="bg-white/40 backdrop-blur-md border border-slate-200/60 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex-grow flex items-center justify-center relative w-full overflow-hidden">
-                    
-                    {/* Glow effect di belakang HP */}
-                    <div className="absolute w-64 h-64 rounded-full bg-gradient-to-tr from-purple-200/20 to-blue-200/20 blur-3xl -z-10 animate-pulse" style={{ animationDuration: '6s' }} />
-                    
-                    {/* Mockup HP Interaktif (Dilengkapi Drag & Floating Animation) */}
-                    <motion.div 
-                      drag
-                      dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-                      dragElastic={0.2}
-                      animate={{ y: [0, -6, 0] }}
-                      transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                      className="max-w-[280px] md:max-w-[360px] w-full filter drop-shadow-lg cursor-grab active:cursor-grabbing transition-transform duration-300 hover:scale-[1.02]"
-                    >
+                    <div className="relative z-10 max-w-[280px] md:max-w-[320px] w-full">
                       <Image 
                         src="/images/onium-ui.png" 
-                        alt="Onium Chat Mockup" 
-                        width={360}
-                        height={720}
-                        className="w-full h-auto object-contain rounded-xl"
+                        alt="Mobile App Mockup - Onium Chatbot Interface"
+                        width={600}
+                        height={1200}
+                        className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
                         priority
                       />
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
-
               </div>
-
             </div>
           </div>
         </FadeIn>
 
-        {/* =========================================
-            6. RETROSPECTIVE (LESSONS LEARNED)
-            ========================================= */}
+        {/* 6. RETROSPECTIVE */}
         <FadeIn direction="up">
           <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-8 shadow-sm mb-12">
             <div className="border-b border-slate-200 pb-4 mb-6">
@@ -820,7 +806,6 @@ export default function OniumCaseStudy() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
               <div className="bg-white/50 border border-slate-100 p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
                 <span className="text-lg font-black text-slate-300 block mb-2">1</span>
                 <p className="text-sm text-slate-700 leading-relaxed font-medium">
@@ -848,7 +833,6 @@ export default function OniumCaseStudy() {
                   <strong>Less is More:</strong> Memotong fitur yang "keren" demi fitur yang "berfungsi" sangat penting agar MVP dapat langsung divalidasi dengan cepat.
                 </p>
               </div>
-
             </div>
           </div>
         </FadeIn>
@@ -857,7 +841,7 @@ export default function OniumCaseStudy() {
         <FadeIn delay={1.1}>
           <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-20">
             <Link 
-              href="/product-management/konekin" 
+              href="/projects/konekin" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <ArrowLeft className="w-4 h-4 text-slate-500" />
@@ -872,7 +856,7 @@ export default function OniumCaseStudy() {
             </Link>
 
             <Link 
-              href="/product-management/digital-skill-assessment" 
+              href="/projects/digital-assessment" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">Digital Skill Assessment</strong></span>

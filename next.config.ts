@@ -34,6 +34,35 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/product-management/konekin",
+        destination: "/projects/konekin",
+        permanent: true,
+      },
+      {
+        source: "/product-management/glacier",
+        destination: "/projects/glacier",
+        permanent: true,
+      },
+      {
+        source: "/product-management/digital-skill-assessment",
+        destination: "/projects/digital-assessment",
+        permanent: true,
+      },
+      {
+        source: "/product-management/onium",
+        destination: "/projects/onium",
+        permanent: true,
+      },
+      {
+        source: "/product-management",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

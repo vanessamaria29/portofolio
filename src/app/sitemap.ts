@@ -1,17 +1,19 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vanessamaria.dev'
+
   const routes = [
     '',
     '/about',
-    '/product-management/konekin',
-    '/product-management/onium',
-    '/product-management/digital-skill-assessment',
-    '/product-management/glacier',
+    '/projects/konekin',
+    '/projects/glacier',
+    '/projects/digital-assessment',
+    '/projects/onium',
   ]
 
   return routes.map((route) => ({
-    url: `https://vanessamaria.dev${route}`,
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: route === '' ? 1.0 : 0.8,

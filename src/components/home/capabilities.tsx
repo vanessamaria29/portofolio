@@ -14,7 +14,7 @@ export function Capabilities() {
       icon: <BriefcaseBusiness className="h-6 w-6" />,
       description: "Mendefinisikan arah produk, memprioritaskan fitur, dan berkolaborasi untuk membangun produk digital yang bermakna dan menyelesaikan masalah pengguna.",
       skills: ["Product Discovery", "Product Strategy", "User Story", "PRD", "Roadmapping", "Feature Prioritization", "Agile", "Scrum"],
-      href: "/product-management"
+      href: "#portfolio"
     },
     {
       title: "UI/UX Design",

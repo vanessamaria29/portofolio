@@ -44,11 +44,49 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://vanessamaria.dev"),
   title: {
-    template: "%s | Portfolio",
-    default: "Portfolio",
+    template: "%s | Vanessa",
+    default: "Vanessa | Product Manager Portfolio",
   },
-  description: "Product Manager Portfolio",
+  description: "Portfolio Product Manager yang berfokus pada riset pengguna, strategi produk, dan pengembangan sistem operasional digital.",
+  openGraph: {
+    title: "Vanessa | Product Manager Portfolio",
+    description: "Portfolio Product Manager yang berfokus pada riset pengguna, strategi produk, dan pengembangan sistem operasional digital.",
+    url: "https://vanessamaria.dev",
+    siteName: "Vanessa Portfolio",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vanessa | Product Manager Portfolio",
+    description: "Portfolio Product Manager yang berfokus pada riset pengguna dan strategi produk digital.",
+  },
+}
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://vanessamaria.dev/#person",
+      "name": "Vanessa",
+      "jobTitle": "Product Manager",
+      "url": "https://vanessamaria.dev",
+      "sameAs": [
+        "https://linkedin.com",
+        "https://github.com"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vanessamaria.dev/#website",
+      "url": "https://vanessamaria.dev",
+      "name": "Vanessa | Product Manager Portfolio",
+      "description": "Portfolio Product Manager & IT Project Manager yang berfokus pada pengembangan produk digital berbasis riset pengguna."
+    }
+  ]
 }
 
 export default function RootLayout({
@@ -57,8 +95,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`antialiased scroll-smooth ${sora.variable} ${inter.variable} ${lora.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang="id" className={`antialiased scroll-smooth ${sora.variable} ${inter.variable} ${lora.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
       <body className="min-h-screen bg-background font-body text-text-primary flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+        />
         <ThemeProvider>
           <MotionProvider>
             <Navigation />

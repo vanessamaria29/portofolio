@@ -1,10 +1,68 @@
-"use client"
-
 import React from "react"
+import type { Metadata } from "next"
 import { FadeIn } from "@/components/animations/fade-in"
 import { ArrowLeft, ArrowRight, User, Building2, Users, CheckCircle2, Target, AlertCircle, ListTodo, ClipboardCheck, Sparkles, BarChart3, Layers, Calculator, Store, Bell, TrendingUp, Globe, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Glacier | Inventory Management System | Vanessa",
+  description: "Case study digitalisasi proses operasional, pengelolaan stok persediaan, dan otomatisasi perhitungan HPP untuk Sahabat Mixue Group.",
+  alternates: {
+    canonical: "https://vanessamaria.dev/projects/glacier",
+  },
+  openGraph: {
+    title: "Glacier | Inventory Management System | Vanessa",
+    description: "Case study digitalisasi proses operasional, pengelolaan stok persediaan, dan otomatisasi perhitungan HPP untuk Sahabat Mixue Group.",
+    url: "https://vanessamaria.dev/projects/glacier",
+    siteName: "Vanessa Portfolio",
+    images: [
+      {
+        url: "/images/glacier-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Glacier Inventory Management System Logo",
+      },
+    ],
+    locale: "id_ID",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Glacier | Inventory Management System | Vanessa",
+    description: "Case study digitalisasi proses operasional dan otomatisasi perhitungan HPP untuk Sahabat Mixue Group.",
+    images: ["/images/glacier-logo.png"],
+  },
+}
+
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Glacier Case Study",
+      "headline": "Glacier - Platform Digitalisasi Operasional Sahabat Mixue Group",
+      "description": "Case study digitalisasi proses operasional, pengelolaan stok persediaan, dan otomatisasi perhitungan HPP untuk Sahabat Mixue Group.",
+      "author": {
+        "@type": "Person",
+        "name": "Vanessa"
+      },
+      "dateCreated": "2025"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Glacier",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Person",
+        "name": "Vanessa"
+      },
+      "description": "Inventory Management System & Automatic HPP Engine.",
+      "programmingLanguage": "TypeScript, Next.js, Tailwind CSS"
+    }
+  ]
+}
 
 const SlideFrame = ({ children, title, index, className = "" }: { children: React.ReactNode, title: string, index: string, className?: string }) => (
   <section className={`bg-white border border-slate-200/90 rounded-2xl p-6 md:p-8 shadow-xs my-8 ${className}`}>
@@ -24,6 +82,10 @@ const SlideFrame = ({ children, title, index, className = "" }: { children: Reac
 export default function GlacierCaseStudy() {
   return (
     <div className="min-h-screen bg-surface-primary selection:bg-slate-200 selection:text-slate-900 relative text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+      />
       
       {/* Background ambient gradients - Clean Ice Blue */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -695,7 +757,6 @@ export default function GlacierCaseStudy() {
                 Proyek Glacier dikelola menggunakan <strong className="text-slate-900 font-bold">Scrum Framework</strong> dengan bantuan <strong className="text-slate-900 font-bold">Trello</strong> sebagai alat manajemen tugas harian.
               </p>
 
-
               {/* Trello Board Screenshot Display Area */}
               <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xs">
                 <Image 
@@ -743,7 +804,7 @@ export default function GlacierCaseStudy() {
         <FadeIn delay={1.1}>
           <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-20">
             <Link 
-              href="/product-management/digital-skill-assessment" 
+              href="/projects/digital-assessment" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <ArrowLeft className="w-4 h-4 text-slate-500" />
@@ -758,7 +819,7 @@ export default function GlacierCaseStudy() {
             </Link>
 
             <Link 
-              href="/product-management/konekin" 
+              href="/projects/konekin" 
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-5 py-3 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50 cursor-pointer active:scale-95 select-none"
             >
               <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">KONEKIN</strong></span>
