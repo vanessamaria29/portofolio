@@ -30,11 +30,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
         {project.imageSrc && (
           <div className="w-full relative overflow-hidden border-b border-slate-100 aspect-[4/3] bg-white flex items-center justify-center">
             {isLogoImage ? (
-              <div className="p-3 sm:p-4 w-full h-full flex items-center justify-center">
+              <div className="p-2 sm:p-3 w-full h-full flex items-center justify-center">
                 <img 
                   src={project.imageSrc} 
                   alt={project.title} 
-                  className="w-full h-auto max-w-[280px] max-h-[210px] object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-sm"
+                  className="w-full h-auto max-w-[320px] max-h-[240px] object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-sm"
                 />
               </div>
             ) : (

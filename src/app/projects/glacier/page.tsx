@@ -160,14 +160,14 @@ export default function GlacierCaseStudy() {
               </div>
 
               {/* Kolom Kanan: Logo Glacier & Live URL */}
-              <div className="lg:col-span-5 flex flex-col items-center justify-center p-6 md:p-8 gap-6 rounded-2xl bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700/80 shadow-lg relative overflow-hidden group min-h-[280px]">
+              <div className="lg:col-span-5 flex flex-col items-center justify-center p-4 md:p-6 gap-6 rounded-2xl bg-white border-2 border-slate-200/90 shadow-md relative overflow-hidden group min-h-[320px] md:min-h-[360px]">
                 <div className="relative flex items-center justify-center w-full z-10">
                   <Image 
                     src="/images/glacier-logo.png"
                     alt="Logo Glacier"
-                    width={800}
-                    height={800}
-                    className="w-full max-w-[360px] md:max-w-[420px] h-auto object-contain relative z-10 drop-shadow-md group-hover:scale-105 transition-all duration-300"
+                    width={500}
+                    height={500}
+                    className="w-full max-w-[300px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[460px] h-auto max-h-[300px] object-contain relative z-10 drop-shadow-md group-hover:scale-105 transition-all duration-300"
                     priority
                   />
                 </div>
@@ -176,13 +176,12 @@ export default function GlacierCaseStudy() {
                   href="https://sahabatglacier.online" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/10 backdrop-blur-md text-white rounded-full text-xs md:text-sm font-bold hover:bg-white/20 transition-all shadow-sm group border border-white/20 z-10"
+                  className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-slate-900 text-white rounded-full text-xs md:text-sm font-bold hover:bg-slate-800 transition-all shadow-sm group border border-slate-800 z-10"
                 >
                   <Globe className="w-4 h-4 text-sky-400 group-hover:rotate-12 transition-transform" />
                   <span>Dapat dilihat di <span className="underline decoration-sky-400 font-extrabold">sahabatglacier.online</span></span>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
-                <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-sky-500/10 rounded-full blur-2xl pointer-events-none" />
               </div>
 
             </div>
