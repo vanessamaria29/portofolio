@@ -2,7 +2,7 @@
 
 import React from "react"
 import { FadeIn } from "@/components/animations/fade-in"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -825,6 +825,34 @@ export default function KonekinCaseStudy() {
               </div>
             </div>
           </SlideFrame>
+        </FadeIn>
+
+        {/* FOOTER NAV */}
+        <FadeIn delay={1.1}>
+          <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <Link 
+              href="/product-management/glacier" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Studi Kasus Sebelumnya: <strong className="text-slate-900">Glacier</strong></span>
+            </Link>
+
+            <Link 
+              href="/" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+            >
+              Ke Halaman Utama
+            </Link>
+
+            <Link 
+              href="/product-management/onium" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+            >
+              <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">Onium</strong></span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </FadeIn>
 
       </main>

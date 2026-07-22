@@ -853,6 +853,34 @@ export default function OniumCaseStudy() {
           </div>
         </FadeIn>
 
+        {/* FOOTER NAV */}
+        <FadeIn delay={1.1}>
+          <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <Link 
+              href="/product-management/konekin" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white/80 backdrop-blur-md border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Studi Kasus Sebelumnya: <strong className="text-slate-900">KONEKIN</strong></span>
+            </Link>
+
+            <Link 
+              href="/" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white/80 backdrop-blur-md border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+            >
+              Ke Halaman Utama
+            </Link>
+
+            <Link 
+              href="/product-management/digital-skill-assessment" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs md:text-sm font-semibold text-slate-700 hover:text-slate-900 transition-all bg-white/80 backdrop-blur-md border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-slate-300 hover:bg-slate-50"
+            >
+              <span>Studi Kasus Selanjutnya: <strong className="text-slate-900">Digital Skill Assessment</strong></span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </FadeIn>
+
       </main>
     </div>
   )
