@@ -153,98 +153,93 @@ export function ExperiencePreview() {
         <FadeIn direction="up" delay={0.1}>
           <div className="flex flex-col lg:flex-row gap-6 items-start">
             
-            {/* COLUMN 1: Pengalaman Profesional (40% width) */}
-            <div className="w-full lg:w-[40%] flex flex-col gap-8 bg-white/70 backdrop-blur-md border border-slate-200/90 p-6 md:p-8 rounded-2xl shadow-xs">
-              
-              {/* Category A: Pengalaman Profesional */}
-              <div className="flex flex-col gap-5">
-                <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shadow-xs">
-                      <Briefcase className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <h3 className="font-serif text-lg font-bold text-slate-900 tracking-tight">Pengalaman Profesional</h3>
-                      <p className="text-xs font-medium text-slate-500">Magang & Pengalaman Kerja</p>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md uppercase tracking-wider">
-                    Internship
-                  </span>
-                </div>
-
-                <div className="flex flex-col gap-4">
-                  {professionalExperiences.map((exp, idx) => (
-                    <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col gap-3">
-                      <div className="flex flex-wrap items-start justify-between gap-2">
-                        <div>
-                          <span className={`inline-block text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-md border ${exp.badgeColor} mb-1.5`}>
-                            {exp.badge}
-                          </span>
-                          <h4 className="text-base font-bold text-slate-900 leading-snug">
-                            {exp.title}
-                          </h4>
-                          <p className="text-xs font-semibold text-slate-700 mt-0.5">
-                            {exp.subtitle}
-                          </p>
-                        </div>
-                        <span className="text-xs font-bold text-slate-500 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-100">
-                          {exp.date}
-                        </span>
-                      </div>
-
-                      <ul className="flex flex-col gap-2 pt-1 border-t border-slate-100">
-                        {exp.points.map((pt, pIdx) => (
-                          <li key={pIdx} className="flex items-start gap-2.5 text-xs md:text-sm text-slate-600 leading-relaxed">
-                            <span className="text-slate-400 mt-1 flex-shrink-0">•</span>
-                            <span>{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-            {/* COLUMN 2: Achievements (28% width) - Compact & Clean */}
-            <div className="w-full lg:w-[28%] flex flex-col gap-5 bg-white/70 backdrop-blur-md border border-slate-200/90 p-5 md:p-6 rounded-2xl shadow-xs">
+            {/* COLUMN 1: Achievements (40% width) */}
+            <div className="w-full lg:w-[40%] flex flex-col gap-5 bg-white/70 backdrop-blur-md border border-slate-200/90 p-6 md:p-8 rounded-2xl shadow-xs">
               <div className="flex items-center gap-3 border-b border-slate-200 pb-4">
                 <div className="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center shadow-xs">
                   <Trophy className="w-4 h-4" />
                 </div>
                 <div>
                   <h3 className="font-serif text-lg font-bold text-slate-900 tracking-tight">Achievements</h3>
-                  <p className="text-[11px] font-medium text-slate-500">Kompetisi & Akademik</p>
+                  <p className="text-xs font-medium text-slate-500">Kompetisi & Akademik</p>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
                 {achievements.map((item, idx) => (
                   <div 
                     key={idx} 
-                    className={`p-3.5 rounded-xl border transition-all ${
+                    className={`p-4 rounded-xl border transition-all ${
                       item.highlight 
                         ? 'bg-amber-50/70 border-amber-200 shadow-2xs' 
                         : 'bg-white border-slate-200 hover:border-slate-300'
                     }`}
                   >
-                    <div className="flex items-start gap-2.5">
-                      <div className={`mt-0.5 flex-shrink-0 w-6 h-6 rounded-md flex items-center justify-center ${
+                    <div className="flex items-start gap-3">
+                      <div className={`mt-0.5 flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center ${
                         item.badge === 'Academic' ? 'bg-indigo-100 text-indigo-700' : 'bg-amber-100 text-amber-700'
                       }`}>
-                        {item.badge === 'Academic' ? <GraduationCap className="w-3.5 h-3.5" /> : <Award className="w-3.5 h-3.5" />}
+                        {item.badge === 'Academic' ? <GraduationCap className="w-4 h-4" /> : <Award className="w-4 h-4" />}
                       </div>
                       <div className="flex flex-col gap-0.5">
-                        <h4 className="text-xs font-bold text-slate-900 leading-snug">
+                        <h4 className="text-sm font-bold text-slate-900 leading-snug">
                           {item.title}
                         </h4>
-                        <p className="text-[11px] font-medium text-slate-500">
+                        <p className="text-xs font-semibold text-slate-600">
                           {item.subtitle}
                         </p>
                       </div>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* COLUMN 2: Pengalaman Profesional / Internship (28% width) */}
+            <div className="w-full lg:w-[28%] flex flex-col gap-5 bg-white/70 backdrop-blur-md border border-slate-200/90 p-5 md:p-6 rounded-2xl shadow-xs">
+              <div className="flex items-center justify-between border-b border-slate-200 pb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shadow-xs">
+                    <Briefcase className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-lg font-bold text-slate-900 tracking-tight">Pengalaman</h3>
+                    <p className="text-[11px] font-medium text-slate-500">Magang & Pengalaman Kerja</p>
+                  </div>
+                </div>
+                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                  Intern
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-4">
+                {professionalExperiences.map((exp, idx) => (
+                  <div key={idx} className="bg-white border border-slate-200 p-4 rounded-xl shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col gap-3">
+                    <div className="flex flex-wrap items-start justify-between gap-1.5">
+                      <div>
+                        <span className={`inline-block text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md border ${exp.badgeColor} mb-1`}>
+                          {exp.badge}
+                        </span>
+                        <h4 className="text-sm font-bold text-slate-900 leading-snug">
+                          {exp.title}
+                        </h4>
+                        <p className="text-xs font-semibold text-slate-700 mt-0.5">
+                          {exp.subtitle}
+                        </p>
+                      </div>
+                      <span className="text-[11px] font-bold text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">
+                        {exp.date}
+                      </span>
+                    </div>
+
+                    <ul className="flex flex-col gap-2 pt-1 border-t border-slate-100">
+                      {exp.points.map((pt, pIdx) => (
+                        <li key={pIdx} className="flex items-start gap-2 text-xs text-slate-600 leading-relaxed">
+                          <span className="text-slate-400 mt-0.5 flex-shrink-0">•</span>
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
               </div>
