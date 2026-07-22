@@ -153,8 +153,8 @@ export function ExperiencePreview() {
         <FadeIn direction="up" delay={0.1}>
           <div className="flex flex-col lg:flex-row gap-6 items-start">
             
-            {/* COLUMN 1: Experience & Case Studies (55% width) */}
-            <div className="w-full lg:w-[55%] flex flex-col gap-8 bg-white/70 backdrop-blur-md border border-slate-200/90 p-6 md:p-8 rounded-2xl shadow-xs">
+            {/* COLUMN 1: Pengalaman Profesional (40% width) */}
+            <div className="w-full lg:w-[40%] flex flex-col gap-8 bg-white/70 backdrop-blur-md border border-slate-200/90 p-6 md:p-8 rounded-2xl shadow-xs">
               
               {/* Category A: Pengalaman Profesional */}
               <div className="flex flex-col gap-5">
@@ -206,72 +206,10 @@ export function ExperiencePreview() {
                 </div>
               </div>
 
-              {/* Category B: Studi Kasus Produk Unggulan */}
-              <div className="flex flex-col gap-5 pt-2 border-t border-slate-200/80">
-                <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center shadow-xs">
-                      <FolderKanban className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <h3 className="font-serif text-lg font-bold text-slate-900 tracking-tight">Studi Kasus Produk Unggulan</h3>
-                      <p className="text-xs font-medium text-slate-500">Proyek Utama Product Management</p>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-md uppercase tracking-wider">
-                    PM Projects
-                  </span>
-                </div>
-
-                <div className="flex flex-col gap-5">
-                  {productCaseStudies.map((exp, idx) => (
-                    <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col gap-3">
-                      <div className="flex flex-wrap items-start justify-between gap-2">
-                        <div>
-                          <span className={`inline-block text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-md border ${exp.badgeColor} mb-1.5`}>
-                            {exp.badge}
-                          </span>
-                          <h4 className="text-base font-bold text-slate-900 leading-snug">
-                            {exp.title}
-                          </h4>
-                          <p className="text-xs font-semibold text-slate-700 mt-0.5">
-                            {exp.subtitle}
-                          </p>
-                        </div>
-                        <span className="text-xs font-bold text-slate-500 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-100">
-                          {exp.date}
-                        </span>
-                      </div>
-
-                      <ul className="flex flex-col gap-2 pt-1 border-t border-slate-100">
-                        {exp.points.map((pt, pIdx) => (
-                          <li key={pIdx} className="flex items-start gap-2.5 text-xs md:text-sm text-slate-600 leading-relaxed">
-                            <span className="text-slate-400 mt-1 flex-shrink-0">•</span>
-                            <span>{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      {exp.href && (
-                        <div className="pt-2">
-                          <Link 
-                            href={exp.href}
-                            className="inline-flex items-center gap-2 text-xs font-bold text-slate-800 bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-lg shadow-2xs hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all group/btn"
-                          >
-                            <span>Lihat Studi Kasus</span>
-                            <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
-                          </Link>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
             </div>
 
-            {/* COLUMN 2: Achievements (22% width) - Compact & Clean */}
-            <div className="w-full lg:w-[22%] flex flex-col gap-5 bg-white/70 backdrop-blur-md border border-slate-200/90 p-5 rounded-2xl shadow-xs">
+            {/* COLUMN 2: Achievements (28% width) - Compact & Clean */}
+            <div className="w-full lg:w-[28%] flex flex-col gap-5 bg-white/70 backdrop-blur-md border border-slate-200/90 p-5 md:p-6 rounded-2xl shadow-xs">
               <div className="flex items-center gap-3 border-b border-slate-200 pb-4">
                 <div className="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center shadow-xs">
                   <Trophy className="w-4 h-4" />
@@ -312,8 +250,8 @@ export function ExperiencePreview() {
               </div>
             </div>
 
-            {/* COLUMN 3: Leadership & Organization (23% width) - Grouped & Structured */}
-            <div className="w-full lg:w-[23%] flex flex-col gap-5 bg-white/70 backdrop-blur-md border border-slate-200/90 p-5 rounded-2xl shadow-xs">
+            {/* COLUMN 3: Leadership & Organization (32% width) - Grouped & Structured */}
+            <div className="w-full lg:w-[32%] flex flex-col gap-5 bg-white/70 backdrop-blur-md border border-slate-200/90 p-5 md:p-6 rounded-2xl shadow-xs">
               <div className="flex items-center gap-3 border-b border-slate-200 pb-4">
                 <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-xs">
                   <Users className="w-4 h-4" />
